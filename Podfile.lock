@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (5.4.1)
+  - GoogleMaps/Base (4.1.0)
+  - GooglePlaces (4.1.0):
+    - GoogleMaps/Base (= 4.1.0)
+  - iOSDropDown (0.3.4)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JTMaterialSpinner (3.0.5)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - SimpleCheckbox (2.1.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - GooglePlaces
+  - iOSDropDown
+  - IQKeyboardManagerSwift
+  - JTMaterialSpinner
+  - SDWebImage
+  - SimpleCheckbox
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - GoogleMaps
+    - GooglePlaces
+    - iOSDropDown
+    - IQKeyboardManagerSwift
+    - JTMaterialSpinner
+    - SDWebImage
+    - SimpleCheckbox
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
+  GooglePlaces: a058b776259c13e1323c9ff135549cb1b13ad8e7
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JTMaterialSpinner: 28a0444186b6b2df4206a77d12f7c9dcbe604958
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: c63c34b9f1adf68ea0af946027ca167e1dd0ecd5
+
+COCOAPODS: 1.10.1

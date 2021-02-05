@@ -1,0 +1,6 @@
+framework module SimpleCheckbox {
+  umbrella header "SimpleCheckbox-umbrella.h"
+
+  export *
+  module * { export * }
+}
