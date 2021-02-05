@@ -3,18 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2209A663F689B31726324448 /* Pods_Proderma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480B5BA204933B5C9E743879 /* Pods_Proderma.framework */; };
 		C51F73C625C1DD1E0047C80B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F73C525C1DD1E0047C80B /* AppDelegate.swift */; };
 		C51F73C825C1DD1E0047C80B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */; };
-		C51F73CA25C1DD1E0047C80B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F73C925C1DD1E0047C80B /* ViewController.swift */; };
+		C51F73CA25C1DD1E0047C80B /* SelLangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F73C925C1DD1E0047C80B /* SelLangVC.swift */; };
 		C51F73CD25C1DD1F0047C80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51F73CB25C1DD1E0047C80B /* Main.storyboard */; };
 		C51F73CF25C1DD200047C80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51F73CE25C1DD200047C80B /* Assets.xcassets */; };
 		C51F73D225C1DD200047C80B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51F73D025C1DD200047C80B /* LaunchScreen.storyboard */; };
 		C524BA8425CCDB6A005980B5 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BA8325CCDB6A005980B5 /* ChatVC.swift */; };
+		C524BABF25CDA1DF005980B5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BABE25CDA1DF005980B5 /* HomeVC.swift */; };
+		C524BAC225CDA218005980B5 /* AllProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAC125CDA218005980B5 /* AllProductVC.swift */; };
+		C524BAC525CDA226005980B5 /* AllClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAC425CDA226005980B5 /* AllClinicVC.swift */; };
+		C524BAC825CDA23A005980B5 /* OneProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAC725CDA23A005980B5 /* OneProductVC.swift */; };
+		C524BACB25CDA24B005980B5 /* OneClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BACA25CDA24B005980B5 /* OneClinicVC.swift */; };
+		C524BACE25CDA261005980B5 /* ProductInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BACD25CDA261005980B5 /* ProductInfoVC.swift */; };
+		C524BAD125CDA273005980B5 /* ClinicHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAD025CDA273005980B5 /* ClinicHomeVC.swift */; };
+		C524BAD425CDA282005980B5 /* ClinicInfoEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAD325CDA282005980B5 /* ClinicInfoEditVC.swift */; };
+		C524BAD725CDA297005980B5 /* ClinicDoctorAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAD625CDA297005980B5 /* ClinicDoctorAddVC.swift */; };
+		C524BADA25CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAD925CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift */; };
+		C524BADD25CDA2C1005980B5 /* ClinicPhotoAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BADC25CDA2C1005980B5 /* ClinicPhotoAllVC.swift */; };
+		C524BAE025CDA2D9005980B5 /* ClinicPhotoDelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BADF25CDA2D9005980B5 /* ClinicPhotoDelVC.swift */; };
+		C524BAE325CDA2F1005980B5 /* EventHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAE225CDA2F1005980B5 /* EventHomeVC.swift */; };
+		C524BAE625CDA308005980B5 /* HistoryHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAE525CDA308005980B5 /* HistoryHomeVC.swift */; };
+		C524BAE925CDA31C005980B5 /* SettingHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAE825CDA31C005980B5 /* SettingHomeVC.swift */; };
+		C524BAED25CDA332005980B5 /* LogHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAEC25CDA332005980B5 /* LogHomeVC.swift */; };
+		C524BAF125CDA340005980B5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAF025CDA340005980B5 /* LoginVC.swift */; };
+		C524BAF525CDA353005980B5 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAF425CDA353005980B5 /* SignupVC.swift */; };
+		C524BAF925CDA362005980B5 /* SignupClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAF825CDA362005980B5 /* SignupClinicVC.swift */; };
+		C524BAFC25CDA47F005980B5 /* ChangePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAFB25CDA47F005980B5 /* ChangePassVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +44,32 @@
 		C51F73C225C1DD1E0047C80B /* Proderma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proderma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51F73C525C1DD1E0047C80B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C51F73C925C1DD1E0047C80B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C51F73C925C1DD1E0047C80B /* SelLangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelLangVC.swift; sourceTree = "<group>"; };
 		C51F73CC25C1DD1E0047C80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C51F73CE25C1DD200047C80B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C51F73D125C1DD200047C80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C51F73D325C1DD200047C80B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C524BA8325CCDB6A005980B5 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		C524BABE25CDA1DF005980B5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		C524BAC125CDA218005980B5 /* AllProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductVC.swift; sourceTree = "<group>"; };
+		C524BAC425CDA226005980B5 /* AllClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllClinicVC.swift; sourceTree = "<group>"; };
+		C524BAC725CDA23A005980B5 /* OneProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneProductVC.swift; sourceTree = "<group>"; };
+		C524BACA25CDA24B005980B5 /* OneClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneClinicVC.swift; sourceTree = "<group>"; };
+		C524BACD25CDA261005980B5 /* ProductInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoVC.swift; sourceTree = "<group>"; };
+		C524BAD025CDA273005980B5 /* ClinicHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicHomeVC.swift; sourceTree = "<group>"; };
+		C524BAD325CDA282005980B5 /* ClinicInfoEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicInfoEditVC.swift; sourceTree = "<group>"; };
+		C524BAD625CDA297005980B5 /* ClinicDoctorAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDoctorAddVC.swift; sourceTree = "<group>"; };
+		C524BAD925CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDoctorUpdateVC.swift; sourceTree = "<group>"; };
+		C524BADC25CDA2C1005980B5 /* ClinicPhotoAllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPhotoAllVC.swift; sourceTree = "<group>"; };
+		C524BADF25CDA2D9005980B5 /* ClinicPhotoDelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicPhotoDelVC.swift; sourceTree = "<group>"; };
+		C524BAE225CDA2F1005980B5 /* EventHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeVC.swift; sourceTree = "<group>"; };
+		C524BAE525CDA308005980B5 /* HistoryHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryHomeVC.swift; sourceTree = "<group>"; };
+		C524BAE825CDA31C005980B5 /* SettingHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHomeVC.swift; sourceTree = "<group>"; };
+		C524BAEC25CDA332005980B5 /* LogHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHomeVC.swift; sourceTree = "<group>"; };
+		C524BAF025CDA340005980B5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C524BAF425CDA353005980B5 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		C524BAF825CDA362005980B5 /* SignupClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupClinicVC.swift; sourceTree = "<group>"; };
+		C524BAFB25CDA47F005980B5 /* ChangePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +113,17 @@
 		C51F73C425C1DD1E0047C80B /* Proderma */ = {
 			isa = PBXGroup;
 			children = (
+				C524BAB425CDA132005980B5 /* Home */,
+				C524BAB625CDA140005980B5 /* Clinic */,
+				C524BAB725CDA146005980B5 /* Event */,
+				C524BA8225CCDB45005980B5 /* Chat */,
+				C524BAB825CDA15E005980B5 /* History */,
+				C524BAB925CDA166005980B5 /* Setting */,
+				C524BABC25CDA1B6005980B5 /* Log */,
+				C524BABD25CDA1BF005980B5 /* Cell */,
 				C51F73C525C1DD1E0047C80B /* AppDelegate.swift */,
 				C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */,
-				C51F73C925C1DD1E0047C80B /* ViewController.swift */,
-				C524BA8225CCDB45005980B5 /* Chat */,
+				C51F73C925C1DD1E0047C80B /* SelLangVC.swift */,
 				C51F73CB25C1DD1E0047C80B /* Main.storyboard */,
 				C51F73CE25C1DD200047C80B /* Assets.xcassets */,
 				C51F73D025C1DD200047C80B /* LaunchScreen.storyboard */,
@@ -91,6 +138,75 @@
 				C524BA8325CCDB6A005980B5 /* ChatVC.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		C524BAB425CDA132005980B5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C524BABE25CDA1DF005980B5 /* HomeVC.swift */,
+				C524BAC125CDA218005980B5 /* AllProductVC.swift */,
+				C524BAC425CDA226005980B5 /* AllClinicVC.swift */,
+				C524BAC725CDA23A005980B5 /* OneProductVC.swift */,
+				C524BACA25CDA24B005980B5 /* OneClinicVC.swift */,
+				C524BACD25CDA261005980B5 /* ProductInfoVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C524BAB625CDA140005980B5 /* Clinic */ = {
+			isa = PBXGroup;
+			children = (
+				C524BAD025CDA273005980B5 /* ClinicHomeVC.swift */,
+				C524BAD325CDA282005980B5 /* ClinicInfoEditVC.swift */,
+				C524BAD625CDA297005980B5 /* ClinicDoctorAddVC.swift */,
+				C524BAD925CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift */,
+				C524BADC25CDA2C1005980B5 /* ClinicPhotoAllVC.swift */,
+				C524BADF25CDA2D9005980B5 /* ClinicPhotoDelVC.swift */,
+			);
+			path = Clinic;
+			sourceTree = "<group>";
+		};
+		C524BAB725CDA146005980B5 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				C524BAE225CDA2F1005980B5 /* EventHomeVC.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		C524BAB825CDA15E005980B5 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C524BAE525CDA308005980B5 /* HistoryHomeVC.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		C524BAB925CDA166005980B5 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C524BAE825CDA31C005980B5 /* SettingHomeVC.swift */,
+				C524BAFB25CDA47F005980B5 /* ChangePassVC.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		C524BABC25CDA1B6005980B5 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				C524BAEC25CDA332005980B5 /* LogHomeVC.swift */,
+				C524BAF025CDA340005980B5 /* LoginVC.swift */,
+				C524BAF425CDA353005980B5 /* SignupVC.swift */,
+				C524BAF825CDA362005980B5 /* SignupClinicVC.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		C524BABD25CDA1BF005980B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D4DD54C258579908F13E8F15 /* Pods */ = {
@@ -234,9 +350,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C524BAE925CDA31C005980B5 /* SettingHomeVC.swift in Sources */,
+				C524BAE625CDA308005980B5 /* HistoryHomeVC.swift in Sources */,
+				C524BAF125CDA340005980B5 /* LoginVC.swift in Sources */,
+				C524BAED25CDA332005980B5 /* LogHomeVC.swift in Sources */,
+				C524BAD725CDA297005980B5 /* ClinicDoctorAddVC.swift in Sources */,
+				C524BACE25CDA261005980B5 /* ProductInfoVC.swift in Sources */,
+				C524BAC525CDA226005980B5 /* AllClinicVC.swift in Sources */,
+				C524BAE325CDA2F1005980B5 /* EventHomeVC.swift in Sources */,
+				C524BACB25CDA24B005980B5 /* OneClinicVC.swift in Sources */,
+				C524BADD25CDA2C1005980B5 /* ClinicPhotoAllVC.swift in Sources */,
+				C524BAF925CDA362005980B5 /* SignupClinicVC.swift in Sources */,
+				C524BAC825CDA23A005980B5 /* OneProductVC.swift in Sources */,
 				C524BA8425CCDB6A005980B5 /* ChatVC.swift in Sources */,
-				C51F73CA25C1DD1E0047C80B /* ViewController.swift in Sources */,
+				C524BAD125CDA273005980B5 /* ClinicHomeVC.swift in Sources */,
+				C524BAD425CDA282005980B5 /* ClinicInfoEditVC.swift in Sources */,
+				C524BABF25CDA1DF005980B5 /* HomeVC.swift in Sources */,
+				C51F73CA25C1DD1E0047C80B /* SelLangVC.swift in Sources */,
+				C524BAE025CDA2D9005980B5 /* ClinicPhotoDelVC.swift in Sources */,
 				C51F73C625C1DD1E0047C80B /* AppDelegate.swift in Sources */,
+				C524BAFC25CDA47F005980B5 /* ChangePassVC.swift in Sources */,
+				C524BAC225CDA218005980B5 /* AllProductVC.swift in Sources */,
+				C524BADA25CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift in Sources */,
+				C524BAF525CDA353005980B5 /* SignupVC.swift in Sources */,
 				C51F73C825C1DD1E0047C80B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SelLangVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
