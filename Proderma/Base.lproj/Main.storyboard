@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tcc-eE-0yI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1116,6 +1116,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnEng:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4Z-8A-4uw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31x-VB-RN0">
                                         <rect key="frame" x="41.5" y="414" width="331" height="50"/>
@@ -1132,6 +1135,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onBtnArb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHs-42-sFE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1154,6 +1160,10 @@
                             <constraint firstItem="Uk0-cR-IdZ" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="wow-98-hzY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnArc" destination="31x-VB-RN0" id="9tk-3B-TEj"/>
+                        <outlet property="btnEng" destination="gkb-bp-ZFQ" id="wCq-O2-39x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1162,7 +1172,7 @@
         <!--HomeVC-->
         <scene sceneID="Xv8-2f-buw">
             <objects>
-                <viewController id="lR9-z7-wD7" customClass="HomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="lR9-z7-wD7" customClass="HomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BLS-rw-epK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1266,6 +1276,9 @@
                                                         <state key="normal" title="See all">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="onBtnAllProduct:" destination="lR9-z7-wD7" eventType="touchUpInside" id="kJ0-8r-wOB"/>
+                                                        </connections>
                                                     </button>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hw7-Qq-yq2">
                                                         <rect key="frame" x="10" y="35" width="353" height="190"/>
@@ -1380,6 +1393,9 @@
                                                         <state key="normal" title="See all">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="onBtnAllClinic:" destination="lR9-z7-wD7" eventType="touchUpInside" id="h6x-Hc-Qht"/>
+                                                        </connections>
                                                     </button>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4d-dB-513">
                                                         <rect key="frame" x="10" y="35" width="353" height="190"/>
@@ -1522,6 +1538,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQb-pP-lEo">
                                                         <rect key="frame" x="4" y="0.0" width="74.5" height="50"/>
+                                                        <connections>
+                                                            <action selector="onBtnClinic:" destination="lR9-z7-wD7" eventType="touchUpInside" id="Cg3-ay-UOu"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1555,6 +1574,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-9J-yCg">
                                                         <rect key="frame" x="4" y="0.0" width="74.5" height="50"/>
+                                                        <connections>
+                                                            <action selector="onBtnEvent:" destination="lR9-z7-wD7" eventType="touchUpInside" id="Hbs-T5-f35"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1588,6 +1610,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEk-4x-FiF">
                                                         <rect key="frame" x="4" y="0.0" width="75" height="50"/>
+                                                        <connections>
+                                                            <action selector="onBtnChat:" destination="lR9-z7-wD7" eventType="touchUpInside" id="NdN-vD-v8D"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1621,6 +1646,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-cb-tJK">
                                                         <rect key="frame" x="4" y="0.0" width="74.5" height="50"/>
+                                                        <connections>
+                                                            <action selector="onBtnHistory:" destination="lR9-z7-wD7" eventType="touchUpInside" id="OZm-MQ-3SD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1654,6 +1682,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hi-x3-x04">
                                                         <rect key="frame" x="4.5" y="0.0" width="74.5" height="50"/>
+                                                        <connections>
+                                                            <action selector="onBtnSetting:" destination="lR9-z7-wD7" eventType="touchUpInside" id="sgI-kh-qpD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1727,7 +1758,7 @@
         <!--All ProductVC-->
         <scene sceneID="6kR-f3-jsU">
             <objects>
-                <viewController id="ZqD-XO-sbF" customClass="AllProductVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allproductVC" id="ZqD-XO-sbF" customClass="AllProductVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYW-N2-bAc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1755,6 +1786,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onBtnBack:" destination="ZqD-XO-sbF" eventType="touchUpInside" id="IXD-Wc-iCv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1886,7 +1920,7 @@
         <!--All ClinicVC-->
         <scene sceneID="bsE-Np-cEp">
             <objects>
-                <viewController id="wmu-b4-wOq" customClass="AllClinicVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="allclinicVC" id="wmu-b4-wOq" customClass="AllClinicVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mjd-pD-oDm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1914,6 +1948,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onBtnBack:" destination="wmu-b4-wOq" eventType="touchUpInside" id="31N-7n-4Aq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5481,7 +5518,7 @@
     </scenes>
     <resources>
         <image name="alarm" width="170" height="170"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.left" catalog="system" width="32" height="32"/>
         <image name="iccall" width="348" height="348"/>
         <image name="icchat" width="215" height="215"/>
         <image name="icedit" width="512" height="512"/>

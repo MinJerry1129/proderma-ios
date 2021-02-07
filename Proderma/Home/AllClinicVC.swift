@@ -8,22 +8,18 @@
 import UIKit
 
 class AllClinicVC: UIViewController {
+    var homeVC : HomeVC!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onBtnBack(_ sender: Any) {
+//        self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
+//        self.homeVC.modalPresentationStyle = .fullScreen
+//        self.present(self.homeVC, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
 }
