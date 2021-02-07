@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>527105976941-fdrk2jdqdelgk19toa2nncm1pesg445t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.527105976941-fdrk2jdqdelgk19toa2nncm1pesg445t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDZx9W7rJtP2i8RQ25flGLxUGyYg6iprRA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>527105976941</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mobiledevteam.proderma</string>
+	<key>PROJECT_ID</key>
+	<string>proderma-8f2af</string>
+	<key>STORAGE_BUCKET</key>
+	<string>proderma-8f2af.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:527105976941:ios:323f8520bb626458472d64</string>
+</dict>
+</plist>

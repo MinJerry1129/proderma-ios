@@ -14,7 +14,7 @@
         <!--SignupVC-->
         <scene sceneID="SBh-0X-1DN">
             <objects>
-                <viewController id="RKZ-hU-OUK" customClass="SignupVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupVC" id="RKZ-hU-OUK" customClass="SignupVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uEW-nN-6sE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,7 +452,7 @@
         <!--Signup ClinicVC-->
         <scene sceneID="qt6-Lp-bhM">
             <objects>
-                <viewController id="DeJ-yP-OcP" customClass="SignupClinicVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupclinicVC" id="DeJ-yP-OcP" customClass="SignupClinicVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="acV-pD-Ydb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -736,7 +736,7 @@
         <!--LoginVC-->
         <scene sceneID="Auy-JW-7Vq">
             <objects>
-                <viewController id="Zsb-V4-E0w" customClass="LoginVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="Zsb-V4-E0w" customClass="LoginVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ymb-Oj-an0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -979,7 +979,7 @@
         <!--Log HomeVC-->
         <scene sceneID="VfA-rf-YsW">
             <objects>
-                <viewController id="uuG-dq-8YT" customClass="LogHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loghomeVC" id="uuG-dq-8YT" customClass="LogHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="auG-Hn-Iz0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1750,6 +1750,11 @@
                             <constraint firstItem="50f-1V-Kq9" firstAttribute="centerX" secondItem="bvd-aj-5nu" secondAttribute="centerX" id="W0c-DD-L6A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cvClinic" destination="z4d-dB-513" id="tON-am-xBY"/>
+                        <outlet property="cvProduct" destination="Hw7-Qq-yq2" id="AAC-lB-Jel"/>
+                        <outlet property="txtNews" destination="CNp-Po-Z0D" id="sSq-bK-MFX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4Q-MK-iwb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2116,7 +2121,7 @@
         <!--One ClinicVC-->
         <scene sceneID="LfQ-0U-P4n">
             <objects>
-                <viewController id="KV3-qW-YxQ" customClass="OneClinicVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="oneclinicVC" id="KV3-qW-YxQ" customClass="OneClinicVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RWu-8t-caH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2507,7 +2512,7 @@
         <!--One ProductVC-->
         <scene sceneID="RB8-oz-MuE">
             <objects>
-                <viewController id="XO0-yj-Nuk" customClass="OneProductVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="oneproductVC" id="XO0-yj-Nuk" customClass="OneProductVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JJu-a1-Q7w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2920,7 +2925,7 @@
         <!--Clinic HomeVC-->
         <scene sceneID="TLp-zq-FFs">
             <objects>
-                <viewController id="z22-jV-LlX" customClass="ClinicHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clinichomeVC" id="z22-jV-LlX" customClass="ClinicHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OI7-yw-8Uu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3351,7 +3356,7 @@
         <!--Event HomeVC-->
         <scene sceneID="gcM-53-YD9">
             <objects>
-                <viewController id="amb-Vd-uWL" customClass="EventHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventhomeVC" id="amb-Vd-uWL" customClass="EventHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvv-RE-0lA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3526,7 +3531,7 @@
         <!--ChatVC-->
         <scene sceneID="rVP-IJ-brx">
             <objects>
-                <viewController id="LBj-VH-o1T" customClass="ChatVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatVC" id="LBj-VH-o1T" customClass="ChatVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="00D-17-FaV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3690,7 +3695,7 @@
         <!--History HomeVC-->
         <scene sceneID="xUD-bu-L9L">
             <objects>
-                <viewController id="4oz-Cp-UFN" customClass="HistoryHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="historyhomeVC" id="4oz-Cp-UFN" customClass="HistoryHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cd6-lb-4eS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3874,7 +3879,7 @@
         <!--Setting HomeVC-->
         <scene sceneID="2GU-0c-3hV">
             <objects>
-                <viewController id="es1-zj-DIZ" customClass="SettingHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settinghomeVC" id="es1-zj-DIZ" customClass="SettingHomeVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T2J-5E-BGJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4009,7 +4014,7 @@
         <!--Clinic Info EditVC-->
         <scene sceneID="gVJ-1w-nfY">
             <objects>
-                <viewController id="rNC-rQ-ZOi" customClass="ClinicInfoEditVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clinicinfoeditVC" id="rNC-rQ-ZOi" customClass="ClinicInfoEditVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hS4-FP-E1k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4293,7 +4298,7 @@
         <!--Clinic Photo AllVC-->
         <scene sceneID="FnM-Py-HZm">
             <objects>
-                <viewController id="RKt-CD-Bd2" customClass="ClinicPhotoAllVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clinicphotoallVC" id="RKt-CD-Bd2" customClass="ClinicPhotoAllVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VE4-q3-t39">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4449,7 +4454,7 @@
         <!--Clinic Doctor AddVC-->
         <scene sceneID="xkL-HO-eJE">
             <objects>
-                <viewController id="fKJ-sC-tg1" customClass="ClinicDoctorAddVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clinicdoctoraddVC" id="fKJ-sC-tg1" customClass="ClinicDoctorAddVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EZb-tS-GGH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4690,7 +4695,7 @@
         <!--Clinic Doctor UpdateVC-->
         <scene sceneID="hgx-n0-BQN">
             <objects>
-                <viewController id="aDq-Qa-r2x" customClass="ClinicDoctorUpdateVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clinicdoctorupdateVC" id="aDq-Qa-r2x" customClass="ClinicDoctorUpdateVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5m6-hB-lmN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4950,7 +4955,7 @@
         <!--Clinic Photo DelVC-->
         <scene sceneID="obK-52-2PD">
             <objects>
-                <viewController id="7gW-F6-Wj1" customClass="ClinicPhotoDelVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clinicphotodelVC" id="7gW-F6-Wj1" customClass="ClinicPhotoDelVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wg3-v3-2K8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5057,7 +5062,7 @@
         <!--Product InfoVC-->
         <scene sceneID="MjG-7M-PTQ">
             <objects>
-                <viewController id="qyj-20-xe5" customClass="ProductInfoVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productinfoVC" id="qyj-20-xe5" customClass="ProductInfoVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MKB-YV-fyu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5246,7 +5251,7 @@
         <!--Change PassVC-->
         <scene sceneID="PPa-0y-mhn">
             <objects>
-                <viewController id="tcc-eE-0yI" customClass="ChangePassVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="changepassVC" id="tcc-eE-0yI" customClass="ChangePassVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0uX-bP-Khh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
