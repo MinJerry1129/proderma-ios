@@ -6,24 +6,123 @@
 //
 
 import UIKit
+import ImageSlideshow
+import Alamofire
+import SDWebImage
+import JTMaterialSpinner
 
-class OneProductVC: UIViewController {
-
+class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var productSlider: ImageSlideshow!
+    @IBOutlet weak var nameTxt: UILabel!
+    @IBOutlet weak var priceTxt: UILabel!
+    @IBOutlet weak var countTxt: UITextField!
+    @IBOutlet weak var extraTxt: UITextField!
+    @IBOutlet weak var descriptionTxt: UITextView!
+    @IBOutlet weak var productCV: UICollectionView!
+    
+    var productID : String!
+    var productName : String!
+    var productPrice : String!
+    var productPercent : String!
+    var productInformation : String!
+    var productPhoto : String!
+    
+    var allClinics = [Clinic]()
+    var allImages = [ProductImage]()
+    var spinnerView = JTMaterialSpinner()
+    
     override func viewDidLoad() {
+        productID = AppDelegate.shared().productID
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        productCV.delegate = self
+        productCV.dataSource = self
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        allImages=[]
+        getData()
+    }
+    func getData(){
+        self.view.addSubview(spinnerView)
+        spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
+        spinnerView.circleLayer.lineWidth = 2.0
+        spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
+        spinnerView.beginRefreshing()
+        let parameters: Parameters = ["id": productID!]
+        AF.request(Global.baseUrl + "api/getProductInfo", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
+            print(response)
+            self.spinnerView.endRefreshing()
+            if let value = response.value as? [String: AnyObject] {
+                let clinicInfos = value["productOrder"] as? [[String: AnyObject]]
+                let productImages = value["productImages"] as? [[String: AnyObject]]
+                let productInfo = value["productInfo"] as? [String: AnyObject]
+                if(clinicInfos!.count > 0){
+                    for i in 0 ... (clinicInfos!.count)-1 {
+                        let id = clinicInfos![i]["id"] as! String
+                        let name = clinicInfos![i]["clinicname"] as! String
+                        let location = clinicInfos![i]["location"] as! String
+                        let photo = clinicInfos![i]["photo"] as! String
+                        let description = clinicInfos![i]["information"] as! String
+                        let phone = clinicInfos![i]["mobile"] as! String
+                        let doctor = "0"
+                        let latitude = clinicInfos![i]["latitude"] as! String
+                        let longitude = clinicInfos![i]["longitude"] as! String
+                        
+                        let cliniccell = Clinic(id: id, name: name, location: location, photo: photo, description: description, phone: phone, doctor: doctor, latlng: latitude+","+longitude)
+                        self.allClinics.append(cliniccell)
+                    }
+                }
+                if(productImages!.count > 0){
+                    for i in 0 ... (productImages!.count)-1 {
+                        let id = productImages![i]["id"] as! String
+                        let productid = productImages![i]["productid"] as! String
+                        let photo = productImages![i]["url"] as! String
+                        let status = productImages![i]["status"] as! String
+                                            
+                        let imagecell = ProductImage(id: id, productid: productid, photo: photo, status: status)
+                        self.allImages.append(imagecell)
+                    }
+                }
+                self.productName = productInfo!["name"] as! String
+                self.productPrice = productInfo!["price"] as! String
+                self.productPercent = productInfo!["percent"] as! String
+                self.productInformation = productInfo!["information"] as! String
+                self.productPhoto = productInfo!["photo"] as! String
+                
+                self.showInfo();
+                self.productCV.reloadData()
+            }
+        }
+        
+        
+    }
+    func showInfo(){
+        nameTxt.text = productName
+        priceTxt.text = productPrice
+        descriptionTxt.text = productInformation
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {           return allClinics.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let oneClinic: Clinic
+        oneClinic = allClinics[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! ProductClinicCell
+        cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+        cell.clinicImg.sd_setImage(with: URL(string: Global.baseUrl + oneClinic.photo), completed: nil)
+        cell.nameTxt.text = oneClinic.name
+        return cell
+        
+        
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.height * 0.95, height: collectionView.bounds.height * 0.95)
+    }
+    
+    @IBAction func onBactBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

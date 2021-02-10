@@ -1280,7 +1280,7 @@
                                                             <action selector="onBtnAllProduct:" destination="lR9-z7-wD7" eventType="touchUpInside" id="kJ0-8r-wOB"/>
                                                         </connections>
                                                     </button>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hw7-Qq-yq2">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="101" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hw7-Qq-yq2">
                                                         <rect key="frame" x="10" y="35" width="353" height="190"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lyG-iE-Ubr">
@@ -1290,7 +1290,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tpw-df-HIY">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="tpw-df-HIY" customClass="HomeproductCell" customModule="Proderma" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="190"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WGW-Df-43U">
@@ -1355,6 +1355,11 @@
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <size key="customSize" width="180" height="190"/>
+                                                                <connections>
+                                                                    <outlet property="mainView" destination="izg-LB-miK" id="vQW-uZ-3Xm"/>
+                                                                    <outlet property="nameTxt" destination="aR1-bC-asm" id="geE-mu-LJa"/>
+                                                                    <outlet property="productImg" destination="fsy-Cr-BkS" id="jRp-1I-cuV"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -1397,7 +1402,7 @@
                                                             <action selector="onBtnAllClinic:" destination="lR9-z7-wD7" eventType="touchUpInside" id="h6x-Hc-Qht"/>
                                                         </connections>
                                                     </button>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4d-dB-513">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="102" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4d-dB-513">
                                                         <rect key="frame" x="10" y="35" width="353" height="190"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jUh-7B-flX">
@@ -1407,7 +1412,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5H5-mo-qGV">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5H5-mo-qGV" customClass="HomeclinicCell" customModule="Proderma" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="190"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nCt-9g-rBm">
@@ -1458,9 +1463,6 @@
                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                                     <integer key="value" value="1"/>
                                                                                 </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
-                                                                                    <color key="value" red="0.61052644249999999" green="0.14460611340000001" blue="0.1226233467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                     </subviews>
@@ -1472,6 +1474,11 @@
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <size key="customSize" width="180" height="190"/>
+                                                                <connections>
+                                                                    <outlet property="clinicImg" destination="7fe-sh-Vex" id="ScM-69-zA9"/>
+                                                                    <outlet property="mainView" destination="abw-qo-gKq" id="j1e-No-p7R"/>
+                                                                    <outlet property="nameTxt" destination="poS-h7-tbR" id="2UN-j7-272"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -1811,14 +1818,14 @@
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1qU-AD-k3v">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="avD-P6-qSz">
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="avD-P6-qSz">
                                                     <size key="itemSize" width="263" height="272"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="v6T-qf-ow2">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="v6T-qf-ow2" customClass="AllproductCell" customModule="Proderma" customModuleProvider="target">
                                                         <rect key="frame" x="75.5" y="0.0" width="263" height="272"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xnW-nL-Mhh">
@@ -1883,6 +1890,11 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="263" height="272"/>
+                                                        <connections>
+                                                            <outlet property="mainView" destination="1XI-Jt-Qdt" id="7YT-Ua-e7D"/>
+                                                            <outlet property="nameTxt" destination="Tzf-wd-cpp" id="AIB-rX-SBY"/>
+                                                            <outlet property="productImg" destination="t7L-Rc-K9A" id="rjV-DM-Efo"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -1917,6 +1929,9 @@
                             <constraint firstItem="qsV-Jk-euZ" firstAttribute="height" secondItem="i1B-iR-DFw" secondAttribute="height" id="qMs-ux-f3m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cvProduct" destination="1qU-AD-k3v" id="fUQ-0B-34u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1j-5G-r04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2540,6 +2555,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onBactBtn:" destination="XO0-yj-Nuk" eventType="touchUpInside" id="wSt-Fn-jKI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2558,9 +2576,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-qb-mZs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="903.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="853.5"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWr-0w-rbd">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWr-0w-rbd" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                                                 <rect key="frame" x="10.5" y="10" width="393" height="393.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -2774,20 +2792,20 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-fA-AvT">
-                                                                <rect key="frame" x="20.5" y="693.5" width="373" height="200"/>
+                                                                <rect key="frame" x="20.5" y="693.5" width="373" height="150"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="200" id="lPF-SH-tQc"/>
+                                                                    <constraint firstAttribute="height" constant="150" id="lPF-SH-tQc"/>
                                                                 </constraints>
-                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ogb-bn-fnh">
+                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ogb-bn-fnh">
                                                                     <size key="itemSize" width="195" height="193"/>
                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sRE-sd-3vO">
-                                                                        <rect key="frame" x="0.0" y="3.5" width="195" height="193"/>
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="sRE-sd-3vO" customClass="ProductClinicCell" customModule="Proderma" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="-21.5" width="195" height="193"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rvb-5e-3K3">
                                                                             <rect key="frame" x="0.0" y="0.0" width="195" height="193"/>
@@ -2848,6 +2866,11 @@
                                                                             </constraints>
                                                                         </collectionViewCellContentView>
                                                                         <size key="customSize" width="195" height="193"/>
+                                                                        <connections>
+                                                                            <outlet property="clinicImg" destination="cQI-Xt-MSI" id="ZNZ-zD-HNH"/>
+                                                                            <outlet property="mainView" destination="ACA-RO-ZrD" id="sxF-Nl-chf"/>
+                                                                            <outlet property="nameTxt" destination="JfE-jU-Lf2" id="AIY-Ko-X15"/>
+                                                                        </connections>
                                                                     </collectionViewCell>
                                                                 </cells>
                                                             </collectionView>
@@ -2917,6 +2940,15 @@
                             <constraint firstItem="Uba-hU-nOW" firstAttribute="centerY" secondItem="XV0-c6-KqX" secondAttribute="centerY" id="q6Q-Tt-PhU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countTxt" destination="sxo-0P-KN4" id="1UT-sd-iaZ"/>
+                        <outlet property="descriptionTxt" destination="bZG-AH-8Ik" id="zJj-PL-Lkd"/>
+                        <outlet property="extraTxt" destination="gjF-Rx-V5p" id="cID-XO-2oU"/>
+                        <outlet property="nameTxt" destination="Fw8-py-er5" id="BZd-WG-o1H"/>
+                        <outlet property="priceTxt" destination="Nx5-P8-9dE" id="X8o-a1-tv5"/>
+                        <outlet property="productCV" destination="cAd-fA-AvT" id="7Gc-AL-USK"/>
+                        <outlet property="productSlider" destination="TWr-0w-rbd" id="9fH-2g-Nsr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkK-G2-zp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5523,7 +5555,7 @@
     </scenes>
     <resources>
         <image name="alarm" width="170" height="170"/>
-        <image name="chevron.left" catalog="system" width="32" height="32"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="iccall" width="348" height="348"/>
         <image name="icchat" width="215" height="215"/>
         <image name="icedit" width="512" height="512"/>

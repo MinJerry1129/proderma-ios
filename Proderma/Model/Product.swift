@@ -2,8 +2,8 @@ import Foundation
 
 struct Product {
     var id : String
-    var title : String
-    var description : String
+    var name : String
     var price : String
-    var category_id : String
+    var photo : String
+    var description : String
 }

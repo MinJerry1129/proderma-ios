@@ -39,6 +39,12 @@
 		C541469625CF6F6C007F73AB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469525CF6F6C007F73AB /* Global.swift */; };
 		C541469925CF6F7D007F73AB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469825CF6F7D007F73AB /* Product.swift */; };
 		C541469C25CF733E007F73AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C541469B25CF733E007F73AB /* GoogleService-Info.plist */; };
+		C54146D025CFE923007F73AB /* HomeclinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54146CF25CFE923007F73AB /* HomeclinicCell.swift */; };
+		C54146D325CFED80007F73AB /* HomeproductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54146D225CFED80007F73AB /* HomeproductCell.swift */; };
+		C54146D725CFF295007F73AB /* AllproductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54146D625CFF295007F73AB /* AllproductCell.swift */; };
+		C541473925D0D601007F73AB /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473825D0D601007F73AB /* ProductImage.swift */; };
+		C541473C25D0D6F6007F73AB /* ClinicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473B25D0D6F6007F73AB /* ClinicImage.swift */; };
+		C541473F25D0E32D007F73AB /* ProductClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473E25D0E32D007F73AB /* ProductClinicCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +84,12 @@
 		C541469525CF6F6C007F73AB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C541469825CF6F7D007F73AB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C541469B25CF733E007F73AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C54146CF25CFE923007F73AB /* HomeclinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeclinicCell.swift; sourceTree = "<group>"; };
+		C54146D225CFED80007F73AB /* HomeproductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeproductCell.swift; sourceTree = "<group>"; };
+		C54146D625CFF295007F73AB /* AllproductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllproductCell.swift; sourceTree = "<group>"; };
+		C541473825D0D601007F73AB /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
+		C541473B25D0D6F6007F73AB /* ClinicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicImage.swift; sourceTree = "<group>"; };
+		C541473E25D0E32D007F73AB /* ProductClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClinicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,9 @@
 		C51F73C425C1DD1E0047C80B /* Proderma */ = {
 			isa = PBXGroup;
 			children = (
+				C51F73C525C1DD1E0047C80B /* AppDelegate.swift */,
+				C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */,
+				C51F73C925C1DD1E0047C80B /* SelLangVC.swift */,
 				C541469B25CF733E007F73AB /* GoogleService-Info.plist */,
 				C524BAB425CDA132005980B5 /* Home */,
 				C524BAB625CDA140005980B5 /* Clinic */,
@@ -131,9 +146,6 @@
 				C524BABC25CDA1B6005980B5 /* Log */,
 				C524BABD25CDA1BF005980B5 /* Cell */,
 				C541469125CF6EF7007F73AB /* Model */,
-				C51F73C525C1DD1E0047C80B /* AppDelegate.swift */,
-				C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */,
-				C51F73C925C1DD1E0047C80B /* SelLangVC.swift */,
 				C51F73CB25C1DD1E0047C80B /* Main.storyboard */,
 				C51F73CE25C1DD200047C80B /* Assets.xcassets */,
 				C51F73D025C1DD200047C80B /* LaunchScreen.storyboard */,
@@ -215,6 +227,10 @@
 		C524BABD25CDA1BF005980B5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C54146CF25CFE923007F73AB /* HomeclinicCell.swift */,
+				C54146D225CFED80007F73AB /* HomeproductCell.swift */,
+				C54146D625CFF295007F73AB /* AllproductCell.swift */,
+				C541473E25D0E32D007F73AB /* ProductClinicCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -224,6 +240,8 @@
 			children = (
 				C541469225CF6F09007F73AB /* Clinic.swift */,
 				C541469825CF6F7D007F73AB /* Product.swift */,
+				C541473825D0D601007F73AB /* ProductImage.swift */,
+				C541473B25D0D6F6007F73AB /* ClinicImage.swift */,
 				C541469525CF6F6C007F73AB /* Global.swift */,
 			);
 			path = Model;
@@ -372,24 +390,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C524BAE925CDA31C005980B5 /* SettingHomeVC.swift in Sources */,
+				C541473C25D0D6F6007F73AB /* ClinicImage.swift in Sources */,
 				C524BAE625CDA308005980B5 /* HistoryHomeVC.swift in Sources */,
 				C524BAF125CDA340005980B5 /* LoginVC.swift in Sources */,
 				C524BAED25CDA332005980B5 /* LogHomeVC.swift in Sources */,
 				C524BAD725CDA297005980B5 /* ClinicDoctorAddVC.swift in Sources */,
 				C524BACE25CDA261005980B5 /* ProductInfoVC.swift in Sources */,
+				C541473925D0D601007F73AB /* ProductImage.swift in Sources */,
 				C524BAC525CDA226005980B5 /* AllClinicVC.swift in Sources */,
 				C524BAE325CDA2F1005980B5 /* EventHomeVC.swift in Sources */,
 				C524BACB25CDA24B005980B5 /* OneClinicVC.swift in Sources */,
 				C524BADD25CDA2C1005980B5 /* ClinicPhotoAllVC.swift in Sources */,
 				C524BAF925CDA362005980B5 /* SignupClinicVC.swift in Sources */,
 				C524BAC825CDA23A005980B5 /* OneProductVC.swift in Sources */,
+				C54146D325CFED80007F73AB /* HomeproductCell.swift in Sources */,
 				C524BA8425CCDB6A005980B5 /* ChatVC.swift in Sources */,
 				C524BAD125CDA273005980B5 /* ClinicHomeVC.swift in Sources */,
 				C524BAD425CDA282005980B5 /* ClinicInfoEditVC.swift in Sources */,
 				C524BABF25CDA1DF005980B5 /* HomeVC.swift in Sources */,
 				C51F73CA25C1DD1E0047C80B /* SelLangVC.swift in Sources */,
 				C524BAE025CDA2D9005980B5 /* ClinicPhotoDelVC.swift in Sources */,
+				C54146D725CFF295007F73AB /* AllproductCell.swift in Sources */,
+				C54146D025CFE923007F73AB /* HomeclinicCell.swift in Sources */,
 				C541469625CF6F6C007F73AB /* Global.swift in Sources */,
+				C541473F25D0E32D007F73AB /* ProductClinicCell.swift in Sources */,
 				C51F73C625C1DD1E0047C80B /* AppDelegate.swift in Sources */,
 				C541469925CF6F7D007F73AB /* Product.swift in Sources */,
 				C524BAFC25CDA47F005980B5 /* ChangePassVC.swift in Sources */,

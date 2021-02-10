@@ -14,8 +14,11 @@ target 'Proderma' do
   pod 'iOSDropDown'
   pod 'SDWebImage'
   pod 'Toast-Swift'
+  pod 'ImageSlideshow'
+  pod "ImageSlideshow/Alamofire"
   
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Messaging'
   
 end
