@@ -20,27 +20,45 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var extraTxt: UITextField!
     @IBOutlet weak var descriptionTxt: UITextView!
     @IBOutlet weak var productCV: UICollectionView!
+    @IBOutlet weak var orderBtn: UIButton!
+    @IBOutlet weak var cvConstraint: NSLayoutConstraint!
     
+    var productinfoVC : ProductInfoVC!
     var productID : String!
     var productName : String!
     var productPrice : String!
     var productPercent : String!
     var productInformation : String!
     var productPhoto : String!
+    var loginStatus = "no"
     
     var allClinics = [Clinic]()
     var allImages = [ProductImage]()
     var spinnerView = JTMaterialSpinner()
+    var image : [UIImage] = []
+    var inputSource: [InputSource] = []
     
     override func viewDidLoad() {
         productID = AppDelegate.shared().productID
+        loginStatus = AppDelegate.shared().loginStatus
         super.viewDidLoad()
         productCV.delegate = self
         productCV.dataSource = self
+        
+        let pageControl = UIPageControl()
+        pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        pageControl.pageIndicatorTintColor = UIColor.black
+        productSlider.pageIndicator = pageControl
+        productSlider.activityIndicator = DefaultActivityIndicator()
+        if loginStatus == "no"{
+            cvConstraint.constant = 10
+            orderBtn.isHidden = true
+        }
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        allImages=[]
+        inputSource = []
         getData()
     }
     func getData(){
@@ -82,6 +100,7 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
                                             
                         let imagecell = ProductImage(id: id, productid: productid, photo: photo, status: status)
                         self.allImages.append(imagecell)
+                        self.inputSource.append(AlamofireSource(urlString: Global.baseUrl + photo)!)                        
                     }
                 }
                 self.productName = productInfo!["name"] as! String
@@ -91,6 +110,7 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
                 self.productPhoto = productInfo!["photo"] as! String
                 
                 self.showInfo();
+                self.productSlider.setImageInputs(self.inputSource)
                 self.productCV.reloadData()
             }
         }
@@ -121,6 +141,11 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         return CGSize(width: collectionView.bounds.height * 0.95, height: collectionView.bounds.height * 0.95)
     }
     
+    @IBAction func onInfoBtn(_ sender: Any) {
+        self.productinfoVC = self.storyboard?.instantiateViewController(withIdentifier: "productinfoVC") as? ProductInfoVC
+        self.productinfoVC.modalPresentationStyle = .fullScreen
+        self.present(self.productinfoVC, animated: true, completion: nil)
+    }
     @IBAction func onBactBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -45,6 +45,9 @@
 		C541473925D0D601007F73AB /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473825D0D601007F73AB /* ProductImage.swift */; };
 		C541473C25D0D6F6007F73AB /* ClinicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473B25D0D6F6007F73AB /* ClinicImage.swift */; };
 		C541473F25D0E32D007F73AB /* ProductClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473E25D0E32D007F73AB /* ProductClinicCell.swift */; };
+		C56379B425D4363F00B99EE5 /* ProductPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B325D4363F00B99EE5 /* ProductPdf.swift */; };
+		C56379B725D4372D00B99EE5 /* Productvideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B625D4372D00B99EE5 /* Productvideo.swift */; };
+		C56379BA25D4376B00B99EE5 /* ProductinfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		C541473825D0D601007F73AB /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		C541473B25D0D6F6007F73AB /* ClinicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicImage.swift; sourceTree = "<group>"; };
 		C541473E25D0E32D007F73AB /* ProductClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClinicCell.swift; sourceTree = "<group>"; };
+		C56379B325D4363F00B99EE5 /* ProductPdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPdf.swift; sourceTree = "<group>"; };
+		C56379B625D4372D00B99EE5 /* Productvideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productvideo.swift; sourceTree = "<group>"; };
+		C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductinfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				C54146CF25CFE923007F73AB /* HomeclinicCell.swift */,
+				C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */,
 				C54146D225CFED80007F73AB /* HomeproductCell.swift */,
 				C54146D625CFF295007F73AB /* AllproductCell.swift */,
 				C541473E25D0E32D007F73AB /* ProductClinicCell.swift */,
@@ -243,6 +250,8 @@
 				C541473825D0D601007F73AB /* ProductImage.swift */,
 				C541473B25D0D6F6007F73AB /* ClinicImage.swift */,
 				C541469525CF6F6C007F73AB /* Global.swift */,
+				C56379B325D4363F00B99EE5 /* ProductPdf.swift */,
+				C56379B625D4372D00B99EE5 /* Productvideo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C524BAE925CDA31C005980B5 /* SettingHomeVC.swift in Sources */,
+				C56379BA25D4376B00B99EE5 /* ProductinfoCell.swift in Sources */,
 				C541473C25D0D6F6007F73AB /* ClinicImage.swift in Sources */,
 				C524BAE625CDA308005980B5 /* HistoryHomeVC.swift in Sources */,
 				C524BAF125CDA340005980B5 /* LoginVC.swift in Sources */,
@@ -418,9 +428,11 @@
 				C541469925CF6F7D007F73AB /* Product.swift in Sources */,
 				C524BAFC25CDA47F005980B5 /* ChangePassVC.swift in Sources */,
 				C541469325CF6F09007F73AB /* Clinic.swift in Sources */,
+				C56379B725D4372D00B99EE5 /* Productvideo.swift in Sources */,
 				C524BAC225CDA218005980B5 /* AllProductVC.swift in Sources */,
 				C524BADA25CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift in Sources */,
 				C524BAF525CDA353005980B5 /* SignupVC.swift in Sources */,
+				C56379B425D4363F00B99EE5 /* ProductPdf.swift in Sources */,
 				C51F73C825C1DD1E0047C80B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

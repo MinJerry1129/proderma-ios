@@ -40,6 +40,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         getData()
     }
     func getData(){
+        allProducts = []
+        allClinics = []
         deviceID = UIDevice.current.identifierForVendor?.uuidString
         deviceToken = AppDelegate.shared().fcmtoken
 
