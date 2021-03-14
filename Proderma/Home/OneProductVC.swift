@@ -30,6 +30,8 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     var productPercent : String!
     var productInformation : String!
     var productPhoto : String!
+    var clinicID : String!
+    var userType : String!
     var loginStatus = "no"
     
     var allClinics = [Clinic]()
@@ -41,6 +43,7 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     override func viewDidLoad() {
         productID = AppDelegate.shared().productID
         loginStatus = AppDelegate.shared().loginStatus
+        clinicID = AppDelegate.shared().clinicID
         super.viewDidLoad()
         productCV.delegate = self
         productCV.dataSource = self
@@ -54,7 +57,18 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
             cvConstraint.constant = 10
             orderBtn.isHidden = true
         }
-
+        countTxt.addTarget(self, action: #selector(countChange), for: .editingChanged)
+    }
+    @objc func countChange(){
+        if(countTxt.text == ""){
+            extraTxt.text = "0"
+        }else{
+            let countInt = Int(countTxt.text!)
+            let percentInt = Int(productPercent)
+            let extraInt = countInt! * percentInt!/100
+            extraTxt.text = "\(extraInt)"
+        }
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -114,9 +128,8 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
                 self.productCV.reloadData()
             }
         }
-        
-        
     }
+    
     func showInfo(){
         nameTxt.text = productName
         priceTxt.text = productPrice
@@ -146,6 +159,11 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         self.productinfoVC.modalPresentationStyle = .fullScreen
         self.present(self.productinfoVC, animated: true, completion: nil)
     }
+    
+    @IBAction func onOrderProduct(_ sender: Any) {
+        
+    }
+    
     @IBAction func onBactBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
