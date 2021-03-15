@@ -105,6 +105,7 @@ PODS:
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
   - SimpleCheckbox (2.1.0)
+  - SwiftyGif (5.4.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
@@ -120,6 +121,7 @@ DEPENDENCIES:
   - JTMaterialSpinner
   - SDWebImage
   - SimpleCheckbox
+  - SwiftyGif
   - Toast-Swift
 
 SPEC REPOS:
@@ -148,6 +150,7 @@ SPEC REPOS:
     - PromisesObjC
     - SDWebImage
     - SimpleCheckbox
+    - SwiftyGif
     - Toast-Swift
 
 SPEC CHECKSUMS:
@@ -175,8 +178,9 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
+  SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: ed5a7a7d45e40d9d8b787f2bba10dfb4526d6fe2
+PODFILE CHECKSUM: 9b9035a37df9bea22e3c5dfc818a37b2aeb550c9
 
 COCOAPODS: 1.10.1

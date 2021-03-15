@@ -17,19 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kyC-En-QNO">
-                                <rect key="frame" x="41.5" y="287.5" width="331" height="331"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="kyC-En-QNO" secondAttribute="height" multiplier="1:1" id="hrF-Xu-dZ2"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.gif" translatesAutoresizingMaskIntoConstraints="NO" id="kyC-En-QNO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kyC-En-QNO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="f9J-Uf-WRt"/>
+                            <constraint firstItem="kyC-En-QNO" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="Nhr-w8-r9z"/>
+                            <constraint firstItem="kyC-En-QNO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="f9J-Uf-WRt"/>
                             <constraint firstItem="kyC-En-QNO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pux-m7-ybx"/>
-                            <constraint firstItem="kyC-En-QNO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="vhW-tj-J38"/>
+                            <constraint firstItem="kyC-En-QNO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="vhW-tj-J38"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="300" height="292"/>
+        <image name="splash.gif" width="1284" height="2778"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

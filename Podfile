@@ -16,6 +16,7 @@ target 'Proderma' do
   pod 'Toast-Swift'
   pod 'ImageSlideshow'
   pod "ImageSlideshow/Alamofire"
+  pod 'SwiftyGif'
   
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'

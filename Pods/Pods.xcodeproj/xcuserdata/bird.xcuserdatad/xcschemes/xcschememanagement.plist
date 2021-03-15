@@ -165,12 +165,19 @@
 			<key>orderHint</key>
 			<integer>24</integer>
 		</dict>
-		<key>Toast-Swift.xcscheme</key>
+		<key>SwiftyGif.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>25</integer>
+		</dict>
+		<key>Toast-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>26</integer>
 		</dict>
 		<key>iOSDropDown.xcscheme</key>
 		<dict>

@@ -22,6 +22,12 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var productCV: UICollectionView!
     @IBOutlet weak var orderBtn: UIButton!
     @IBOutlet weak var cvConstraint: NSLayoutConstraint!
+    @IBOutlet weak var priceViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var clinicViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var priceView: UIView!
+    @IBOutlet weak var infoView: UIView!
+    
     
     var productinfoVC : ProductInfoVC!
     var productID : String!
@@ -53,8 +59,12 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         pageControl.pageIndicatorTintColor = UIColor.black
         productSlider.pageIndicator = pageControl
         productSlider.activityIndicator = DefaultActivityIndicator()
+        priceView.layer.borderColor = UIColor(named: "major")?.cgColor
+        infoView.layer.borderColor = UIColor(named: "major")?.cgColor
+        clinicViewHeight.constant = 0
         if loginStatus == "no"{
             cvConstraint.constant = 10
+            priceViewHeight.constant = 0
             orderBtn.isHidden = true
         }
         countTxt.addTarget(self, action: #selector(countChange), for: .editingChanged)
@@ -76,6 +86,7 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         getData()
     }
     func getData(){
+        allClinics = []
         self.view.addSubview(spinnerView)
         spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
         spinnerView.circleLayer.lineWidth = 2.0
@@ -97,13 +108,15 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
                         let photo = clinicInfos![i]["photo"] as! String
                         let description = clinicInfos![i]["information"] as! String
                         let phone = clinicInfos![i]["mobile"] as! String
+                        let whatsapp = clinicInfos![i]["whatsapp"] as! String
                         let doctor = "0"
                         let latitude = clinicInfos![i]["latitude"] as! String
                         let longitude = clinicInfos![i]["longitude"] as! String
                         
-                        let cliniccell = Clinic(id: id, name: name, location: location, photo: photo, description: description, phone: phone, doctor: doctor, latlng: latitude+","+longitude)
+                        let cliniccell = Clinic(id: id, name: name, location: location, photo: photo, description: description, phone: phone, whatsapp: whatsapp, doctor: doctor, latlng: latitude+","+longitude, latitude: latitude, longitude: longitude)
                         self.allClinics.append(cliniccell)
                     }
+                    self.clinicViewHeight.constant = 150
                 }
                 if(productImages!.count > 0){
                     for i in 0 ... (productImages!.count)-1 {
@@ -126,6 +139,7 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
                 self.showInfo();
                 self.productSlider.setImageInputs(self.inputSource)
                 self.productCV.reloadData()
+                self.productCV.updateConstraints()
             }
         }
     }

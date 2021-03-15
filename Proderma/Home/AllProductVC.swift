@@ -14,12 +14,20 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     var homeVC : HomeVC!
     var oneproductVC : OneProductVC!
     var allProducts = [Product]()
+    var allFilterProducts = [Product]()
+    var allBrands = [Brand]()
     var spinnerView = JTMaterialSpinner()
+    
+    @IBOutlet weak var cvBrand: UICollectionView!
     @IBOutlet weak var cvProduct: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cvProduct.delegate = self
         cvProduct.dataSource = self
+        
+        cvBrand.delegate = self
+        cvBrand.dataSource = self
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +37,8 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     
     func getData(){
         allProducts = []
+        allFilterProducts = []
+        allBrands = []
         self.view.addSubview(spinnerView)
         spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
         spinnerView.circleLayer.lineWidth = 2.0
@@ -40,47 +50,127 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
             self.spinnerView.endRefreshing()
             if let value = response.value as? [String: AnyObject] {
                 let productsInfos = value["productsInfo"] as? [[String: AnyObject]]
-                
-                for i in 0 ... (productsInfos!.count)-1 {
-                    let id = productsInfos![i]["id"] as! String
-                    let name = productsInfos![i]["name"] as! String
-                    let price = productsInfos![i]["price"] as! String
-                    let photo = productsInfos![i]["photo"] as! String
-                    let description = productsInfos![i]["information"] as! String
-                    
-                    let productcell = Product(id: id, name: name, price: price, photo: photo, description: description)
-                    self.allProducts.append(productcell)
+                let brandsInfos = value["brandsInfo"] as? [[String: AnyObject]]
+                self.allBrands.append(Brand(id: "0", name: "A l l"))
+                if(productsInfos!.count > 0){
+                    for i in 0 ... (productsInfos!.count)-1 {
+                        let id = productsInfos![i]["id"] as! String
+                        let brandid = productsInfos![i]["brandid"] as! String
+                        let name = productsInfos![i]["name"] as! String
+                        let price = productsInfos![i]["price"] as! String
+                        let percent = productsInfos![i]["percent"] as! String
+                        let photo = productsInfos![i]["photo"] as! String
+                        let description = productsInfos![i]["information"] as! String
+                        
+                        let productcell = Product(id: id,brandid: brandid, name: name, price: price, percent: percent, photo: photo, description: description)
+                        self.allProducts.append(productcell)
+                        self.allFilterProducts.append(productcell)
+                    }
                 }
+                if(brandsInfos!.count > 0){
+                    for i in 0 ... (brandsInfos!.count)-1 {
+                        let id = brandsInfos![i]["id"] as! String
+                        let name = brandsInfos![i]["name"] as! String
+                        
+                        let brandCell = Brand(id: id, name: name)
+                        self.allBrands.append(brandCell)
+                    }
+                }
+                
                 self.cvProduct.reloadData()
+                self.cvBrand.reloadData()
             }
         }
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allProducts.count
+        if(collectionView.tag == 103){
+            return allFilterProducts.count
+        }else{
+            return allBrands.count
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let oneProduct: Product
-        oneProduct =  allProducts[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! AllproductCell
-        cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
-        cell.productImg.sd_setImage(with: URL(string: Global.baseUrl + oneProduct.photo), completed: nil)
-        cell.nameTxt.text = oneProduct.name
-        return cell
+        if collectionView.tag == 103{
+            let oneProduct: Product
+            oneProduct =  allFilterProducts[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! AllproductCell
+            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+            cell.productImg.sd_setImage(with: URL(string: Global.baseUrl + oneProduct.photo), completed: nil)
+            cell.nameTxt.text = oneProduct.name
+            return cell
+        }else{
+            let onBrand: Brand
+            onBrand =  allBrands[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! BrandCell
+            cell.brandTxt.text = onBrand.name
+            return cell
+        }
+        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        AppDelegate.shared().productID = allProducts[indexPath.row].id
-        self.oneproductVC = self.storyboard?.instantiateViewController(withIdentifier: "oneproductVC") as? OneProductVC
-        self.oneproductVC.modalPresentationStyle = .fullScreen
-        self.present(self.oneproductVC, animated: true, completion: nil)
+        if collectionView.tag == 103{
+            AppDelegate.shared().productID = allFilterProducts[indexPath.row].id
+            self.oneproductVC = self.storyboard?.instantiateViewController(withIdentifier: "oneproductVC") as? OneProductVC
+            self.oneproductVC.modalPresentationStyle = .fullScreen
+            self.present(self.oneproductVC, animated: true, completion: nil)
+        }else{
+            allFilterProducts = []
+            if indexPath.row == 0{
+                if(allProducts.count > 0){
+                    for i in 0 ... allProducts.count - 1 {
+                        allFilterProducts.append(allProducts[i])
+                    }
+                }
+            }else{
+                if(allProducts.count > 0){
+                    for i in 0 ... allProducts.count - 1 {
+                        if allProducts[i].brandid == allBrands[indexPath.row].id{
+                            allFilterProducts.append(allProducts[i])
+                        }
+                    }
+                }
+                
+            }
+            cvProduct.reloadData()
+        }
+        
+        
 
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.bounds.width-40) * 0.5, height: (collectionView.bounds.width-40) * 0.5)
+        if collectionView.tag == 103{
+            return CGSize(width: (collectionView.bounds.width-40) * 0.5, height: (collectionView.bounds.width-40) * 0.5)
+        }else{
+            var width = self.getRowHeightFromText(strText: allBrands[indexPath.row].name)
+            if width < 100{
+                width = 100
+            }
+            return CGSize(width: width + 10, height: 40)
+        }
     }
 
     @IBAction func onBtnBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func getRowHeightFromText(strText : String!) -> CGFloat
+    {
+        let textView : UITextView! = UITextView(frame: CGRect(x: 0, y: 0, width: 0,  height: 40))
+        textView.text = strText
+        textView.font = UIFont(name: "system", size:  11.0)
+        textView.sizeToFit()
+
+        var txt_frame : CGRect! = CGRect()
+        txt_frame = textView.frame
+
+        var size : CGSize! = CGSize()
+        size = txt_frame.size
+
+        size.width = txt_frame.size.width
+
+        return size.width
     }
 }

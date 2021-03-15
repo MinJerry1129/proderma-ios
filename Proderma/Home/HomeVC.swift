@@ -18,6 +18,13 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var allclinicVC : AllClinicVC!
     var oneproductVC : OneProductVC!
     var oneclinicVC : OneClinicVC!
+    
+    var chatVC : ChatVC!
+    
+    var historyhomeVC : HistoryHomeVC!
+    
+    var settinghomeVC : SettingHomeVC!
+    
     var spinnerView = JTMaterialSpinner()
 
     @IBOutlet weak var txtNews: UITextView!
@@ -58,30 +65,38 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             if let value = response.value as? [String: AnyObject] {
                 let clinicInfos = value["clinicsInfo"] as? [[String: AnyObject]]
                 let productsInfos = value["productsInfo"] as? [[String: AnyObject]]
-                for i in 0 ... (clinicInfos!.count)-1 {
-                    let id = clinicInfos![i]["id"] as! String
-                    let name = clinicInfos![i]["clinicname"] as! String
-                    let location = clinicInfos![i]["location"] as! String
-                    let photo = clinicInfos![i]["photo"] as! String
-                    let description = clinicInfos![i]["information"] as! String
-                    let phone = clinicInfos![i]["mobile"] as! String
-                    let doctor = "0"
-                    let latitude = clinicInfos![i]["latitude"] as! String
-                    let longitude = clinicInfos![i]["longitude"] as! String
-                    
-                    let cliniccell = Clinic(id: id, name: name, location: location, photo: photo, description: description, phone: phone, doctor: doctor, latlng: latitude+","+longitude)
-                    self.allClinics.append(cliniccell)
+                if clinicInfos!.count > 0{
+                    for i in 0 ... (clinicInfos!.count)-1 {
+                        let id = clinicInfos![i]["id"] as! String
+                        let name = clinicInfos![i]["clinicname"] as! String
+                        let location = clinicInfos![i]["location"] as! String
+                        let photo = clinicInfos![i]["photo"] as! String
+                        let description = clinicInfos![i]["information"] as! String
+                        let phone = clinicInfos![i]["mobile"] as! String
+                        let whatsapp = clinicInfos![i]["whatsapp"] as! String
+                        let doctor = "0"
+                        let latitude = clinicInfos![i]["latitude"] as! String
+                        let longitude = clinicInfos![i]["longitude"] as! String
+                        
+                        let cliniccell = Clinic(id: id, name: name, location: location, photo: photo, description: description, phone: phone, whatsapp: whatsapp, doctor: doctor, latlng: latitude+","+longitude, latitude: latitude, longitude: longitude)
+                        self.allClinics.append(cliniccell)
+                    }
                 }
-                for i in 0 ... (productsInfos!.count)-1 {
-                    let id = productsInfos![i]["id"] as! String
-                    let name = productsInfos![i]["name"] as! String
-                    let price = productsInfos![i]["price"] as! String
-                    let photo = productsInfos![i]["photo"] as! String
-                    let description = productsInfos![i]["information"] as! String
-                    
-                    let productcell = Product(id: id, name: name, price: price, photo: photo, description: description)
-                    self.allProducts.append(productcell)
+                if productsInfos!.count > 0{
+                    for i in 0 ... (productsInfos!.count)-1 {
+                        let id = productsInfos![i]["id"] as! String
+                        let brandid = productsInfos![i]["brandid"] as! String
+                        let name = productsInfos![i]["name"] as! String
+                        let price = productsInfos![i]["price"] as! String
+                        let percent = productsInfos![i]["percent"] as! String
+                        let photo = productsInfos![i]["photo"] as! String
+                        let description = productsInfos![i]["information"] as! String
+                        
+                        let productcell = Product(id: id,brandid: brandid, name: name, price: price, percent: percent, photo: photo, description: description)
+                        self.allProducts.append(productcell)
+                    }
                 }
+                
                 self.cvClinic.reloadData()
                 self.cvProduct.reloadData()
             }
@@ -162,12 +177,21 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     @IBAction func onBtnChat(_ sender: Any) {
+        self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
+        self.chatVC.modalPresentationStyle = .fullScreen
+        self.present(self.chatVC, animated: true, completion: nil)
     }
     
     @IBAction func onBtnHistory(_ sender: Any) {
+        self.historyhomeVC = self.storyboard?.instantiateViewController(withIdentifier: "historyhomeVC") as? HistoryHomeVC
+        self.historyhomeVC.modalPresentationStyle = .fullScreen
+        self.present(self.historyhomeVC, animated: true, completion: nil)
     }
     
     @IBAction func onBtnSetting(_ sender: Any) {
+        self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
+        self.chatVC.modalPresentationStyle = .fullScreen
+        self.present(self.chatVC, animated: true, completion: nil)
     }
     
 }

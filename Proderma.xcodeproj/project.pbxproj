@@ -35,6 +35,18 @@
 		C524BAF525CDA353005980B5 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAF425CDA353005980B5 /* SignupVC.swift */; };
 		C524BAF925CDA362005980B5 /* SignupClinicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAF825CDA362005980B5 /* SignupClinicVC.swift */; };
 		C524BAFC25CDA47F005980B5 /* ChangePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C524BAFB25CDA47F005980B5 /* ChangePassVC.swift */; };
+		C527609525FF8B09002F3989 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527609425FF8B09002F3989 /* BrandCell.swift */; };
+		C527609825FF8F32002F3989 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527609725FF8F32002F3989 /* Brand.swift */; };
+		C527611825FF957E002F3989 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = C527611725FF957E002F3989 /* splash.gif */; };
+		C52761A525FF996E002F3989 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761A325FF996D002F3989 /* LogoAnimationView.swift */; };
+		C52761A625FF996E002F3989 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761A425FF996E002F3989 /* UIView+Constraints.swift */; };
+		C52761A925FF9989002F3989 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761A825FF9989002F3989 /* SplashVC.swift */; };
+		C52761AC25FF9D20002F3989 /* AllClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761AB25FF9D20002F3989 /* AllClinicCell.swift */; };
+		C52761AF25FFB934002F3989 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761AE25FFB934002F3989 /* Doctor.swift */; };
+		C52761B225FFB943002F3989 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761B125FFB943002F3989 /* Offer.swift */; };
+		C52761B525FFC016002F3989 /* HomeDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761B425FFC016002F3989 /* HomeDoctorCell.swift */; };
+		C52761B925FFC322002F3989 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52761B725FFC322002F3989 /* OfferCell.swift */; };
+		C52761BA25FFC322002F3989 /* OfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C52761B825FFC322002F3989 /* OfferCell.xib */; };
 		C541469325CF6F09007F73AB /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469225CF6F09007F73AB /* Clinic.swift */; };
 		C541469625CF6F6C007F73AB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469525CF6F6C007F73AB /* Global.swift */; };
 		C541469925CF6F7D007F73AB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469825CF6F7D007F73AB /* Product.swift */; };
@@ -83,6 +95,18 @@
 		C524BAF425CDA353005980B5 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		C524BAF825CDA362005980B5 /* SignupClinicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupClinicVC.swift; sourceTree = "<group>"; };
 		C524BAFB25CDA47F005980B5 /* ChangePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassVC.swift; sourceTree = "<group>"; };
+		C527609425FF8B09002F3989 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
+		C527609725FF8F32002F3989 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		C527611725FF957E002F3989 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
+		C52761A325FF996D002F3989 /* LogoAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		C52761A425FF996E002F3989 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		C52761A825FF9989002F3989 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		C52761AB25FF9D20002F3989 /* AllClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllClinicCell.swift; sourceTree = "<group>"; };
+		C52761AE25FFB934002F3989 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		C52761B125FFB943002F3989 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		C52761B425FFC016002F3989 /* HomeDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorCell.swift; sourceTree = "<group>"; };
+		C52761B725FFC322002F3989 /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
+		C52761B825FFC322002F3989 /* OfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCell.xib; sourceTree = "<group>"; };
 		C541469225CF6F09007F73AB /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		C541469525CF6F6C007F73AB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C541469825CF6F7D007F73AB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -141,8 +165,10 @@
 			children = (
 				C51F73C525C1DD1E0047C80B /* AppDelegate.swift */,
 				C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */,
+				C527611725FF957E002F3989 /* splash.gif */,
 				C51F73C925C1DD1E0047C80B /* SelLangVC.swift */,
 				C541469B25CF733E007F73AB /* GoogleService-Info.plist */,
+				C527613925FF9932002F3989 /* Gifanimation */,
 				C524BAB425CDA132005980B5 /* Home */,
 				C524BAB625CDA140005980B5 /* Clinic */,
 				C524BAB725CDA146005980B5 /* Event */,
@@ -237,9 +263,24 @@
 				C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */,
 				C54146D225CFED80007F73AB /* HomeproductCell.swift */,
 				C54146D625CFF295007F73AB /* AllproductCell.swift */,
+				C52761AB25FF9D20002F3989 /* AllClinicCell.swift */,
 				C541473E25D0E32D007F73AB /* ProductClinicCell.swift */,
+				C52761B425FFC016002F3989 /* HomeDoctorCell.swift */,
+				C527609425FF8B09002F3989 /* BrandCell.swift */,
+				C52761B725FFC322002F3989 /* OfferCell.swift */,
+				C52761B825FFC322002F3989 /* OfferCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C527613925FF9932002F3989 /* Gifanimation */ = {
+			isa = PBXGroup;
+			children = (
+				C52761A325FF996D002F3989 /* LogoAnimationView.swift */,
+				C52761A425FF996E002F3989 /* UIView+Constraints.swift */,
+				C52761A825FF9989002F3989 /* SplashVC.swift */,
+			);
+			path = Gifanimation;
 			sourceTree = "<group>";
 		};
 		C541469125CF6EF7007F73AB /* Model */ = {
@@ -247,11 +288,14 @@
 			children = (
 				C541469225CF6F09007F73AB /* Clinic.swift */,
 				C541469825CF6F7D007F73AB /* Product.swift */,
+				C527609725FF8F32002F3989 /* Brand.swift */,
 				C541473825D0D601007F73AB /* ProductImage.swift */,
 				C541473B25D0D6F6007F73AB /* ClinicImage.swift */,
 				C541469525CF6F6C007F73AB /* Global.swift */,
 				C56379B325D4363F00B99EE5 /* ProductPdf.swift */,
 				C56379B625D4372D00B99EE5 /* Productvideo.swift */,
+				C52761AE25FFB934002F3989 /* Doctor.swift */,
+				C52761B125FFB943002F3989 /* Offer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,8 +371,10 @@
 			files = (
 				C51F73D225C1DD200047C80B /* LaunchScreen.storyboard in Resources */,
 				C541469C25CF733E007F73AB /* GoogleService-Info.plist in Resources */,
+				C52761BA25FFC322002F3989 /* OfferCell.xib in Resources */,
 				C51F73CF25C1DD200047C80B /* Assets.xcassets in Resources */,
 				C51F73CD25C1DD1F0047C80B /* Main.storyboard in Resources */,
+				C527611825FF957E002F3989 /* splash.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +447,13 @@
 				C524BAE925CDA31C005980B5 /* SettingHomeVC.swift in Sources */,
 				C56379BA25D4376B00B99EE5 /* ProductinfoCell.swift in Sources */,
 				C541473C25D0D6F6007F73AB /* ClinicImage.swift in Sources */,
+				C52761A925FF9989002F3989 /* SplashVC.swift in Sources */,
 				C524BAE625CDA308005980B5 /* HistoryHomeVC.swift in Sources */,
 				C524BAF125CDA340005980B5 /* LoginVC.swift in Sources */,
 				C524BAED25CDA332005980B5 /* LogHomeVC.swift in Sources */,
 				C524BAD725CDA297005980B5 /* ClinicDoctorAddVC.swift in Sources */,
+				C52761B925FFC322002F3989 /* OfferCell.swift in Sources */,
+				C52761A625FF996E002F3989 /* UIView+Constraints.swift in Sources */,
 				C524BACE25CDA261005980B5 /* ProductInfoVC.swift in Sources */,
 				C541473925D0D601007F73AB /* ProductImage.swift in Sources */,
 				C524BAC525CDA226005980B5 /* AllClinicVC.swift in Sources */,
@@ -415,22 +464,29 @@
 				C524BAC825CDA23A005980B5 /* OneProductVC.swift in Sources */,
 				C54146D325CFED80007F73AB /* HomeproductCell.swift in Sources */,
 				C524BA8425CCDB6A005980B5 /* ChatVC.swift in Sources */,
+				C52761AF25FFB934002F3989 /* Doctor.swift in Sources */,
 				C524BAD125CDA273005980B5 /* ClinicHomeVC.swift in Sources */,
 				C524BAD425CDA282005980B5 /* ClinicInfoEditVC.swift in Sources */,
+				C527609525FF8B09002F3989 /* BrandCell.swift in Sources */,
 				C524BABF25CDA1DF005980B5 /* HomeVC.swift in Sources */,
 				C51F73CA25C1DD1E0047C80B /* SelLangVC.swift in Sources */,
 				C524BAE025CDA2D9005980B5 /* ClinicPhotoDelVC.swift in Sources */,
+				C52761AC25FF9D20002F3989 /* AllClinicCell.swift in Sources */,
+				C52761A525FF996E002F3989 /* LogoAnimationView.swift in Sources */,
 				C54146D725CFF295007F73AB /* AllproductCell.swift in Sources */,
 				C54146D025CFE923007F73AB /* HomeclinicCell.swift in Sources */,
 				C541469625CF6F6C007F73AB /* Global.swift in Sources */,
 				C541473F25D0E32D007F73AB /* ProductClinicCell.swift in Sources */,
+				C52761B525FFC016002F3989 /* HomeDoctorCell.swift in Sources */,
 				C51F73C625C1DD1E0047C80B /* AppDelegate.swift in Sources */,
 				C541469925CF6F7D007F73AB /* Product.swift in Sources */,
+				C527609825FF8F32002F3989 /* Brand.swift in Sources */,
 				C524BAFC25CDA47F005980B5 /* ChangePassVC.swift in Sources */,
 				C541469325CF6F09007F73AB /* Clinic.swift in Sources */,
 				C56379B725D4372D00B99EE5 /* Productvideo.swift in Sources */,
 				C524BAC225CDA218005980B5 /* AllProductVC.swift in Sources */,
 				C524BADA25CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift in Sources */,
+				C52761B225FFB943002F3989 /* Offer.swift in Sources */,
 				C524BAF525CDA353005980B5 /* SignupVC.swift in Sources */,
 				C56379B425D4363F00B99EE5 /* ProductPdf.swift in Sources */,
 				C51F73C825C1DD1E0047C80B /* SceneDelegate.swift in Sources */,
