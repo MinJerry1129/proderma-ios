@@ -29,12 +29,14 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     @IBOutlet weak var offerTBHeight: NSLayoutConstraint!
     @IBOutlet weak var doctorCVHeight: NSLayoutConstraint!
-    var inputSource: [InputSource] = []
+    
     var spinnerView = JTMaterialSpinner()
+    var inputSource: [InputSource] = []
     var image : [UIImage] = []
+    var allImages = [ClinicImage]()
     var allDoctors = [Doctor]()
     var allOffers = [Offer]()
-    var allImages = [ClinicImage]()
+    
     var clinicID : String!
     var clinicName : String!
     var clinicLocation : String!

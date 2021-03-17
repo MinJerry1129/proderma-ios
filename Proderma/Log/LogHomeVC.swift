@@ -8,22 +8,27 @@
 import UIKit
 
 class LogHomeVC: UIViewController {
-
+    var loginVC : LoginVC!
+    var signupVC : SignupVC!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    }
+    @IBAction func onSignupBtn(_ sender: Any) {
+        self.signupVC = self.storyboard?.instantiateViewController(withIdentifier: "signupVC") as? SignupVC
+        self.signupVC.modalPresentationStyle = .fullScreen
+        self.present(self.signupVC, animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onLoginBtn(_ sender: Any) {
+        self.loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as? LoginVC
+        self.loginVC.modalPresentationStyle = .fullScreen
+        self.present(self.loginVC, animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func onGoHome(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

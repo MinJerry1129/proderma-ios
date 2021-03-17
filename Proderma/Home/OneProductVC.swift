@@ -49,7 +49,8 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     override func viewDidLoad() {
         productID = AppDelegate.shared().productID
         loginStatus = AppDelegate.shared().loginStatus
-        clinicID = AppDelegate.shared().clinicID
+        clinicID = AppDelegate.shared().currentClinicID
+        userType = AppDelegate.shared().userType
         super.viewDidLoad()
         productCV.delegate = self
         productCV.dataSource = self
@@ -70,14 +71,19 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         countTxt.addTarget(self, action: #selector(countChange), for: .editingChanged)
     }
     @objc func countChange(){
-        if(countTxt.text == ""){
-            extraTxt.text = "0"
+        if userType == "elite"{
+            if(countTxt.text == ""){
+                extraTxt.text = "0"
+            }else{
+                let countInt = Int(countTxt.text!)
+                let percentInt = Int(productPercent)
+                let extraInt = countInt! * percentInt!/100
+                extraTxt.text = "\(extraInt)"
+            }
         }else{
-            let countInt = Int(countTxt.text!)
-            let percentInt = Int(productPercent)
-            let extraInt = countInt! * percentInt!/100
-            extraTxt.text = "\(extraInt)"
+            extraTxt.text = "0"
         }
+        
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -175,6 +181,36 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     @IBAction func onOrderProduct(_ sender: Any) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let now = Date()
+        let dateString = formatter.string(from: now)
+        print(dateString)
+        if countTxt.text! != ""{
+            if Int(countTxt.text!)! > 0{
+                self.view.addSubview(spinnerView)
+                spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
+                spinnerView.circleLayer.lineWidth = 2.0
+                spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
+                spinnerView.beginRefreshing()
+                let parameters: Parameters = ["clinicid": clinicID!,"productid": productID!,"count": countTxt.text!,"extra": extraTxt.text!,"date": dateString]
+                AF.request(Global.baseUrl + "api/requestOrder", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
+                    print(response)
+                    self.spinnerView.endRefreshing()
+                    if let value = response.value as? [String: AnyObject] {
+                        let result = value["result"] as! String
+                        if(result == "ok"){
+                            self.view.makeToast("Request order product success!")
+                        }else{
+                            self.view.makeToast("Request order product fail!")
+                        }
+                       
+                    }
+                }
+            }
+        }else{
+            self.view.makeToast("Input Quantity of product")
+        }
         
     }
     

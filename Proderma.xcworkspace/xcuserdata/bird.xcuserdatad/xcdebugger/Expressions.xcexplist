@@ -3,12 +3,31 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "OneProductVC.onOrderProduct(_:):OneProductVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "clinicID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ClinicPhotoAllVC.addimage():ClinicPhotoAllVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AllClinicVC.sortList():AllClinicVC.swift">
          <PersistentStrings>
             <PersistentString
                value = "allClinics">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in HistoryHomeVC.getData():HistoryHomeVC.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -20,21 +20,24 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var oneclinicVC : OneClinicVC!
     
     var chatVC : ChatVC!
-    
     var historyhomeVC : HistoryHomeVC!
-    
     var settinghomeVC : SettingHomeVC!
+    var eventhomeVC : EventHomeVC!
+    var clinichomeVC : ClinicHomeVC!
+    var loghomeVC : LogHomeVC!
     
     var spinnerView = JTMaterialSpinner()
 
     @IBOutlet weak var txtNews: UITextView!
     @IBOutlet weak var cvProduct: UICollectionView!
     @IBOutlet weak var cvClinic: UICollectionView!
+    
     var deviceID : String!
     var deviceToken : String!
     var allClinics = [Clinic]()
     var allProducts = [Product]()
-    
+    var loginstatus :String!
+    var usertype : String!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,6 +47,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         cvClinic.dataSource = self
         cvProduct.delegate = self
         cvProduct.dataSource = self
+        usertype = AppDelegate.shared().userType
         getData()
     }
     func getData(){
@@ -51,6 +55,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         allClinics = []
         deviceID = UIDevice.current.identifierForVendor?.uuidString
         deviceToken = AppDelegate.shared().fcmtoken
+        loginstatus = AppDelegate.shared().loginStatus
 
         //
         self.view.addSubview(spinnerView)
@@ -171,9 +176,25 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     @IBAction func onBtnClinic(_ sender: Any) {
+        if loginstatus == "no"{
+            self.loghomeVC = self.storyboard?.instantiateViewController(withIdentifier: "loghomeVC") as? LogHomeVC
+            self.loghomeVC.modalPresentationStyle = .fullScreen
+            self.present(self.loghomeVC, animated: true, completion: nil)
+        }else{
+            if usertype == "elite"{
+                self.clinichomeVC = self.storyboard?.instantiateViewController(withIdentifier: "clinichomeVC") as? ClinicHomeVC
+                self.clinichomeVC.modalPresentationStyle = .fullScreen
+                self.present(self.clinichomeVC, animated: true, completion: nil)
+            }else{
+                
+            }
+        }
     }
     
     @IBAction func onBtnEvent(_ sender: Any) {
+        self.eventhomeVC = self.storyboard?.instantiateViewController(withIdentifier: "eventhomeVC") as? EventHomeVC
+        self.eventhomeVC.modalPresentationStyle = .fullScreen
+        self.present(self.eventhomeVC, animated: true, completion: nil)
     }
     
     @IBAction func onBtnChat(_ sender: Any) {
@@ -183,15 +204,22 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     @IBAction func onBtnHistory(_ sender: Any) {
-        self.historyhomeVC = self.storyboard?.instantiateViewController(withIdentifier: "historyhomeVC") as? HistoryHomeVC
-        self.historyhomeVC.modalPresentationStyle = .fullScreen
-        self.present(self.historyhomeVC, animated: true, completion: nil)
+        if loginstatus == "no"{
+            self.loghomeVC = self.storyboard?.instantiateViewController(withIdentifier: "loghomeVC") as? LogHomeVC
+            self.loghomeVC.modalPresentationStyle = .fullScreen
+            self.present(self.loghomeVC, animated: true, completion: nil)
+        }else{
+            self.historyhomeVC = self.storyboard?.instantiateViewController(withIdentifier: "historyhomeVC") as? HistoryHomeVC
+            self.historyhomeVC.modalPresentationStyle = .fullScreen
+            self.present(self.historyhomeVC, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func onBtnSetting(_ sender: Any) {
-        self.chatVC = self.storyboard?.instantiateViewController(withIdentifier: "chatVC") as? ChatVC
-        self.chatVC.modalPresentationStyle = .fullScreen
-        self.present(self.chatVC, animated: true, completion: nil)
+        self.settinghomeVC = self.storyboard?.instantiateViewController(withIdentifier: "settinghomeVC") as? SettingHomeVC
+        self.settinghomeVC.modalPresentationStyle = .fullScreen
+        self.present(self.settinghomeVC, animated: true, completion: nil)
     }
     
 }

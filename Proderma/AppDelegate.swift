@@ -9,6 +9,8 @@ import UIKit
 import UserNotifications
 import Firebase
 import IQKeyboardManagerSwift
+import GooglePlaces
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let gcmMessageIDKey = "gcm.message_id"
@@ -17,13 +19,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var productID : String!
     var loginStatus = "no"
     var userType : String!
+    var currentClinicID : String!
+    var eventID : String!
+    var doctorID : String!
+    var offerID : String!
+    var clinicimageID : String!
+    var clinicimageURL : String!
+    
+    var sign_firstname : String!
+    var sign_lastname : String!
+    var sign_clinicname : String!
+    var sign_email : String!
+    var sign_phone : String!
+    var sign_password : String!
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         IQKeyboardManager.shared.enable = true
-        
+        GMSPlacesClient.provideAPIKey("AIzaSyDlHehSkS1jY6ZXAg_vUUZcZ22rKYhbgtE")
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self

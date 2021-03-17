@@ -57,6 +57,16 @@
 		C541473925D0D601007F73AB /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473825D0D601007F73AB /* ProductImage.swift */; };
 		C541473C25D0D6F6007F73AB /* ClinicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473B25D0D6F6007F73AB /* ClinicImage.swift */; };
 		C541473F25D0E32D007F73AB /* ProductClinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541473E25D0E32D007F73AB /* ProductClinicCell.swift */; };
+		C55B13EC2600D92F00715036 /* OrderHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B13EB2600D92F00715036 /* OrderHistory.swift */; };
+		C55B13F02600D9C300715036 /* OrderHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B13EF2600D9C300715036 /* OrderHistoryCell.swift */; };
+		C55B13F42600EB3600715036 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B13F32600EB3600715036 /* Event.swift */; };
+		C55B13F72600EBBD00715036 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B13F62600EBBD00715036 /* EventListCell.swift */; };
+		C55B13FA2600F90800715036 /* EventOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B13F92600F90800715036 /* EventOneVC.swift */; };
+		C55B13FD2600FB1C00715036 /* EventImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B13FC2600FB1C00715036 /* EventImage.swift */; };
+		C55B14002601308600715036 /* ClinicDoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B13FF2601308600715036 /* ClinicDoctorCell.swift */; };
+		C55B14032601921400715036 /* ClinicImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B14022601921300715036 /* ClinicImageCell.swift */; };
+		C55B14062601A52800715036 /* ClinicOfferAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B14052601A52800715036 /* ClinicOfferAddVC.swift */; };
+		C55B14092601ABA200715036 /* ClinicOfferDelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55B14082601ABA200715036 /* ClinicOfferDelVC.swift */; };
 		C56379B425D4363F00B99EE5 /* ProductPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B325D4363F00B99EE5 /* ProductPdf.swift */; };
 		C56379B725D4372D00B99EE5 /* Productvideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B625D4372D00B99EE5 /* Productvideo.swift */; };
 		C56379BA25D4376B00B99EE5 /* ProductinfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */; };
@@ -117,6 +127,16 @@
 		C541473825D0D601007F73AB /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		C541473B25D0D6F6007F73AB /* ClinicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicImage.swift; sourceTree = "<group>"; };
 		C541473E25D0E32D007F73AB /* ProductClinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClinicCell.swift; sourceTree = "<group>"; };
+		C55B13EB2600D92F00715036 /* OrderHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistory.swift; sourceTree = "<group>"; };
+		C55B13EF2600D9C300715036 /* OrderHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryCell.swift; sourceTree = "<group>"; };
+		C55B13F32600EB3600715036 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C55B13F62600EBBD00715036 /* EventListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
+		C55B13F92600F90800715036 /* EventOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOneVC.swift; sourceTree = "<group>"; };
+		C55B13FC2600FB1C00715036 /* EventImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventImage.swift; sourceTree = "<group>"; };
+		C55B13FF2601308600715036 /* ClinicDoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicDoctorCell.swift; sourceTree = "<group>"; };
+		C55B14022601921300715036 /* ClinicImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicImageCell.swift; sourceTree = "<group>"; };
+		C55B14052601A52800715036 /* ClinicOfferAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicOfferAddVC.swift; sourceTree = "<group>"; };
+		C55B14082601ABA200715036 /* ClinicOfferDelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicOfferDelVC.swift; sourceTree = "<group>"; };
 		C56379B325D4363F00B99EE5 /* ProductPdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPdf.swift; sourceTree = "<group>"; };
 		C56379B625D4372D00B99EE5 /* Productvideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productvideo.swift; sourceTree = "<group>"; };
 		C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductinfoCell.swift; sourceTree = "<group>"; };
@@ -216,6 +236,8 @@
 				C524BAD925CDA2AA005980B5 /* ClinicDoctorUpdateVC.swift */,
 				C524BADC25CDA2C1005980B5 /* ClinicPhotoAllVC.swift */,
 				C524BADF25CDA2D9005980B5 /* ClinicPhotoDelVC.swift */,
+				C55B14052601A52800715036 /* ClinicOfferAddVC.swift */,
+				C55B14082601ABA200715036 /* ClinicOfferDelVC.swift */,
 			);
 			path = Clinic;
 			sourceTree = "<group>";
@@ -224,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				C524BAE225CDA2F1005980B5 /* EventHomeVC.swift */,
+				C55B13F92600F90800715036 /* EventOneVC.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -260,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				C54146CF25CFE923007F73AB /* HomeclinicCell.swift */,
+				C55B13EF2600D9C300715036 /* OrderHistoryCell.swift */,
+				C55B13FF2601308600715036 /* ClinicDoctorCell.swift */,
 				C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */,
 				C54146D225CFED80007F73AB /* HomeproductCell.swift */,
 				C54146D625CFF295007F73AB /* AllproductCell.swift */,
@@ -267,7 +292,9 @@
 				C541473E25D0E32D007F73AB /* ProductClinicCell.swift */,
 				C52761B425FFC016002F3989 /* HomeDoctorCell.swift */,
 				C527609425FF8B09002F3989 /* BrandCell.swift */,
+				C55B14022601921300715036 /* ClinicImageCell.swift */,
 				C52761B725FFC322002F3989 /* OfferCell.swift */,
+				C55B13F62600EBBD00715036 /* EventListCell.swift */,
 				C52761B825FFC322002F3989 /* OfferCell.xib */,
 			);
 			path = Cell;
@@ -296,6 +323,9 @@
 				C56379B625D4372D00B99EE5 /* Productvideo.swift */,
 				C52761AE25FFB934002F3989 /* Doctor.swift */,
 				C52761B125FFB943002F3989 /* Offer.swift */,
+				C55B13EB2600D92F00715036 /* OrderHistory.swift */,
+				C55B13F32600EB3600715036 /* Event.swift */,
+				C55B13FC2600FB1C00715036 /* EventImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,8 +478,10 @@
 				C56379BA25D4376B00B99EE5 /* ProductinfoCell.swift in Sources */,
 				C541473C25D0D6F6007F73AB /* ClinicImage.swift in Sources */,
 				C52761A925FF9989002F3989 /* SplashVC.swift in Sources */,
+				C55B14062601A52800715036 /* ClinicOfferAddVC.swift in Sources */,
 				C524BAE625CDA308005980B5 /* HistoryHomeVC.swift in Sources */,
 				C524BAF125CDA340005980B5 /* LoginVC.swift in Sources */,
+				C55B13FA2600F90800715036 /* EventOneVC.swift in Sources */,
 				C524BAED25CDA332005980B5 /* LogHomeVC.swift in Sources */,
 				C524BAD725CDA297005980B5 /* ClinicDoctorAddVC.swift in Sources */,
 				C52761B925FFC322002F3989 /* OfferCell.swift in Sources */,
@@ -461,6 +493,7 @@
 				C524BACB25CDA24B005980B5 /* OneClinicVC.swift in Sources */,
 				C524BADD25CDA2C1005980B5 /* ClinicPhotoAllVC.swift in Sources */,
 				C524BAF925CDA362005980B5 /* SignupClinicVC.swift in Sources */,
+				C55B14092601ABA200715036 /* ClinicOfferDelVC.swift in Sources */,
 				C524BAC825CDA23A005980B5 /* OneProductVC.swift in Sources */,
 				C54146D325CFED80007F73AB /* HomeproductCell.swift in Sources */,
 				C524BA8425CCDB6A005980B5 /* ChatVC.swift in Sources */,
@@ -472,16 +505,23 @@
 				C51F73CA25C1DD1E0047C80B /* SelLangVC.swift in Sources */,
 				C524BAE025CDA2D9005980B5 /* ClinicPhotoDelVC.swift in Sources */,
 				C52761AC25FF9D20002F3989 /* AllClinicCell.swift in Sources */,
+				C55B13F72600EBBD00715036 /* EventListCell.swift in Sources */,
 				C52761A525FF996E002F3989 /* LogoAnimationView.swift in Sources */,
 				C54146D725CFF295007F73AB /* AllproductCell.swift in Sources */,
 				C54146D025CFE923007F73AB /* HomeclinicCell.swift in Sources */,
+				C55B13F02600D9C300715036 /* OrderHistoryCell.swift in Sources */,
 				C541469625CF6F6C007F73AB /* Global.swift in Sources */,
+				C55B14032601921400715036 /* ClinicImageCell.swift in Sources */,
+				C55B13EC2600D92F00715036 /* OrderHistory.swift in Sources */,
+				C55B13FD2600FB1C00715036 /* EventImage.swift in Sources */,
 				C541473F25D0E32D007F73AB /* ProductClinicCell.swift in Sources */,
 				C52761B525FFC016002F3989 /* HomeDoctorCell.swift in Sources */,
+				C55B14002601308600715036 /* ClinicDoctorCell.swift in Sources */,
 				C51F73C625C1DD1E0047C80B /* AppDelegate.swift in Sources */,
 				C541469925CF6F7D007F73AB /* Product.swift in Sources */,
 				C527609825FF8F32002F3989 /* Brand.swift in Sources */,
 				C524BAFC25CDA47F005980B5 /* ChangePassVC.swift in Sources */,
+				C55B13F42600EB3600715036 /* Event.swift in Sources */,
 				C541469325CF6F09007F73AB /* Clinic.swift in Sources */,
 				C56379B725D4372D00B99EE5 /* Productvideo.swift in Sources */,
 				C524BAC225CDA218005980B5 /* AllProductVC.swift in Sources */,
