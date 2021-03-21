@@ -18,8 +18,38 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>youtube</string>
+		<string>whatsapp</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>yourdomain.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app wants to take pictures.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Application wants to use your location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Application wants to use your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Application wants to use your location</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app wants to use your photos.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -64,35 +94,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>youtube</string>
-		<string>whatsapp</string>
-	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Application wants to use your location</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Application wants to use your location</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Application wants to use your location</string>
-	<key>NSCameraUsageDescription</key>
-	<string>This app wants to take pictures.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app wants to use your photos.</string>
-    <key>NSAppTransportSecurity</key>
-        <dict>
-            <key>NSAllowsArbitraryLoads</key>
-            <true/>
-            <key>NSExceptionDomains</key>
-            <dict>
-                <key>yourdomain.com</key>
-                <dict>
-                    <key>NSIncludesSubdomains</key>
-                    <true/>
-                    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-                    <false/>
-                </dict>
-           </dict>
-      </dict>
 </dict>
 </plist>

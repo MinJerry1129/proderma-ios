@@ -70,6 +70,7 @@
 		C56379B425D4363F00B99EE5 /* ProductPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B325D4363F00B99EE5 /* ProductPdf.swift */; };
 		C56379B725D4372D00B99EE5 /* Productvideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B625D4372D00B99EE5 /* Productvideo.swift */; };
 		C56379BA25D4376B00B99EE5 /* ProductinfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */; };
+		C59E54302607A0A900CAD33A /* ClinicNormalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E542F2607A0A900CAD33A /* ClinicNormalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		C56379B325D4363F00B99EE5 /* ProductPdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPdf.swift; sourceTree = "<group>"; };
 		C56379B625D4372D00B99EE5 /* Productvideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productvideo.swift; sourceTree = "<group>"; };
 		C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductinfoCell.swift; sourceTree = "<group>"; };
+		C59E542F2607A0A900CAD33A /* ClinicNormalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicNormalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 				C524BADF25CDA2D9005980B5 /* ClinicPhotoDelVC.swift */,
 				C55B14052601A52800715036 /* ClinicOfferAddVC.swift */,
 				C55B14082601ABA200715036 /* ClinicOfferDelVC.swift */,
+				C59E542F2607A0A900CAD33A /* ClinicNormalVC.swift */,
 			);
 			path = Clinic;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				C55B13FA2600F90800715036 /* EventOneVC.swift in Sources */,
 				C524BAED25CDA332005980B5 /* LogHomeVC.swift in Sources */,
 				C524BAD725CDA297005980B5 /* ClinicDoctorAddVC.swift in Sources */,
+				C59E54302607A0A900CAD33A /* ClinicNormalVC.swift in Sources */,
 				C52761B925FFC322002F3989 /* OfferCell.swift in Sources */,
 				C52761A625FF996E002F3989 /* UIView+Constraints.swift in Sources */,
 				C524BACE25CDA261005980B5 /* ProductInfoVC.swift in Sources */,

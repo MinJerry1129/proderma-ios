@@ -17,13 +17,13 @@ class ChatVC: UIViewController {
     }
 
     @IBAction func onSendMessage(_ sender: Any) {
-        let urlWhats = "whatsapp://send?phone=+123123123&text=" + messageTxt.text!
+        let urlWhats = "whatsapp://send?phone=+97180077633762&text=" + messageTxt.text!
         if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
             if let whatsappURL = URL(string: urlString) {
                 if UIApplication.shared.canOpenURL(whatsappURL) {
                     UIApplication.shared.openURL(whatsappURL)
                 } else {
-                    let whatsappURL = URL(string: "https://api.whatsapp.com/send?phone=+1234567890" )
+                    let whatsappURL = URL(string: "https://api.whatsapp.com/send?phone=+97180077633762" )
                     if UIApplication.shared.canOpenURL(whatsappURL!) {
                         UIApplication.shared.open(whatsappURL!, options: [:], completionHandler: nil)
                         }

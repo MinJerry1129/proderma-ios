@@ -24,6 +24,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var settinghomeVC : SettingHomeVC!
     var eventhomeVC : EventHomeVC!
     var clinichomeVC : ClinicHomeVC!
+    var clinicnormalVC : ClinicNormalVC!
     var loghomeVC : LogHomeVC!
     
     var spinnerView = JTMaterialSpinner()
@@ -48,6 +49,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         cvProduct.delegate = self
         cvProduct.dataSource = self
         usertype = AppDelegate.shared().userType
+        txtNews.text = "PRODERMA ME was developed in 2007 in Dubai, in response to the ever --- growing demand and need for a complete Aeshetic, representing only approved worldwide aesthetic companies"
         getData()
     }
     func getData(){
@@ -186,7 +188,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
                 self.clinichomeVC.modalPresentationStyle = .fullScreen
                 self.present(self.clinichomeVC, animated: true, completion: nil)
             }else{
-                
+                self.clinicnormalVC = self.storyboard?.instantiateViewController(withIdentifier: "clinicnormalVC") as? ClinicNormalVC
+                self.clinicnormalVC.modalPresentationStyle = .fullScreen
+                self.present(self.clinicnormalVC, animated: true, completion: nil)
             }
         }
     }
