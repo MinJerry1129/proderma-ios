@@ -21,10 +21,23 @@ class ClinicNormalVC: UIViewController {
     var clinicname : String!
     var phone : String!
     var clinicID : String!
+    @IBOutlet weak var btnBack: UIButton!
+    
+    @IBOutlet weak var btnUpdate: UIButton!
+    @IBOutlet weak var lblClinic: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         clinicID = AppDelegate.shared().currentClinicID
         getData()
+        setReady()
+    }
+    func setReady(){
+        lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
+        btnUpdate.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func getData(){
         self.view.addSubview(spinnerView)

@@ -13,12 +13,23 @@ class ClinicOfferAddVC: UIViewController {
     var spinnerView = JTMaterialSpinner()
     @IBOutlet weak var titleTxt: UITextField!
     @IBOutlet weak var infoTxt: UITextView!
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var btnAdd: UIButton!
+    @IBOutlet weak var lblOfferinfo: UILabel!
     var clinicID : String!
     override func viewDidLoad() {
         super.viewDidLoad()
         clinicID = AppDelegate.shared().currentClinicID
+        setReady()
     }
-    
+    func setReady(){
+        lblOfferinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "offerInfo", comment: "")
+        btnAdd.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "add", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
+    }
     @IBAction func onAddOffer(_ sender: Any) {
         let title = titleTxt.text!
         let info = infoTxt.text!

@@ -23,6 +23,9 @@ class AllClinicVC: UIViewController ,UITableViewDelegate, UITableViewDataSource,
     var spinnerView = JTMaterialSpinner()
     var currentlocation : CLLocation!
 
+    @IBOutlet weak var lblClinics: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
+    
     @IBOutlet weak var clinicTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,13 @@ class AllClinicVC: UIViewController ,UITableViewDelegate, UITableViewDataSource,
         clinicTable.dataSource = self
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
+        setReady()
+    }
+    func setReady(){
+        lblClinics.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinics", comment: "")
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

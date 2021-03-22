@@ -13,6 +13,9 @@ import JTMaterialSpinner
 class ClinicPhotoDelVC: UIViewController {
     @IBOutlet weak var doctorImg: UIImageView!
     var spinnerView = JTMaterialSpinner()
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblPhoto: UILabel!
+    @IBOutlet weak var btnDelete: UIButton!
     var imageID : String!
     var imageURL: String!
     override func viewDidLoad() {
@@ -20,6 +23,15 @@ class ClinicPhotoDelVC: UIViewController {
         imageID = AppDelegate.shared().clinicimageID
         imageURL = AppDelegate.shared().clinicimageURL
         doctorImg.sd_setImage(with: URL(string: Global.baseUrl + imageURL), completed: nil)
+        setReady()
+    }
+    func setReady(){
+        lblPhoto.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "photo", comment: "")
+        btnDelete.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "delete", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     
     @IBAction func onDeleteBtn(_ sender: Any) {

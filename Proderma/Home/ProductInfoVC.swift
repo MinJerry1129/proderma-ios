@@ -21,17 +21,28 @@ class ProductInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var productID : String!
     var sel_type = "video"
     
+    @IBOutlet weak var btnBack: UIButton!
+    
+    @IBOutlet weak var lblMoreinfo: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         productID = AppDelegate.shared().productID
         infoTB.delegate = self
         infoTB.dataSource = self
+        setReady()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         allPdf = []
         allVideo = []
         getData()
+    }
+    func setReady(){
+        lblMoreinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "moreinfo", comment: "")
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func getData(){
         self.view.addSubview(spinnerView)

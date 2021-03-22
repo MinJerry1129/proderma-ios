@@ -16,6 +16,9 @@ class ClinicDoctorAddVC: UIViewController {
     @IBOutlet weak var DoctorImg: UIImageView!
     @IBOutlet weak var infoTxt: UITextView!
     @IBOutlet weak var nameTxt: UITextField!
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblDoctorInfo: UILabel!
+    @IBOutlet weak var btnAdd: UIButton!
     var avatarImage : UIImage!
     var imgSel = 0
     var spinnerView = JTMaterialSpinner()
@@ -26,6 +29,15 @@ class ClinicDoctorAddVC: UIViewController {
         DoctorImg.isUserInteractionEnabled = true
         DoctorImg.addGestureRecognizer(imageTapGesture)
         clinicID = AppDelegate.shared().currentClinicID
+        setReady()
+    }
+    func setReady(){
+        lblDoctorInfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "doctorinfo", comment: "")
+        btnAdd.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "add", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     @objc func selClinicImg(){
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)

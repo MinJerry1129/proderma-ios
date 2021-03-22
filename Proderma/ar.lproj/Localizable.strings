@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  Proderma
+
+  Created by bird on 3/22/21.
+  
+*/
+"language" = "English";
+
+"see_all" = "اظهار الكل";
+"lastnews" = "أحدث الأخبار";
+"clinics" = "العيادات";
+"products" = "المنتجات";
+
+
+"clinic" = "العيادة";
+"event" = "فعاليات";
+"chat" = "محادثة";
+"history" = "سجل";
+"setting" = "إعدادات";
+
+"moreinfo" = "مزيد من المعلومات";
+"price" = "السعر($)";
+"quality" = "العدد:";
+"informations" = "معلومات";
+"order" = "طلب المنتج";
+"homeevent" = "التدريب و الفعاليات";
+"changepassword" = "تغيير كلمة السرs";
+"logout" = "تسجيل خروج";
+
+"update" = "تحديث";
+"allphoto" = "جميع الصور";
+"clinicinfo" = "معلومات عيادة الإدخال";
+"doctorinfo" = "معلومات الطبيب";
+"offerInfo" = "تقدم المعلومات";
+"add" = "يضيف";
+"interest" = "اهتمام";
+"photo" = "صورة";
+"delete" = "حذف";
+
+"signup" = "اشتراك";
+"login" = "تسجيل دخول";
+"eliteclinic" = "هل انت ايليت ؟";
+"alreadyaccount" = "لديك حساب بالفعل؟ تسجيل الدخول";
+"noaccount" = "ليس لديك حساب؟ اشتراك";

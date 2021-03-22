@@ -21,6 +21,10 @@ class ClinicInfoEditVC: UIViewController {
     @IBOutlet weak var whatsappTxt: UITextField!
     @IBOutlet weak var infoTxt: UITextView!
     
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var btnUpdate: UIButton!
+    @IBOutlet weak var lblInputlcinicInfo: UILabel!
+    
     var imagePicker = UIImagePickerController()
     var spinnerView = JTMaterialSpinner()
     var clinicID : String!
@@ -34,10 +38,19 @@ class ClinicInfoEditVC: UIViewController {
         let imageTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.selClinicImg))
         clinicImg.isUserInteractionEnabled = true
         clinicImg.addGestureRecognizer(imageTapGesture)
+        setReady()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         getReady()
+    }
+    func setReady(){
+        lblInputlcinicInfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinicinfo", comment: "")
+        btnUpdate.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "update", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func getReady(){
         self.view.addSubview(spinnerView)

@@ -15,6 +15,10 @@ class ClinicDoctorUpdateVC: UIViewController {
     @IBOutlet weak var doctorImg: UIImageView!
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var infoTxt: UITextView!
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblDoctorInfo: UILabel!
+    @IBOutlet weak var btnUpdate: UIButton!
+    @IBOutlet weak var btnDelete: UIButton!
     var imgSel = "no"
     var doctorID : String!
     var clinicID : String!
@@ -27,7 +31,17 @@ class ClinicDoctorUpdateVC: UIViewController {
         let imageTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.selClinicImg))
         doctorImg.isUserInteractionEnabled = true
         doctorImg.addGestureRecognizer(imageTapGesture)
+        setReady()
         getData()
+    }
+    func setReady(){
+        lblDoctorInfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "doctorinfo", comment: "")
+        btnDelete.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "delete", comment: ""), for: .normal)
+        btnUpdate.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "update", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func getData(){
         self.view.addSubview(spinnerView)

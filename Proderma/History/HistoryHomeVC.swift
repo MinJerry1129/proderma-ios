@@ -19,12 +19,22 @@ class HistoryHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var spinnerView = JTMaterialSpinner()
     var allhistory = [OrderHistory]()
     
+    @IBOutlet weak var lblHistory: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         clinicId = AppDelegate.shared().currentClinicID
         historyTB.delegate = self
         historyTB.dataSource = self
         getData()
+        setReady()
+    }
+    func setReady(){
+        lblHistory.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "history", comment: "")
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func getData(){
         allhistory = []

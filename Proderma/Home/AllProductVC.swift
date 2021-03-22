@@ -18,6 +18,8 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     var allBrands = [Brand]()
     var spinnerView = JTMaterialSpinner()
     
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblProducts: UILabel!
     @IBOutlet weak var cvBrand: UICollectionView!
     @IBOutlet weak var cvProduct: UICollectionView!
     
@@ -28,13 +30,18 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         
         cvBrand.delegate = self
         cvBrand.dataSource = self
-        
+        setReady()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         getData()
     }
-    
+    func setReady(){
+        lblProducts.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "products", comment: "")
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
+    }
     func getData(){
         allProducts = []
         allFilterProducts = []

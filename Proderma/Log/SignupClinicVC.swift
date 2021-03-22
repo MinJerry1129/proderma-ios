@@ -31,12 +31,22 @@ class SignupClinicVC: UIViewController {
     var latitude : String!
     var longitude : String!
     
+    @IBOutlet weak var btnSignup: UIButton!
+    @IBOutlet weak var lblClinicinfo: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageTapGesture = UITapGestureRecognizer(target:self,action:#selector(self.selClinicImg))
         clinicImg.isUserInteractionEnabled = true
         clinicImg.addGestureRecognizer(imageTapGesture)
-
+        setReady()
+    }
+    func setReady(){
+        btnSignup.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: ""), for: .normal)        
+        lblClinicinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinicinfo", comment: "")
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     @objc func selClinicImg(){
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)

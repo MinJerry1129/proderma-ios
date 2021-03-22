@@ -49,6 +49,9 @@ class ClinicHomeVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     var clinicInformation : String!
     var clinicPhoto : String!
 
+    @IBOutlet weak var lblInformations: UILabel!
+    @IBOutlet weak var lblClinic: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         infoView.layer.borderColor = UIColor(named: "major")?.cgColor
@@ -67,6 +70,15 @@ class ClinicHomeVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         super.viewDidAppear(true)
         inputSource = []
         getData()
+        setReady()
+    }
+    func setReady(){
+        lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
+        lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func getData(){
         allDoctors = []

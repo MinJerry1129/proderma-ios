@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2209A663F689B31726324448 /* Pods_Proderma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480B5BA204933B5C9E743879 /* Pods_Proderma.framework */; };
+		C51DD81E2608CBA900FCDCFE /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DD81D2608CBA900FCDCFE /* LocalizationSystem.swift */; };
+		C51DD8262608CCDF00FCDCFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C51DD8282608CCDF00FCDCFE /* Localizable.strings */; };
 		C51F73C625C1DD1E0047C80B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F73C525C1DD1E0047C80B /* AppDelegate.swift */; };
 		C51F73C825C1DD1E0047C80B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */; };
 		C51F73CA25C1DD1E0047C80B /* SelLangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F73C925C1DD1E0047C80B /* SelLangVC.swift */; };
@@ -77,6 +79,11 @@
 		102C3AAF3D9260A893E9D181 /* Pods-Proderma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proderma.debug.xcconfig"; path = "Target Support Files/Pods-Proderma/Pods-Proderma.debug.xcconfig"; sourceTree = "<group>"; };
 		480B5BA204933B5C9E743879 /* Pods_Proderma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proderma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CCFD07A238CAD000CC596C /* Pods-Proderma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proderma.release.xcconfig"; path = "Target Support Files/Pods-Proderma/Pods-Proderma.release.xcconfig"; sourceTree = "<group>"; };
+		C51DD81D2608CBA900FCDCFE /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
+		C51DD8202608CC7E00FCDCFE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		C51DD8212608CC7F00FCDCFE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C51DD8272608CCDF00FCDCFE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C51DD8292608CCE600FCDCFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C51F73C225C1DD1E0047C80B /* Proderma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proderma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51F73C525C1DD1E0047C80B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +196,7 @@
 				C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */,
 				C527611725FF957E002F3989 /* splash.gif */,
 				C51F73C925C1DD1E0047C80B /* SelLangVC.swift */,
+				C51DD8282608CCDF00FCDCFE /* Localizable.strings */,
 				C541469B25CF733E007F73AB /* GoogleService-Info.plist */,
 				C527613925FF9932002F3989 /* Gifanimation */,
 				C524BAB425CDA132005980B5 /* Home */,
@@ -318,6 +326,7 @@
 			children = (
 				C541469225CF6F09007F73AB /* Clinic.swift */,
 				C541469825CF6F7D007F73AB /* Product.swift */,
+				C51DD81D2608CBA900FCDCFE /* LocalizationSystem.swift */,
 				C527609725FF8F32002F3989 /* Brand.swift */,
 				C541473825D0D601007F73AB /* ProductImage.swift */,
 				C541473B25D0D6F6007F73AB /* ClinicImage.swift */,
@@ -386,6 +395,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = C51F73B925C1DD1E0047C80B;
 			productRefGroup = C51F73C325C1DD1E0047C80B /* Products */;
@@ -405,6 +415,7 @@
 				C51F73D225C1DD200047C80B /* LaunchScreen.storyboard in Resources */,
 				C541469C25CF733E007F73AB /* GoogleService-Info.plist in Resources */,
 				C52761BA25FFC322002F3989 /* OfferCell.xib in Resources */,
+				C51DD8262608CCDF00FCDCFE /* Localizable.strings in Resources */,
 				C51F73CF25C1DD200047C80B /* Assets.xcassets in Resources */,
 				C51F73CD25C1DD1F0047C80B /* Main.storyboard in Resources */,
 				C527611825FF957E002F3989 /* splash.gif in Resources */,
@@ -494,6 +505,7 @@
 				C541473925D0D601007F73AB /* ProductImage.swift in Sources */,
 				C524BAC525CDA226005980B5 /* AllClinicVC.swift in Sources */,
 				C524BAE325CDA2F1005980B5 /* EventHomeVC.swift in Sources */,
+				C51DD81E2608CBA900FCDCFE /* LocalizationSystem.swift in Sources */,
 				C524BACB25CDA24B005980B5 /* OneClinicVC.swift in Sources */,
 				C524BADD25CDA2C1005980B5 /* ClinicPhotoAllVC.swift in Sources */,
 				C524BAF925CDA362005980B5 /* SignupClinicVC.swift in Sources */,
@@ -540,10 +552,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C51DD8282608CCDF00FCDCFE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C51DD8272608CCDF00FCDCFE /* ar */,
+				C51DD8292608CCE600FCDCFE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C51F73CB25C1DD1E0047C80B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C51F73CC25C1DD1E0047C80B /* Base */,
+				C51DD8202608CC7E00FCDCFE /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -552,6 +574,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C51F73D125C1DD200047C80B /* Base */,
+				C51DD8212608CC7F00FCDCFE /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -563,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -624,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

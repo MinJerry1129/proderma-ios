@@ -1,0 +1,450 @@
+
+/* Class = "UILabel"; text = "All Photos"; ObjectID = "2Te-L9-0Ay"; */
+"2Te-L9-0Ay.text" = "All Photos";
+
+/* Class = "UIButton"; normalTitle = "عربى"; ObjectID = "31x-VB-RN0"; */
+"31x-VB-RN0.normalTitle" = "عربى";
+
+/* Class = "UILabel"; text = "Clinic Address"; ObjectID = "3D2-YH-yTI"; */
+"3D2-YH-yTI.text" = "Clinic Address";
+
+/* Class = "UILabel"; text = "A L  L"; ObjectID = "3Db-co-Vnv"; */
+"3Db-co-Vnv.text" = "A L  L";
+
+/* Class = "UILabel"; text = "1234"; ObjectID = "3oO-VP-1Ew"; */
+"3oO-VP-1Ew.text" = "1234";
+
+/* Class = "UITextField"; placeholder = "Clinic Name"; ObjectID = "4dF-GI-m0r"; */
+"4dF-GI-m0r.placeholder" = "Clinic Name";
+
+/* Class = "UILabel"; text = "Informations"; ObjectID = "4oY-ll-EVF"; */
+"4oY-ll-EVF.text" = "Informations";
+
+/* Class = "UILabel"; text = "History"; ObjectID = "4s7-hh-rpI"; */
+"4s7-hh-rpI.text" = "History";
+
+/* Class = "UILabel"; text = "Clinic Info"; ObjectID = "5Lg-Vz-cwK"; */
+"5Lg-Vz-cwK.text" = "Clinic Info";
+
+/* Class = "UILabel"; text = "More Info"; ObjectID = "5Wv-w5-PbR"; */
+"5Wv-w5-PbR.text" = "More Info";
+
+/* Class = "UILabel"; text = "Clinic Name"; ObjectID = "5X3-1Y-kSL"; */
+"5X3-1Y-kSL.text" = "Clinic Name";
+
+/* Class = "UITextField"; placeholder = "Visa code"; ObjectID = "5qu-s1-hjE"; */
+"5qu-s1-hjE.placeholder" = "Visa code";
+
+/* Class = "UILabel"; text = "Clinic"; ObjectID = "716-rg-JJU"; */
+"716-rg-JJU.text" = "Clinic";
+
+/* Class = "UILabel"; text = "Input Doctor Info"; ObjectID = "74S-3a-nbH"; */
+"74S-3a-nbH.text" = "Input Doctor Info";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "7X7-RV-eZA"; */
+"7X7-RV-eZA.normalTitle" = "Sign Up";
+
+/* Class = "UISegmentedControl"; 8GQ-L5-djb.segmentTitles[0] = "Video"; ObjectID = "8GQ-L5-djb"; */
+"8GQ-L5-djb.segmentTitles[0]" = "Video";
+
+/* Class = "UISegmentedControl"; 8GQ-L5-djb.segmentTitles[1] = "Pdf"; ObjectID = "8GQ-L5-djb"; */
+"8GQ-L5-djb.segmentTitles[1]" = "Pdf";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "; ObjectID = "8Tg-jt-stl"; */
+"8Tg-jt-stl.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ";
+
+/* Class = "UILabel"; text = "Clinic Address"; ObjectID = "8Ue-Hm-asw"; */
+"8Ue-Hm-asw.text" = "Clinic Address";
+
+/* Class = "UILabel"; text = "Input Clinic Info"; ObjectID = "8js-s2-naF"; */
+"8js-s2-naF.text" = "Input Clinic Info";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "8yY-Xa-5WX"; */
+"8yY-Xa-5WX.placeholder" = "Name";
+
+/* Class = "UILabel"; text = "2021/02/03"; ObjectID = "900-yH-kCq"; */
+"900-yH-kCq.text" = "2021/02/03";
+
+/* Class = "UILabel"; text = "Change Password"; ObjectID = "9FB-fo-uOI"; */
+"9FB-fo-uOI.text" = "Change Password";
+
+/* Class = "UILabel"; text = "Input Clinic Info"; ObjectID = "9Rv-vi-uLd"; */
+"9Rv-vi-uLd.text" = "Input Clinic Info";
+
+/* Class = "UILabel"; text = "All Clinics"; ObjectID = "A0s-ZX-V0q"; */
+"A0s-ZX-V0q.text" = "All Clinics";
+
+/* Class = "UILabel"; text = "Original Password"; ObjectID = "Aei-9i-Hks"; */
+"Aei-9i-Hks.text" = "Original Password";
+
+/* Class = "UILabel"; text = "Product name"; ObjectID = "AhB-PO-X6C"; */
+"AhB-PO-X6C.text" = "Product name";
+
+/* Class = "UILabel"; text = "Quantity:"; ObjectID = "BZY-uc-ME3"; */
+"BZY-uc-ME3.text" = "Quantity:";
+
+/* Class = "UILabel"; text = "Informations"; ObjectID = "CGc-Hw-sla"; */
+"CGc-Hw-sla.text" = "Informations";
+
+/* Class = "UITextField"; placeholder = "Last name"; ObjectID = "CSV-sg-Esq"; */
+"CSV-sg-Esq.placeholder" = "Last name";
+
+/* Class = "UIButton"; normalTitle = "Log in"; ObjectID = "CTr-tK-1yb"; */
+"CTr-tK-1yb.normalTitle" = "Log in";
+
+/* Class = "UIButton"; normalTitle = "Have already account? Signin"; ObjectID = "Cgp-6x-c6R"; */
+"Cgp-6x-c6R.normalTitle" = "Have already account? Signin";
+
+/* Class = "UIButton"; normalTitle = "Interest"; ObjectID = "Clz-cb-beF"; */
+"Clz-cb-beF.normalTitle" = "Interest";
+
+/* Class = "UIButton"; normalTitle = "See all"; ObjectID = "F5l-N4-Cbi"; */
+"F5l-N4-Cbi.normalTitle" = "See all";
+
+/* Class = "UILabel"; text = "Event"; ObjectID = "F63-v6-N4o"; */
+"F63-v6-N4o.text" = "Event";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "FHM-T1-Qr8"; */
+"FHM-T1-Qr8.text" = "Name:";
+
+/* Class = "UILabel"; text = "Input Doctor Info"; ObjectID = "FOf-yY-xCz"; */
+"FOf-yY-xCz.text" = "Input Doctor Info";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "Fw8-py-er5"; */
+"Fw8-py-er5.text" = "Product Name";
+
+/* Class = "UILabel"; text = "Chats"; ObjectID = "GcS-88-N3Q"; */
+"GcS-88-N3Q.text" = "Chats";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "Ggo-TK-dGC"; */
+"Ggo-TK-dGC.text" = "Product";
+
+/* Class = "UILabel"; text = "Clinic Info"; ObjectID = "Gnm-DT-S56"; */
+"Gnm-DT-S56.text" = "Clinic Info";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "HXb-XH-BsL"; */
+"HXb-XH-BsL.placeholder" = "Phone";
+
+/* Class = "UITextField"; placeholder = "First name"; ObjectID = "HmX-uM-aGo"; */
+"HmX-uM-aGo.placeholder" = "First name";
+
+/* Class = "UILabel"; text = "+12345667"; ObjectID = "Hwk-bB-2e5"; */
+"Hwk-bB-2e5.text" = "+12345667";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Icd-sK-Ybn"; */
+"Icd-sK-Ybn.text" = "Label";
+
+/* Class = "UILabel"; text = "Informations"; ObjectID = "IeY-Jo-6rI"; */
+"IeY-Jo-6rI.text" = "Informations";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JfE-jU-Lf2"; */
+"JfE-jU-Lf2.text" = "Label";
+
+/* Class = "UILabel"; text = "Change Password"; ObjectID = "Jgm-ch-gi7"; */
+"Jgm-ch-gi7.text" = "Change Password";
+
+/* Class = "UILabel"; text = "Ali Benkhla"; ObjectID = "KK7-OD-fcx"; */
+"KK7-OD-fcx.text" = "Ali Benkhla";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LTH-C3-Ms1"; */
+"LTH-C3-Ms1.text" = "Label";
+
+/* Class = "UILabel"; text = "Ali Benkhla"; ObjectID = "NeF-Tu-ZT1"; */
+"NeF-Tu-ZT1.text" = "Ali Benkhla";
+
+/* Class = "UILabel"; text = "15"; ObjectID = "Nx5-P8-9dE"; */
+"Nx5-P8-9dE.text" = "15";
+
+/* Class = "UILabel"; text = "+1234567890"; ObjectID = "NyJ-11-wdT"; */
+"NyJ-11-wdT.text" = "+1234567890";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "O2L-rh-0da"; */
+"O2L-rh-0da.normalTitle" = "Log In";
+
+/* Class = "UILabel"; text = "Information"; ObjectID = "OTA-90-7TI"; */
+"OTA-90-7TI.text" = "Information";
+
+/* Class = "UILabel"; text = "Welcome Proderma"; ObjectID = "OX5-Se-aYN"; */
+"OX5-Se-aYN.text" = "Welcome Proderma";
+
+/* Class = "UILabel"; text = "All Products"; ObjectID = "OiF-Zd-ge6"; */
+"OiF-Zd-ge6.text" = "All Products";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "Ojd-iO-DTf"; */
+"Ojd-iO-DTf.normalTitle" = "Update";
+
+/* Class = "UILabel"; text = "Chat"; ObjectID = "PCS-0X-SrW"; */
+"PCS-0X-SrW.text" = "Chat";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "Q5z-LJ-ZId"; */
+"Q5z-LJ-ZId.normalTitle" = "Update";
+
+/* Class = "UILabel"; text = "Log in"; ObjectID = "Qm1-ol-Esh"; */
+"Qm1-ol-Esh.text" = "Log in";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor "; ObjectID = "QrV-Ny-VhH"; */
+"QrV-Ny-VhH.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor ";
+
+/* Class = "UIButton"; normalTitle = "Change"; ObjectID = "ROY-Zf-sf2"; */
+"ROY-Zf-sf2.normalTitle" = "Change";
+
+/* Class = "UILabel"; text = "Events and Training"; ObjectID = "SMu-Ye-tgU"; */
+"SMu-Ye-tgU.text" = "Events and Training";
+
+/* Class = "UIButton"; normalTitle = "See all"; ObjectID = "Skx-zZ-qkl"; */
+"Skx-zZ-qkl.normalTitle" = "See all";
+
+/* Class = "UILabel"; text = "Lastest News"; ObjectID = "SwL-kz-Xra"; */
+"SwL-kz-Xra.text" = "Lastest News";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "T2Y-wg-wam"; */
+"T2Y-wg-wam.placeholder" = "Confirm Password";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "T5x-nF-Xqa"; */
+"T5x-nF-Xqa.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "Clinic Location"; ObjectID = "Twv-aE-4t8"; */
+"Twv-aE-4t8.placeholder" = "Clinic Location";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Tzf-wd-cpp"; */
+"Tzf-wd-cpp.text" = "Label";
+
+/* Class = "UILabel"; text = "Information"; ObjectID = "UDC-ZE-LYl"; */
+"UDC-ZE-LYl.text" = "Information";
+
+/* Class = "UILabel"; text = "Clinic"; ObjectID = "UYK-gj-Nl7"; */
+"UYK-gj-Nl7.text" = "Clinic";
+
+/* Class = "UITextField"; placeholder = "location"; ObjectID = "VQ3-ij-okn"; */
+"VQ3-ij-okn.placeholder" = "location";
+
+/* Class = "UILabel"; text = "Clinic Info"; ObjectID = "VUL-DT-Saj"; */
+"VUL-DT-Saj.text" = "Clinic Info";
+
+/* Class = "UILabel"; text = "+1234567890"; ObjectID = "Wcs-kw-yl5"; */
+"Wcs-kw-yl5.text" = "+1234567890";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "Wen-x3-jrL"; */
+"Wen-x3-jrL.placeholder" = "Title";
+
+/* Class = "UIButton"; normalTitle = "More Info"; ObjectID = "Wf2-5r-joc"; */
+"Wf2-5r-joc.normalTitle" = "More Info";
+
+/* Class = "UILabel"; text = "Setting"; ObjectID = "WmG-SY-NQ2"; */
+"WmG-SY-NQ2.text" = "Setting";
+
+/* Class = "UILabel"; text = "2021/02/03"; ObjectID = "X78-yI-sLH"; */
+"X78-yI-sLH.text" = "2021/02/03";
+
+/* Class = "UITextField"; placeholder = "Original Password"; ObjectID = "XLU-hY-vX0"; */
+"XLU-hY-vX0.placeholder" = "Original Password";
+
+/* Class = "UIButton"; normalTitle = "Order"; ObjectID = "ZMN-5E-7vC"; */
+"ZMN-5E-7vC.normalTitle" = "Order";
+
+/* Class = "UILabel"; text = "Photo"; ObjectID = "ZPB-D8-Lfd"; */
+"ZPB-D8-Lfd.text" = "Photo";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Zo3-Vl-dfy"; */
+"Zo3-Vl-dfy.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aR1-bC-asm"; */
+"aR1-bC-asm.text" = "Label";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "b1y-BE-kGu"; */
+"b1y-BE-kGu.text" = "Sign Up";
+
+/* Class = "UILabel"; text = "+123456789012"; ObjectID = "b3y-IF-jzH"; */
+"b3y-IF-jzH.text" = "+123456789012";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "bKa-Q4-1Qc"; */
+"bKa-Q4-1Qc.text" = "Description";
+
+/* Class = "UILabel"; text = "Clinics"; ObjectID = "bVP-7M-a0h"; */
+"bVP-7M-a0h.text" = "Clinics";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "; ObjectID = "bZG-AH-8Ik"; */
+"bZG-AH-8Ik.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ";
+
+/* Class = "UILabel"; text = "Product name"; ObjectID = "bhw-Lc-g3M"; */
+"bhw-Lc-g3M.text" = "Product name";
+
+/* Class = "UITextField"; placeholder = "First name"; ObjectID = "cE4-l2-ocv"; */
+"cE4-l2-ocv.placeholder" = "First name";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "chB-jm-MC9"; */
+"chB-jm-MC9.placeholder" = "Title";
+
+/* Class = "UILabel"; text = "+1234567890"; ObjectID = "crL-9h-vN9"; */
+"crL-9h-vN9.text" = "+1234567890";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "; ObjectID = "cw6-1u-RZ3"; */
+"cw6-1u-RZ3.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dWp-Lt-BRe"; */
+"dWp-Lt-BRe.text" = "Label";
+
+/* Class = "UILabel"; text = "Clinic"; ObjectID = "dXn-X5-GI5"; */
+"dXn-X5-GI5.text" = "Clinic";
+
+/* Class = "UITextField"; placeholder = "Clinic name"; ObjectID = "dgU-00-GUS"; */
+"dgU-00-GUS.placeholder" = "Clinic name";
+
+/* Class = "UILabel"; text = "FOC:"; ObjectID = "eUG-9P-3Pv"; */
+"eUG-9P-3Pv.text" = "FOC:";
+
+/* Class = "UITextField"; placeholder = "New Password"; ObjectID = "eY6-fw-RgU"; */
+"eY6-fw-RgU.placeholder" = "New Password";
+
+/* Class = "UITextField"; placeholder = "Phonenumber"; ObjectID = "exJ-Pz-aJN"; */
+"exJ-Pz-aJN.placeholder" = "Phonenumber";
+
+/* Class = "UILabel"; text = "New Password"; ObjectID = "f6f-YC-xBb"; */
+"f6f-YC-xBb.text" = "New Password";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "fHk-oj-Swh"; */
+"fHk-oj-Swh.normalTitle" = "Add";
+
+/* Class = "UILabel"; text = "FOC:"; ObjectID = "gK4-3m-grs"; */
+"gK4-3m-grs.text" = "FOC:";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "gkb-bp-ZFQ"; */
+"gkb-bp-ZFQ.normalTitle" = "English";
+
+/* Class = "UILabel"; text = "123"; ObjectID = "hF5-b7-Xcx"; */
+"hF5-b7-Xcx.text" = "123";
+
+/* Class = "UIButton"; normalTitle = "Change Password"; ObjectID = "hQo-jO-Aws"; */
+"hQo-jO-Aws.normalTitle" = "Change Password";
+
+/* Class = "UITextField"; placeholder = "Phonenumber"; ObjectID = "hR1-0I-Qfb"; */
+"hR1-0I-Qfb.placeholder" = "Phonenumber";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "i8T-5E-Kcb"; */
+"i8T-5E-Kcb.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "iDt-sT-4uR"; */
+"iDt-sT-4uR.normalTitle" = "Send";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "idK-u3-I2o"; */
+"idK-u3-I2o.normalTitle" = "Log out";
+
+/* Class = "UILabel"; text = "Clinic"; ObjectID = "in0-jV-lcx"; */
+"in0-jV-lcx.text" = "Clinic";
+
+/* Class = "UILabel"; text = "Product name"; ObjectID = "jfH-kZ-fTR"; */
+"jfH-kZ-fTR.text" = "Product name";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor "; ObjectID = "k9G-Ir-1pz"; */
+"k9G-Ir-1pz.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lkl-ky-Zk2"; */
+"lkl-ky-Zk2.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Have already account? Signin"; ObjectID = "lpI-3Z-Rqu"; */
+"lpI-3Z-Rqu.normalTitle" = "Have already account? Signin";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "mH4-F1-60K"; */
+"mH4-F1-60K.text" = "Location";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "mf8-Ps-DTb"; */
+"mf8-Ps-DTb.normalTitle" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "mxR-Xz-ajM"; */
+"mxR-Xz-ajM.normalTitle" = "Add";
+
+/* Class = "UILabel"; text = "Product name"; ObjectID = "okR-7u-zPn"; */
+"okR-7u-zPn.text" = "Product name";
+
+/* Class = "UILabel"; text = "Order History"; ObjectID = "pMK-wE-PBX"; */
+"pMK-wE-PBX.text" = "Order History";
+
+/* Class = "UILabel"; text = "Clinic Name"; ObjectID = "pfg-EV-n6C"; */
+"pfg-EV-n6C.text" = "Clinic Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "poS-h7-tbR"; */
+"poS-h7-tbR.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Last name"; ObjectID = "q4v-su-fv7"; */
+"q4v-su-fv7.placeholder" = "Last name";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "qJ3-wM-KVt"; */
+"qJ3-wM-KVt.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "Input Message"; ObjectID = "qRZ-mT-vh8"; */
+"qRZ-mT-vh8.text" = "Input Message";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "qXy-in-uUd"; */
+"qXy-in-uUd.normalTitle" = "English";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "qbs-d4-Okt"; */
+"qbs-d4-Okt.text" = "Name:";
+
+/* Class = "UILabel"; text = "Clinic address"; ObjectID = "rLg-M8-LFT"; */
+"rLg-M8-LFT.text" = "Clinic address";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "rml-gc-DGe"; */
+"rml-gc-DGe.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Informations"; ObjectID = "rqR-qI-hZ9"; */
+"rqR-qI-hZ9.text" = "Informations";
+
+/* Class = "UILabel"; text = "Are you elite clinic?"; ObjectID = "s91-Qq-sEg"; */
+"s91-Qq-sEg.text" = "Are you elite clinic?";
+
+/* Class = "UITextField"; placeholder = "Clinic name"; ObjectID = "sHX-ta-ofO"; */
+"sHX-ta-ofO.placeholder" = "Clinic name";
+
+/* Class = "UILabel"; text = "Input Offer Info"; ObjectID = "swH-v7-Vgd"; */
+"swH-v7-Vgd.text" = "Input Offer Info";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "; ObjectID = "tQE-5a-HyQ"; */
+"tQE-5a-HyQ.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "ucV-Ad-W2U"; */
+"ucV-Ad-W2U.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Ready to order"; ObjectID = "ucY-Ad-I5l"; */
+"ucY-Ad-I5l.text" = "Ready to order";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "uxU-60-NGr"; */
+"uxU-60-NGr.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "Event"; ObjectID = "v6H-ak-DnA"; */
+"v6H-ak-DnA.text" = "Event";
+
+/* Class = "UILabel"; text = "+123456789012"; ObjectID = "vJu-fT-37d"; */
+"vJu-fT-37d.text" = "+123456789012";
+
+/* Class = "UITextField"; placeholder = "Whatsapp"; ObjectID = "vWI-dY-Of9"; */
+"vWI-dY-Of9.placeholder" = "Whatsapp";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "vqP-K6-dDT"; */
+"vqP-K6-dDT.text" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "wfz-zd-NUp"; */
+"wfz-zd-NUp.normalTitle" = "Update";
+
+/* Class = "UITextField"; placeholder = "Whatsapp number"; ObjectID = "xQL-41-Crf"; */
+"xQL-41-Crf.placeholder" = "Whatsapp number";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "xVd-Mj-xhn"; */
+"xVd-Mj-xhn.text" = "Sign Up";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "xW8-xL-iyc"; */
+"xW8-xL-iyc.text" = "Products";
+
+/* Class = "UILabel"; text = "Informations:"; ObjectID = "y0n-8v-SRO"; */
+"y0n-8v-SRO.text" = "Informations:";
+
+/* Class = "UILabel"; text = "Quality:"; ObjectID = "y5r-5F-bsq"; */
+"y5r-5F-bsq.text" = "Quality:";
+
+/* Class = "UILabel"; text = "Price($)"; ObjectID = "yce-0g-dz5"; */
+"yce-0g-dz5.text" = "Price($)";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "yrb-JV-dK3"; */
+"yrb-JV-dK3.normalTitle" = "Delete";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "zwM-TH-MGq"; */
+"zwM-TH-MGq.normalTitle" = "Sign Up";

@@ -20,9 +20,23 @@ class LoginVC: UIViewController {
     
     var homeVC : HomeVC!
     
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblLogin: UILabel!
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnAlreday: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneToken = AppDelegate.shared().fcmtoken
+        setReady()
+    }
+    func setReady(){
+        btnLogin.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "login", comment: ""), for: .normal)
+        btnAlreday.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "noaccount", comment: ""), for: .normal)
+        lblLogin.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "login", comment: "")
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     
     @IBAction func loginBtn(_ sender: Any) {

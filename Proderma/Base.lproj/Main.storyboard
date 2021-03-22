@@ -455,10 +455,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAlready" destination="lpI-3Z-Rqu" id="5Ib-2E-Xqh"/>
+                        <outlet property="btnBack" destination="oR6-Iu-UnO" id="5v8-j6-a8t"/>
                         <outlet property="clinicNameTxt" destination="sHX-ta-ofO" id="7xq-Pn-4BA"/>
                         <outlet property="emailTxt" destination="Zo3-Vl-dfy" id="ZmQ-KV-lBb"/>
                         <outlet property="firstNameTxt" destination="cE4-l2-ocv" id="OUa-KQ-xaw"/>
                         <outlet property="lastNameTxt" destination="CSV-sg-Esq" id="61K-u2-bKe"/>
+                        <outlet property="lblAreElite" destination="s91-Qq-sEg" id="F6h-7g-E6d"/>
+                        <outlet property="lblSignupTitle" destination="b1y-BE-kGu" id="wuT-eF-sOk"/>
+                        <outlet property="lblSingup" destination="xVd-Mj-xhn" id="NPG-OR-hAg"/>
                         <outlet property="passwordTxt" destination="i8T-5E-Kcb" id="t81-aC-NFw"/>
                         <outlet property="phoneTxt" destination="hR1-0I-Qfb" id="6gD-dx-3rI"/>
                         <outlet property="signupBtn" destination="zwM-TH-MGq" id="ulM-nI-0db"/>
@@ -758,9 +763,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="zJv-iy-bHR" id="3q5-7q-nEu"/>
+                        <outlet property="btnSignup" destination="7X7-RV-eZA" id="EAv-AL-5JC"/>
                         <outlet property="clinicImg" destination="exe-2J-9zd" id="vEG-VE-MIa"/>
                         <outlet property="codeTxt" destination="5qu-s1-hjE" id="0qW-HX-hCC"/>
                         <outlet property="infoTxt" destination="IuH-Fr-5iu" id="0Q2-La-Tsb"/>
+                        <outlet property="lblClinicinfo" destination="9Rv-vi-uLd" id="TyT-AP-2NV"/>
                         <outlet property="locationTxt" destination="VQ3-ij-okn" id="21V-RM-Nd3"/>
                         <outlet property="whatsappTxt" destination="xQL-41-Crf" id="NBf-6L-aQd"/>
                     </connections>
@@ -1017,7 +1025,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAlreday" destination="Cgp-6x-c6R" id="Fcj-jN-n58"/>
+                        <outlet property="btnBack" destination="clJ-aE-te7" id="JhE-k8-nez"/>
+                        <outlet property="btnLogin" destination="CTr-tK-1yb" id="I8s-AX-xWn"/>
                         <outlet property="emailTxt" destination="rml-gc-DGe" id="OXK-cG-gWj"/>
+                        <outlet property="lblLogin" destination="Qm1-ol-Esh" id="0Rv-uz-tbp"/>
                         <outlet property="passwordTxt" destination="ucV-Ad-W2U" id="w6F-Nv-5kr"/>
                     </connections>
                 </viewController>
@@ -1028,7 +1040,7 @@
         <!--SplashVC-->
         <scene sceneID="6Ob-eM-wMz">
             <objects>
-                <viewController id="zpQ-bd-tJF" customClass="SplashVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="splashVC" id="zpQ-bd-tJF" customClass="SplashVC" customModule="Proderma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Inv-qg-dFx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1158,6 +1170,11 @@
                             <constraint firstItem="Htv-eT-vpF" firstAttribute="width" secondItem="oEa-lK-yFJ" secondAttribute="width" id="zAG-ou-rLV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnBack" destination="0p7-0D-FJB" id="qzJ-YS-Mb0"/>
+                        <outlet property="btnLogin" destination="O2L-rh-0da" id="1l3-5b-p6b"/>
+                        <outlet property="btnSingup" destination="mf8-Ps-DTb" id="mKs-Zs-AfG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLS-FH-DOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1287,8 +1304,8 @@
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jvc-Jt-zig">
                                                 <rect key="frame" x="20.5" y="7" width="373" height="230"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastest News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwL-kz-Xra">
-                                                        <rect key="frame" x="10" y="10" width="98.5" height="18"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwL-kz-Xra">
+                                                        <rect key="frame" x="10" y="10" width="0.0" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="qXj-BT-6wo"/>
                                                         </constraints>
@@ -1329,8 +1346,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jot-IO-tRP">
                                                 <rect key="frame" x="20.5" y="244" width="373" height="230"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW8-xL-iyc">
-                                                        <rect key="frame" x="10" y="10" width="67" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW8-xL-iyc">
+                                                        <rect key="frame" x="10" y="10" width="0.0" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="lw3-NW-BAM"/>
                                                         </constraints>
@@ -1339,13 +1356,12 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skx-zZ-qkl">
-                                                        <rect key="frame" x="323" y="10" width="40" height="20"/>
+                                                        <rect key="frame" x="333" y="10" width="30" height="20"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="40" id="Idw-eY-VAe"/>
                                                             <constraint firstAttribute="height" constant="20" id="WxQ-U8-FGz"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <state key="normal" title="See all">
+                                                        <state key="normal">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -1451,8 +1467,8 @@
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWU-g0-DJY">
                                                 <rect key="frame" x="20.5" y="481" width="373" height="230"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVP-7M-a0h">
-                                                        <rect key="frame" x="10" y="10" width="49.5" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVP-7M-a0h">
+                                                        <rect key="frame" x="10" y="10" width="0.0" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="qxV-IN-czG"/>
                                                         </constraints>
@@ -1461,13 +1477,12 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5l-N4-Cbi">
-                                                        <rect key="frame" x="323" y="10" width="40" height="20"/>
+                                                        <rect key="frame" x="333" y="10" width="30" height="20"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="40" id="CV2-U1-fqB"/>
                                                             <constraint firstAttribute="height" constant="20" id="YwQ-ry-iEv"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <state key="normal" title="See all">
+                                                        <state key="normal">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -1830,8 +1845,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnCSeeAll" destination="F5l-N4-Cbi" id="lYd-yk-4ow"/>
+                        <outlet property="btnPSeeAll" destination="Skx-zZ-qkl" id="YdJ-3c-UFA"/>
                         <outlet property="cvClinic" destination="z4d-dB-513" id="tON-am-xBY"/>
                         <outlet property="cvProduct" destination="Hw7-Qq-yq2" id="AAC-lB-Jel"/>
+                        <outlet property="lblChat" destination="PCS-0X-SrW" id="hAT-A3-IMD"/>
+                        <outlet property="lblClinic" destination="716-rg-JJU" id="Nlu-rK-24X"/>
+                        <outlet property="lblClinics" destination="bVP-7M-a0h" id="1zR-0B-zaD"/>
+                        <outlet property="lblEvent" destination="v6H-ak-DnA" id="quV-sh-wd9"/>
+                        <outlet property="lblHistory" destination="4s7-hh-rpI" id="dCp-te-fOF"/>
+                        <outlet property="lblLastNews" destination="SwL-kz-Xra" id="tIN-8b-xc6"/>
+                        <outlet property="lblProducts" destination="xW8-xL-iyc" id="5FE-Yp-Kqy"/>
+                        <outlet property="lblSetting" destination="WmG-SY-NQ2" id="mcl-w9-KVX"/>
                         <outlet property="txtNews" destination="CNp-Po-Z0D" id="sSq-bK-MFX"/>
                     </connections>
                 </viewController>
@@ -1853,8 +1878,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE3-EA-ICV">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiF-Zd-ge6">
-                                                <rect key="frame" x="45" y="14.5" width="99.5" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiF-Zd-ge6">
+                                                <rect key="frame" x="45" y="25" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2074,8 +2099,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="JH5-XA-G4M" id="NDv-N9-r5z"/>
                         <outlet property="cvBrand" destination="CcH-nc-KHm" id="6aF-Ao-vTa"/>
                         <outlet property="cvProduct" destination="1qU-AD-k3v" id="fUQ-0B-34u"/>
+                        <outlet property="lblProducts" destination="OiF-Zd-ge6" id="foZ-Fp-AaB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1j-5G-r04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2096,8 +2123,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6G-Ip-bp9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Clinics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0s-ZX-V0q">
-                                                <rect key="frame" x="45" y="14.5" width="80" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0s-ZX-V0q">
+                                                <rect key="frame" x="45" y="25" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2302,7 +2329,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="BjI-q7-5iW" id="bMq-Gm-0jv"/>
                         <outlet property="clinicTable" destination="0o0-ci-O2Q" id="g8z-ZQ-h3i"/>
+                        <outlet property="lblClinics" destination="A0s-ZX-V0q" id="nQh-FL-0PF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzM-Hx-YUA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2719,12 +2748,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="Cta-bn-XLa" id="iGZ-Wc-n6i"/>
                         <outlet property="clinicImg" destination="O8K-Xe-wNc" id="GhM-FO-6lS"/>
                         <outlet property="clinicSlider" destination="YCo-OM-nMR" id="cry-CM-Qvg"/>
                         <outlet property="doctorCV" destination="Kaz-Um-hj0" id="Piq-hi-uck"/>
                         <outlet property="doctorCVHeight" destination="Ya5-Ox-ZTD" id="tln-lK-XqO"/>
                         <outlet property="infoTxt" destination="tQE-5a-HyQ" id="HGy-0F-okZ"/>
                         <outlet property="infoView" destination="Hbo-Rl-g6I" id="RGe-gM-Yl7"/>
+                        <outlet property="lblClinic" destination="UYK-gj-Nl7" id="tOd-Lw-sUe"/>
+                        <outlet property="lblInformations" destination="UDC-ZE-LYl" id="qKf-cY-0Zn"/>
                         <outlet property="locationTxt" destination="8Ue-Hm-asw" id="7IT-QD-YQe"/>
                         <outlet property="nameTxt" destination="pfg-EV-n6C" id="H11-tP-eTK"/>
                         <outlet property="offerTB" destination="8AF-zM-v8r" id="bHZ-ig-TqW"/>
@@ -3188,12 +3220,19 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="eRh-fz-cu6" id="iU9-Zx-aEo"/>
+                        <outlet property="btnOrder" destination="ZMN-5E-7vC" id="fPC-kv-2z1"/>
                         <outlet property="clinicViewHeight" destination="lPF-SH-tQc" id="Dfk-Qq-Q8z"/>
                         <outlet property="countTxt" destination="sxo-0P-KN4" id="1UT-sd-iaZ"/>
                         <outlet property="cvConstraint" destination="jHO-RS-kOR" id="otd-vM-mU5"/>
                         <outlet property="descriptionTxt" destination="bZG-AH-8Ik" id="zJj-PL-Lkd"/>
                         <outlet property="extraTxt" destination="gjF-Rx-V5p" id="cID-XO-2oU"/>
                         <outlet property="infoView" destination="5KG-nH-z8q" id="bMq-5K-0As"/>
+                        <outlet property="lblInformations" destination="CGc-Hw-sla" id="91A-Ia-uMr"/>
+                        <outlet property="lblMoreinfo" destination="Wf2-5r-joc" id="gXd-3s-eiF"/>
+                        <outlet property="lblPrice" destination="yce-0g-dz5" id="B1f-Jo-I6d"/>
+                        <outlet property="lblProduct" destination="Ggo-TK-dGC" id="PF0-mK-pSL"/>
+                        <outlet property="lblQuality" destination="y5r-5F-bsq" id="pU3-Lq-bu5"/>
                         <outlet property="nameTxt" destination="Fw8-py-er5" id="BZd-WG-o1H"/>
                         <outlet property="orderBtn" destination="ZMN-5E-7vC" id="RVs-v7-LFS"/>
                         <outlet property="priceTxt" destination="Nx5-P8-9dE" id="X8o-a1-tv5"/>
@@ -3474,6 +3513,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="lRu-Ie-j1q" id="A4v-Rh-fQQ"/>
+                        <outlet property="btnUpdate" destination="wfz-zd-NUp" id="mKe-gk-hTn"/>
+                        <outlet property="lblClinic" destination="dXn-X5-GI5" id="ZOO-bP-jbl"/>
                         <outlet property="txtClinicname" destination="dgU-00-GUS" id="ZPs-Ga-yiN"/>
                         <outlet property="txtFirstname" destination="HmX-uM-aGo" id="tPT-fZ-pSj"/>
                         <outlet property="txtLastname" destination="q4v-su-fv7" id="1EP-Gu-Rm7"/>
@@ -3951,12 +3993,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="ixN-3k-cn0" id="oZ7-82-a7e"/>
                         <outlet property="clinicImg" destination="HUm-eL-i11" id="pFr-1q-a07"/>
                         <outlet property="clinicSlider" destination="un4-cK-TvT" id="gEC-Wb-06g"/>
                         <outlet property="doctorCV" destination="jj2-bf-bzw" id="sdj-N0-JrQ"/>
                         <outlet property="doctorCVHeight" destination="Bbm-sp-1wY" id="AKO-pn-i5P"/>
                         <outlet property="infoTxt" destination="cw6-1u-RZ3" id="CjW-Jp-nIa"/>
                         <outlet property="infoView" destination="stp-P0-biU" id="F4K-D0-c41"/>
+                        <outlet property="lblClinic" destination="in0-jV-lcx" id="AmE-pt-xIQ"/>
+                        <outlet property="lblInformations" destination="OTA-90-7TI" id="qC9-hf-HM8"/>
                         <outlet property="locationTxt" destination="3D2-YH-yTI" id="Pra-ic-GMz"/>
                         <outlet property="nameTxt" destination="5X3-1Y-kSL" id="9Md-jM-8ow"/>
                         <outlet property="offerTB" destination="J82-t9-aN5" id="SlF-p5-jSc"/>
@@ -4169,7 +4214,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="fw0-4P-Q8J" id="rns-PZ-OgH"/>
                         <outlet property="eventTB" destination="Lie-IC-1Wh" id="Gpj-yR-PZL"/>
+                        <outlet property="lblEvent" destination="SMu-Ye-tgU" id="nV1-k8-R7m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTt-BN-1pk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4339,7 +4386,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="ItB-sr-32j" id="Tgc-fx-FXE"/>
                         <outlet property="chatUV" destination="IaS-4m-76d" id="dyA-rh-3Ay"/>
+                        <outlet property="lblChats" destination="GcS-88-N3Q" id="u8Z-r3-7WY"/>
                         <outlet property="messageTxt" destination="LGL-0h-fyF" id="Ek9-ZP-B8q"/>
                     </connections>
                 </viewController>
@@ -4576,7 +4625,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="Pr3-i8-UaD" id="TBg-eG-fiL"/>
                         <outlet property="historyTB" destination="50t-gF-dJm" id="9cT-AX-fY6"/>
+                        <outlet property="lblHistory" destination="pMK-wE-PBX" id="jhC-Jb-U4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUK-Xc-9Nu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4726,7 +4777,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="cMo-Ab-Xm8" id="dO9-zh-Lju"/>
                         <outlet property="changePassBtn" destination="hQo-jO-Aws" id="N0i-30-znu"/>
+                        <outlet property="lblSetting" destination="vqP-K6-dDT" id="37x-eA-hcJ"/>
                         <outlet property="logoutBtn" destination="idK-u3-I2o" id="phG-uP-kax"/>
                         <outlet property="setLangBtn" destination="qXy-in-uUd" id="mK6-Hn-Ok1"/>
                     </connections>
@@ -5067,8 +5120,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="Q9X-ki-jAI" id="YYM-fN-YwF"/>
+                        <outlet property="btnUpdate" destination="Ojd-iO-DTf" id="LDQ-oP-dZD"/>
                         <outlet property="clinicImg" destination="Dnq-4j-6SM" id="EMj-4k-r9g"/>
                         <outlet property="infoTxt" destination="AKi-8I-FYZ" id="ujI-K6-EPu"/>
+                        <outlet property="lblInputlcinicInfo" destination="8js-s2-naF" id="kdM-GI-3sd"/>
                         <outlet property="locationTxt" destination="Twv-aE-4t8" id="dla-RU-WDY"/>
                         <outlet property="nameTxt" destination="4dF-GI-m0r" id="aqb-Y4-5Mb"/>
                         <outlet property="phoneTxt" destination="exJ-Pz-aJN" id="MTV-Z0-6z0"/>
@@ -5215,7 +5271,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="xQ9-cN-zUM" id="XGn-4Z-e5d"/>
                         <outlet property="imageCV" destination="u1m-uq-1jN" id="Dbv-42-wsa"/>
+                        <outlet property="lblAllPhoto" destination="2Te-L9-0Ay" id="6ZU-GT-dCE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYa-3y-KdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5423,7 +5481,10 @@
                     </view>
                     <connections>
                         <outlet property="DoctorImg" destination="BVu-vA-lPh" id="Glh-2h-1Kz"/>
+                        <outlet property="btnAdd" destination="fHk-oj-Swh" id="DPa-hx-hoO"/>
+                        <outlet property="btnBack" destination="x4v-JA-gwu" id="Aoy-ay-VI3"/>
                         <outlet property="infoTxt" destination="bxN-wC-wnB" id="tiF-LJ-cpC"/>
+                        <outlet property="lblDoctorInfo" destination="FOf-yY-xCz" id="rBX-8q-ffY"/>
                         <outlet property="nameTxt" destination="8yY-Xa-5WX" id="ueG-sY-roS"/>
                     </connections>
                 </viewController>
@@ -5616,7 +5677,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAdd" destination="mxR-Xz-ajM" id="n5z-LT-x2B"/>
+                        <outlet property="btnBack" destination="XMC-X5-c5M" id="1E8-Pc-BQQ"/>
                         <outlet property="infoTxt" destination="Nnf-5u-HKt" id="yzy-PA-Rzc"/>
+                        <outlet property="lblOfferinfo" destination="swH-v7-Vgd" id="oD6-C5-c6m"/>
                         <outlet property="titleTxt" destination="Wen-x3-jrL" id="12f-mR-haV"/>
                     </connections>
                 </viewController>
@@ -5823,9 +5887,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="cWJ-9x-XIy" id="Xi2-mp-wzZ"/>
+                        <outlet property="btnInterest" destination="Clz-cb-beF" id="y1U-hl-R9W"/>
                         <outlet property="dateTxt" destination="LTH-C3-Ms1" id="dyZ-MK-rqR"/>
                         <outlet property="eventSlide" destination="Bq1-Ij-5Iv" id="NtW-OO-luI"/>
                         <outlet property="infoTxt" destination="lkl-ky-Zk2" id="Oc7-1u-rgt"/>
+                        <outlet property="lblEvent" destination="F63-v6-N4o" id="gjB-1w-fZw"/>
+                        <outlet property="lblInformation" destination="y0n-8v-SRO" id="PYg-a1-pPS"/>
                         <outlet property="locationTxt" destination="Icd-sK-Ybn" id="GBf-aI-y50"/>
                         <outlet property="requestBtn" destination="Clz-cb-beF" id="J7I-Zv-oQQ"/>
                         <outlet property="titleTxt" destination="dWp-Lt-BRe" id="Qhu-Sb-Iv3"/>
@@ -6057,8 +6125,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="spb-bR-ZKt" id="PCE-Zg-mAm"/>
+                        <outlet property="btnDelete" destination="yrb-JV-dK3" id="sHu-Cm-10D"/>
+                        <outlet property="btnUpdate" destination="Q5z-LJ-ZId" id="6En-bO-Rxh"/>
                         <outlet property="doctorImg" destination="A15-nh-XZc" id="ogx-Cg-cf8"/>
                         <outlet property="infoTxt" destination="qNG-zJ-Skk" id="vai-ie-HwZ"/>
+                        <outlet property="lblDoctorInfo" destination="74S-3a-nbH" id="boc-C4-4Lh"/>
                         <outlet property="nameTxt" destination="T5x-nF-Xqa" id="NvK-6d-mCn"/>
                     </connections>
                 </viewController>
@@ -6239,6 +6311,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="XRI-rE-iBU" id="9U8-9f-66P"/>
+                        <outlet property="btnDelete" destination="uxU-60-NGr" id="Dtz-cv-lo8"/>
                         <outlet property="infoTxt" destination="F8f-IG-j3d" id="YNN-T9-bEd"/>
                         <outlet property="titleTxt" destination="chB-jm-MC9" id="SJU-vf-VZh"/>
                     </connections>
@@ -6356,7 +6430,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="QW9-Xm-C8E" id="4eT-4P-F7Z"/>
+                        <outlet property="btnDelete" destination="qJ3-wM-KVt" id="zl6-u8-bt5"/>
                         <outlet property="doctorImg" destination="r6U-bS-qov" id="8lR-Db-6V5"/>
+                        <outlet property="lblPhoto" destination="ZPB-D8-Lfd" id="nzc-Oq-Q8A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKS-I3-VnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -6561,7 +6638,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="5EW-gy-uxS" id="XeW-mc-27P"/>
                         <outlet property="infoTB" destination="zDB-v3-8D7" id="lu1-kp-dLj"/>
+                        <outlet property="lblMoreinfo" destination="5Wv-w5-PbR" id="nZW-hx-EHz"/>
                         <outlet property="selType" destination="8GQ-L5-djb" id="J6A-8v-jcd"/>
                     </connections>
                 </viewController>
@@ -6843,7 +6922,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="GV6-Yi-8Mq" id="6LJ-HM-fv8"/>
+                        <outlet property="btnChange" destination="ROY-Zf-sf2" id="365-uP-lm0"/>
                         <outlet property="confirmTxt" destination="T2Y-wg-wam" id="J8h-Ns-Xjb"/>
+                        <outlet property="lblChangePassword" destination="Jgm-ch-gi7" id="C0g-SB-Ohf"/>
+                        <outlet property="lblChangePasswordTitle" destination="9FB-fo-uOI" id="yFn-g5-hGo"/>
                         <outlet property="newTxt" destination="eY6-fw-RgU" id="QMo-4t-BMV"/>
                         <outlet property="originalTxt" destination="XLU-hY-vX0" id="zRb-9g-DmK"/>
                     </connections>
@@ -6855,7 +6938,7 @@
     </scenes>
     <resources>
         <image name="alarm" width="170" height="170"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.left" catalog="system" width="32" height="32"/>
         <image name="iccall" width="348" height="348"/>
         <image name="icchat" width="215" height="215"/>
         <image name="icedit" width="512" height="512"/>

@@ -46,6 +46,14 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     var image : [UIImage] = []
     var inputSource: [InputSource] = []
     
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblProduct: UILabel!
+    @IBOutlet weak var lblMoreinfo: UIButton!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblQuality: UILabel!
+    @IBOutlet weak var lblInformations: UILabel!
+    @IBOutlet weak var btnOrder: UIButton!
+    
     override func viewDidLoad() {
         productID = AppDelegate.shared().productID
         loginStatus = AppDelegate.shared().loginStatus
@@ -69,6 +77,18 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
             orderBtn.isHidden = true
         }
         countTxt.addTarget(self, action: #selector(countChange), for: .editingChanged)
+    }
+    func setReady(){
+        lblProduct.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "product", comment: "")
+        lblMoreinfo.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "moreinfo", comment: ""), for: .normal)
+        lblPrice.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "price", comment: "")
+        lblQuality.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "quality", comment: "")
+        lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
+        btnOrder.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "order", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     @objc func countChange(){
         if userType == "elite"{

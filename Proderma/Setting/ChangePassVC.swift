@@ -15,11 +15,26 @@ class ChangePassVC: UIViewController {
     @IBOutlet weak var newTxt: UITextField!
     @IBOutlet weak var confirmTxt: UITextField!
     
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblChangePassword: UILabel!
+    
+    @IBOutlet weak var btnChange: UIButton!
+    @IBOutlet weak var lblChangePasswordTitle: UILabel!
     var spinnerView = JTMaterialSpinner()
     var clinicid : String!
     override func viewDidLoad() {
         super.viewDidLoad()
         clinicid = AppDelegate.shared().currentClinicID
+        setReady()
+    }
+    func setReady(){
+        lblChangePassword.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: "")
+        lblChangePasswordTitle.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: "")
+        btnChange.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     @IBAction func onChangeBtn(_ sender: Any) {
         let origin_pass = originalTxt.text!

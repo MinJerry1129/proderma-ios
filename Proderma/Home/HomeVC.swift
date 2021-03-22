@@ -39,6 +39,21 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var allProducts = [Product]()
     var loginstatus :String!
     var usertype : String!
+    
+    @IBOutlet weak var btnPSeeAll: UIButton!
+    @IBOutlet weak var btnCSeeAll: UIButton!
+    
+    @IBOutlet weak var lblLastNews: UILabel!
+    @IBOutlet weak var lblClinics: UILabel!
+    @IBOutlet weak var lblProducts: UILabel!
+    
+    @IBOutlet weak var lblClinic: UILabel!
+    @IBOutlet weak var lblEvent: UILabel!
+    @IBOutlet weak var lblChat: UILabel!
+    @IBOutlet weak var lblHistory: UILabel!
+    @IBOutlet weak var lblSetting: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -48,9 +63,25 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         cvClinic.dataSource = self
         cvProduct.delegate = self
         cvProduct.dataSource = self
+        setReady()
+        
+        
         usertype = AppDelegate.shared().userType
         txtNews.text = "PRODERMA ME was developed in 2007 in Dubai, in response to the ever --- growing demand and need for a complete Aeshetic, representing only approved worldwide aesthetic companies"
         getData()
+    }
+    func setReady(){
+        btnPSeeAll.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "see_all", comment: ""), for: .normal)
+        btnCSeeAll.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "see_all", comment: ""), for: .normal)
+        lblLastNews.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "lastnews", comment: "")
+        lblClinics.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinics", comment: "")
+        lblProducts.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "products", comment: "")
+        
+        lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
+        lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "event", comment: "")
+        lblChat.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chat", comment: "")
+        lblHistory.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "history", comment: "")
+        lblSetting.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "setting", comment: "")        
     }
     func getData(){
         allProducts = []

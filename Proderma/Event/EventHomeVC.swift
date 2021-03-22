@@ -16,6 +16,10 @@ class EventHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var eventTB: UITableView!
     
     var eventoneVC : EventOneVC!
+    
+    
+    @IBOutlet weak var lblEvent: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         eventTB.delegate = self
@@ -25,8 +29,15 @@ class EventHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getData()
+        setReady()
     }
-    
+    func setReady(){
+        lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "homeevent", comment: "")
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
+    }
     func getData(){
         allevent = []
         self.view.addSubview(spinnerView)

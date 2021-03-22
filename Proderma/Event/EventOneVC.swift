@@ -29,7 +29,11 @@ class EventOneVC: UIViewController {
     var inputSource: [InputSource] = []
     var image : [UIImage] = []
     var allImages = [EventImage]()
+    @IBOutlet weak var lblEvent: UILabel!
+    @IBOutlet weak var lblInformation: UILabel!
     
+    @IBOutlet weak var btnInterest: UIButton!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         loginStatus = AppDelegate.shared().loginStatus
@@ -39,6 +43,13 @@ class EventOneVC: UIViewController {
         getData()
     }
     func setReady(){
+        lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "event", comment: "")
+        lblInformation.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
+        btnInterest.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "interest", comment: ""), for: .normal)
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
         if loginStatus == "no"{
             requestBtn.isHidden = true
         }        

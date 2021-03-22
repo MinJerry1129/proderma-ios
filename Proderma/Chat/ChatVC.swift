@@ -11,9 +11,19 @@ class ChatVC: UIViewController {
 
     @IBOutlet weak var messageTxt: UITextView!
     @IBOutlet weak var chatUV: UIView!
+    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var lblChats: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         chatUV.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+        setReady()
+    }
+    func setReady(){
+        lblChats.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chat", comment: "")
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
 
     @IBAction func onSendMessage(_ sender: Any) {

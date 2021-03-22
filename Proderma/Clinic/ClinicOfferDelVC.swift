@@ -10,6 +10,8 @@ import Alamofire
 import JTMaterialSpinner
 class ClinicOfferDelVC: UIViewController {
 
+    @IBOutlet weak var btnDelete: UIButton!
+    @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var titleTxt: UITextField!
     @IBOutlet weak var infoTxt: UITextView!
     var spinnerView = JTMaterialSpinner()
@@ -18,6 +20,15 @@ class ClinicOfferDelVC: UIViewController {
         super.viewDidLoad()
         offerID = AppDelegate.shared().offerID
         getData()
+        setReady()
+    }
+    func setReady(){
+        
+        btnDelete.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "delete", comment: ""), for: .normal)        
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func getData(){
         self.view.addSubview(spinnerView)

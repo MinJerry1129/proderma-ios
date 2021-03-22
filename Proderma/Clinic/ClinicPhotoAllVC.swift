@@ -19,16 +19,26 @@ class ClinicPhotoAllVC: UIViewController, UICollectionViewDelegate, UICollection
     var clinicID : String!
     var clinicphotodelVC : ClinicPhotoDelVC!
     
+    @IBOutlet weak var lblAllPhoto: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         clinicID = AppDelegate.shared().currentClinicID
         imageCV.delegate = self
         imageCV.dataSource = self
+        setReady()
         
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         getData()
+    }
+    func setReady(){
+        lblAllPhoto.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "allphoto", comment: "")
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     func selClinicImg(){
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)

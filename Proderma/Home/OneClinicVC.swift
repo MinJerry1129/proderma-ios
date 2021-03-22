@@ -44,6 +44,10 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     var clinicWhatsapp : String!
     var clinicInformation : String!
     var clinicPhoto : String!
+    
+    @IBOutlet weak var lblInformations: UILabel!
+    @IBOutlet weak var lblClinic: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         infoView.layer.borderColor = UIColor(named: "major")?.cgColor
@@ -61,11 +65,20 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         whatsappTxt.isUserInteractionEnabled = true
         let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onOpenWhatsapp))
         whatsappTxt.addGestureRecognizer(gestureRecognizerw)
+        setReady()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         inputSource = []
         getData()
+    }
+    func setReady(){
+        lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
+        lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
+        
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     @objc func onOpenCall(){
         let moblestr = "tel://" + phoneTxt.text!

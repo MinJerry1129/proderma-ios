@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  Proderma
+
+  Created by bird on 3/22/21.
+  
+*/
+"language" = "عربي";
+
+"see_all" = "See all";
+"lastnews" = "Latest news";
+"clinics" = "Clinics";
+"products" = "Products";
+
+"clinic" = "Clinic";
+"event" = "Event";
+"chat" = "Chat";
+"history" = "History";
+"setting" = "Setting";
+
+"product" = "Product";
+
+"moreinfo" = "Product";
+"price" = "price($)";
+"quality" = "Quality:";
+"informations" = "Informations";
+"order" = "Order";
+
+"homeevent" = "Event and Training";
+"changepassword" = "Change password";
+"logout" = "Log out";
+
+"update" = "Update";
+"allphoto" = "All Photos";
+
+"clinicinfo" = "Input Clinic Info";
+"doctorinfo" = "Doctor Info";
+"offerInfo" = "Offer Info";
+"add" = "Add";
+"interest" = "Interest";
+"photo" = "Photo";
+"delete" = "Delete";
+
+"signup" = "Sign Up";
+"login" = "Login";
+"eliteclinic" = "Are you Elite Clinic?";
+"alreadyaccount" = "Have already account? Signin";
+"noaccount" = "Don't have account? Signup";
+
+
+

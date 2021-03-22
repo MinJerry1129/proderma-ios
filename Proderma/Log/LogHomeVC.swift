@@ -11,9 +11,20 @@ class LogHomeVC: UIViewController {
     var loginVC : LoginVC!
     var signupVC : SignupVC!
     
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnSingup: UIButton!
+    @IBOutlet weak var btnBack: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setReady()
         
+    }
+    func setReady(){
+        btnLogin.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "login", comment: ""), for: .normal)
+        btnSingup.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: ""), for: .normal)
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
     }
     @IBAction func onSignupBtn(_ sender: Any) {
         self.signupVC = self.storyboard?.instantiateViewController(withIdentifier: "signupVC") as? SignupVC

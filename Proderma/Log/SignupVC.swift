@@ -12,6 +12,11 @@ import Toast_Swift
 import SimpleCheckbox
 class SignupVC: UIViewController {
 
+    @IBOutlet weak var btnAlready: UIButton!
+    @IBOutlet weak var lblAreElite: UILabel!
+    @IBOutlet weak var lblSignupTitle: UILabel!
+    @IBOutlet weak var lblSingup: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var firstNameTxt: UITextField!
     @IBOutlet weak var lastNameTxt: UITextField!
@@ -32,9 +37,19 @@ class SignupVC: UIViewController {
     var clinic_type = "normal"
     override func viewDidLoad() {
         super.viewDidLoad()
+        setReady()
         typeCBox.addTarget(self, action: #selector(checkboxValueChanged(sender:)), for: .valueChanged)
     }
-    
+    func setReady(){
+        signupBtn.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: ""), for: .normal)
+        btnAlready.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "alreadyaccount", comment: ""), for: .normal)
+        lblAreElite.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "eliteclinic", comment: "")
+        lblSingup.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: "")
+        lblSignupTitle.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: "")
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }
+    }
     @objc func checkboxValueChanged(sender: Checkbox) {
         print("checkbox value change: \(sender.isChecked)")
         if sender.isChecked {
