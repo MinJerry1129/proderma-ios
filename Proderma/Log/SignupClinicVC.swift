@@ -21,6 +21,7 @@ class SignupClinicVC: UIViewController {
     @IBOutlet weak var codeTxt: UITextField!
     
     var spinnerView = JTMaterialSpinner()
+    var homeVC : HomeVC!
     
     var avatarImage : UIImage!
     var whatsappnum : String!
@@ -126,6 +127,9 @@ class SignupClinicVC: UIViewController {
                     if let value = response.value as? [String: AnyObject] {
                         let status = value["status"] as? String
                         if status == "ok"{
+                            self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
+                            self.homeVC.modalPresentationStyle = .fullScreen
+                            self.present(self.homeVC, animated: true, completion: nil)
                             self.view.makeToast("Signup Success, Please wait accept or contact to support team")
                         }else if status == "existemail"{
                             self.view.makeToast("Your account already exist, Please contact to support team")

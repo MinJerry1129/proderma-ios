@@ -15,6 +15,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     var oneproductVC : OneProductVC!
     var allProducts = [Product]()
     var allFilterProducts = [Product]()
+    var allSearchFilterProducts = [Product]()
     var allBrands = [Brand]()
     var spinnerView = JTMaterialSpinner()
     
@@ -23,6 +24,8 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var lblProducts: UILabel!
     @IBOutlet weak var cvBrand: UICollectionView!
     @IBOutlet weak var cvProduct: UICollectionView!
+    
+    var search_Text = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +80,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
                         let productcell = Product(id: id,brandid: brandid, name: name, price: price, percent: percent, photo: photo, description: description)
                         self.allProducts.append(productcell)
                         self.allFilterProducts.append(productcell)
+                        self.allSearchFilterProducts.append(productcell)
                     }
                 }
                 if(brandsInfos!.count > 0){
@@ -95,9 +99,32 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         }
         
     }
+
+    func filter(){
+        allSearchFilterProducts = []
+        if search_Text != nil {
+            if search_Text == ""{
+                for i in 0 ... allFilterProducts.count - 1{
+                    allSearchFilterProducts.append(allFilterProducts[i])
+                }
+            }else{
+                allSearchFilterProducts = allFilterProducts.filter({ (product: Product) -> Bool in
+                    return product.name.lowercased().contains(search_Text.lowercased())
+                })
+            }
+        }else{
+            for i in 0 ... allFilterProducts.count - 1{
+                allSearchFilterProducts.append(allFilterProducts[i])
+            }
+        }
+        
+        cvProduct.reloadData()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
     {
-        print(searchText)
+        search_Text = searchText
+        filter()
 
             // filterdata  = searchText.isEmpty ? data : data.filter {(item : String) -> Bool in
 
@@ -109,7 +136,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView.tag == 103){
-            return allFilterProducts.count
+            return allSearchFilterProducts.count
         }else{
             return allBrands.count
         }
@@ -119,7 +146,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView.tag == 103{
             let oneProduct: Product
-            oneProduct =  allFilterProducts[indexPath.row]
+            oneProduct =  allSearchFilterProducts[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! AllproductCell
 //            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
             cell.productImg.sd_setImage(with: URL(string: Global.baseUrl + oneProduct.photo), completed: nil)
@@ -158,7 +185,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
                 }
                 
             }
-            cvProduct.reloadData()
+            filter()
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

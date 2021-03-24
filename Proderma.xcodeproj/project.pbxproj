@@ -73,6 +73,10 @@
 		C56379B725D4372D00B99EE5 /* Productvideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B625D4372D00B99EE5 /* Productvideo.swift */; };
 		C56379BA25D4376B00B99EE5 /* ProductinfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */; };
 		C59E54302607A0A900CAD33A /* ClinicNormalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E542F2607A0A900CAD33A /* ClinicNormalVC.swift */; };
+		C5EFF1DC260BBCAF00B22E8C /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF1DA260BBCAF00B22E8C /* NotificationCell.swift */; };
+		C5EFF1DD260BBCAF00B22E8C /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EFF1DB260BBCAF00B22E8C /* NotificationCell.xib */; };
+		C5EFF1E1260BBE8100B22E8C /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF1E0260BBE8100B22E8C /* NewsVC.swift */; };
+		C5EFF1E5260BC3E100B22E8C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF1E4260BC3E100B22E8C /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +153,10 @@
 		C56379B625D4372D00B99EE5 /* Productvideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productvideo.swift; sourceTree = "<group>"; };
 		C56379B925D4376B00B99EE5 /* ProductinfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductinfoCell.swift; sourceTree = "<group>"; };
 		C59E542F2607A0A900CAD33A /* ClinicNormalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicNormalVC.swift; sourceTree = "<group>"; };
+		C5EFF1DA260BBCAF00B22E8C /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		C5EFF1DB260BBCAF00B22E8C /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		C5EFF1E0260BBE8100B22E8C /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		C5EFF1E4260BC3E100B22E8C /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +206,7 @@
 				C51F73C925C1DD1E0047C80B /* SelLangVC.swift */,
 				C51DD8282608CCDF00FCDCFE /* Localizable.strings */,
 				C541469B25CF733E007F73AB /* GoogleService-Info.plist */,
+				C5EFF1DF260BBE6200B22E8C /* Notification */,
 				C527613925FF9932002F3989 /* Gifanimation */,
 				C524BAB425CDA132005980B5 /* Home */,
 				C524BAB625CDA140005980B5 /* Clinic */,
@@ -304,8 +313,10 @@
 				C52761B425FFC016002F3989 /* HomeDoctorCell.swift */,
 				C527609425FF8B09002F3989 /* BrandCell.swift */,
 				C55B14022601921300715036 /* ClinicImageCell.swift */,
-				C52761B725FFC322002F3989 /* OfferCell.swift */,
+				C5EFF1DA260BBCAF00B22E8C /* NotificationCell.swift */,
+				C5EFF1DB260BBCAF00B22E8C /* NotificationCell.xib */,
 				C55B13F62600EBBD00715036 /* EventListCell.swift */,
+				C52761B725FFC322002F3989 /* OfferCell.swift */,
 				C52761B825FFC322002F3989 /* OfferCell.xib */,
 			);
 			path = Cell;
@@ -327,6 +338,7 @@
 				C541469225CF6F09007F73AB /* Clinic.swift */,
 				C541469825CF6F7D007F73AB /* Product.swift */,
 				C51DD81D2608CBA900FCDCFE /* LocalizationSystem.swift */,
+				C5EFF1E4260BC3E100B22E8C /* News.swift */,
 				C527609725FF8F32002F3989 /* Brand.swift */,
 				C541473825D0D601007F73AB /* ProductImage.swift */,
 				C541473B25D0D6F6007F73AB /* ClinicImage.swift */,
@@ -340,6 +352,14 @@
 				C55B13FC2600FB1C00715036 /* EventImage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C5EFF1DF260BBE6200B22E8C /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				C5EFF1E0260BBE8100B22E8C /* NewsVC.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		D4DD54C258579908F13E8F15 /* Pods */ = {
@@ -416,6 +436,7 @@
 				C541469C25CF733E007F73AB /* GoogleService-Info.plist in Resources */,
 				C52761BA25FFC322002F3989 /* OfferCell.xib in Resources */,
 				C51DD8262608CCDF00FCDCFE /* Localizable.strings in Resources */,
+				C5EFF1DD260BBCAF00B22E8C /* NotificationCell.xib in Resources */,
 				C51F73CF25C1DD200047C80B /* Assets.xcassets in Resources */,
 				C51F73CD25C1DD1F0047C80B /* Main.storyboard in Resources */,
 				C527611825FF957E002F3989 /* splash.gif in Resources */,
@@ -497,6 +518,7 @@
 				C524BAF125CDA340005980B5 /* LoginVC.swift in Sources */,
 				C55B13FA2600F90800715036 /* EventOneVC.swift in Sources */,
 				C524BAED25CDA332005980B5 /* LogHomeVC.swift in Sources */,
+				C5EFF1DC260BBCAF00B22E8C /* NotificationCell.swift in Sources */,
 				C524BAD725CDA297005980B5 /* ClinicDoctorAddVC.swift in Sources */,
 				C59E54302607A0A900CAD33A /* ClinicNormalVC.swift in Sources */,
 				C52761B925FFC322002F3989 /* OfferCell.swift in Sources */,
@@ -515,9 +537,11 @@
 				C524BA8425CCDB6A005980B5 /* ChatVC.swift in Sources */,
 				C52761AF25FFB934002F3989 /* Doctor.swift in Sources */,
 				C524BAD125CDA273005980B5 /* ClinicHomeVC.swift in Sources */,
+				C5EFF1E5260BC3E100B22E8C /* News.swift in Sources */,
 				C524BAD425CDA282005980B5 /* ClinicInfoEditVC.swift in Sources */,
 				C527609525FF8B09002F3989 /* BrandCell.swift in Sources */,
 				C524BABF25CDA1DF005980B5 /* HomeVC.swift in Sources */,
+				C5EFF1E1260BBE8100B22E8C /* NewsVC.swift in Sources */,
 				C51F73CA25C1DD1E0047C80B /* SelLangVC.swift in Sources */,
 				C524BAE025CDA2D9005980B5 /* ClinicPhotoDelVC.swift in Sources */,
 				C52761AC25FF9D20002F3989 /* AllClinicCell.swift in Sources */,

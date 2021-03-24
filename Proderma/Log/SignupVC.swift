@@ -27,6 +27,7 @@ class SignupVC: UIViewController {
     @IBOutlet weak var typeCBox: Checkbox!
     var spinnerView = JTMaterialSpinner()
     var signupclinicVC : SignupClinicVC!
+    var homeVC : HomeVC!
     var firstname = ""
     var lastname = ""
     var clinicname = ""
@@ -97,7 +98,10 @@ class SignupVC: UIViewController {
             if let value = response.value as? [String: AnyObject] {
                 let status = value["status"] as? String
                 if status == "ok"{
-                    self.view.makeToast("Signup Success, Please wait accept or contact to support team")
+                    self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
+                    self.homeVC.modalPresentationStyle = .fullScreen
+                    self.present(self.homeVC, animated: true, completion: nil)
+                    self.view.makeToast("Signup Success, Please wait accept or contact to support team")                    
                 }else if status == "existemail"{
                     self.view.makeToast("Your account already exist, Please contact to support team")
                 }else {

@@ -26,6 +26,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var clinichomeVC : ClinicHomeVC!
     var clinicnormalVC : ClinicNormalVC!
     var loghomeVC : LogHomeVC!
+    var newsVC : NewsVC!
     
     var spinnerView = JTMaterialSpinner()
 
@@ -39,6 +40,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var allProducts = [Product]()
     var loginstatus :String!
     var usertype : String!
+    
+
     
     @IBOutlet weak var btnPSeeAll: UIButton!
     @IBOutlet weak var btnCSeeAll: UIButton!
@@ -67,7 +70,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         
         usertype = AppDelegate.shared().userType
-        txtNews.text = "PRODERMA ME was developed in 2007 in Dubai, in response to the ever --- growing demand and need for a complete Aeshetic, representing only approved worldwide aesthetic companies"
+        
         getData()
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -106,6 +109,13 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             if let value = response.value as? [String: AnyObject] {
                 let clinicInfos = value["clinicsInfo"] as? [[String: AnyObject]]
                 let productsInfos = value["productsInfo"] as? [[String: AnyObject]]
+                let notification = value["notification"] as? [String: AnyObject]
+                if notification != nil {
+                    let noti = notification!["description"] as! String
+                    self.txtNews.text = noti
+                }else{
+                    self.txtNews.text = "PRODERMA ME was developed in 2007 in Dubai, in response to the ever --- growing demand and need for a complete Aeshetic, representing only approved worldwide aesthetic companies"
+                }
                 if clinicInfos!.count > 0{
                     for i in 0 ... (clinicInfos!.count)-1 {
                         let id = clinicInfos![i]["id"] as! String
@@ -209,6 +219,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         self.allclinicVC =     self.storyboard?.instantiateViewController(withIdentifier: "allclinicVC") as? AllClinicVC
         self.allclinicVC.modalPresentationStyle = .fullScreen
         self.present(self.allclinicVC, animated: true, completion: nil)
+    }
+    @IBAction func onBtnNews(_ sender: Any) {
+        self.newsVC = self.storyboard?.instantiateViewController(withIdentifier: "newsVC") as? NewsVC
+        self.newsVC.modalPresentationStyle = .fullScreen
+        self.present(self.newsVC, animated: true, completion: nil)
     }
     
     @IBAction func onBtnClinic(_ sender: Any) {
