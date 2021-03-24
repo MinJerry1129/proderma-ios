@@ -31,6 +31,9 @@ class EventHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         getData()
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "homeevent", comment: "")
         

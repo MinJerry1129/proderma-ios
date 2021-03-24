@@ -40,6 +40,9 @@ class SignupVC: UIViewController {
         setReady()
         typeCBox.addTarget(self, action: #selector(checkboxValueChanged(sender:)), for: .valueChanged)
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         signupBtn.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: ""), for: .normal)
         btnAlready.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "alreadyaccount", comment: ""), for: .normal)

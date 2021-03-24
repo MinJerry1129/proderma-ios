@@ -15,7 +15,6 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet weak var productSlider: ImageSlideshow!
     @IBOutlet weak var nameTxt: UILabel!
-    @IBOutlet weak var priceTxt: UILabel!
     @IBOutlet weak var countTxt: UITextField!
     @IBOutlet weak var extraTxt: UITextField!
     @IBOutlet weak var descriptionTxt: UITextView!
@@ -49,7 +48,6 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var lblProduct: UILabel!
     @IBOutlet weak var lblMoreinfo: UIButton!
-    @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblQuality: UILabel!
     @IBOutlet weak var lblInformations: UILabel!
     @IBOutlet weak var btnOrder: UIButton!
@@ -62,7 +60,7 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         super.viewDidLoad()
         productCV.delegate = self
         productCV.dataSource = self
-        
+        setReady()
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = UIColor.lightGray
         pageControl.pageIndicatorTintColor = UIColor.black
@@ -77,11 +75,14 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
             orderBtn.isHidden = true
         }
         countTxt.addTarget(self, action: #selector(countChange), for: .editingChanged)
+        
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     func setReady(){
-        lblProduct.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "product", comment: "")
+        lblProduct.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "products", comment: "")
         lblMoreinfo.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "moreinfo", comment: ""), for: .normal)
-        lblPrice.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "price", comment: "")
         lblQuality.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "quality", comment: "")
         lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
         btnOrder.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "order", comment: ""), for: .normal)
@@ -172,7 +173,6 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     func showInfo(){
         nameTxt.text = productName
-        priceTxt.text = productPrice
         descriptionTxt.text = productInformation
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {           return allClinics.count

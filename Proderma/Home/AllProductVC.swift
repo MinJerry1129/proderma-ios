@@ -9,7 +9,7 @@ import UIKit
 import JTMaterialSpinner
 import SDWebImage
 import Alamofire
-class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
         
     var homeVC : HomeVC!
     var oneproductVC : OneProductVC!
@@ -18,6 +18,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     var allBrands = [Brand]()
     var spinnerView = JTMaterialSpinner()
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var lblProducts: UILabel!
     @IBOutlet weak var cvBrand: UICollectionView!
@@ -30,11 +31,15 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         
         cvBrand.delegate = self
         cvBrand.dataSource = self
+        searchBar.delegate = self
         setReady()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         getData()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     func setReady(){
         lblProducts.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "products", comment: "")
@@ -90,6 +95,18 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         }
         
     }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+    {
+        print(searchText)
+
+            // filterdata  = searchText.isEmpty ? data : data.filter {(item : String) -> Bool in
+
+//            filterdata = searchText.isEmpty ? data : data.filter { $0.contains(searchText) }
+
+            //return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+
+//        tblview.reloadData()
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView.tag == 103){
             return allFilterProducts.count
@@ -104,7 +121,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
             let oneProduct: Product
             oneProduct =  allFilterProducts[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! AllproductCell
-            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+//            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
             cell.productImg.sd_setImage(with: URL(string: Global.baseUrl + oneProduct.photo), completed: nil)
             cell.nameTxt.text = oneProduct.name
             return cell
@@ -143,9 +160,6 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
             }
             cvProduct.reloadData()
         }
-        
-        
-
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView.tag == 103{

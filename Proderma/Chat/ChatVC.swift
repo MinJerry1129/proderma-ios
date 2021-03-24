@@ -18,6 +18,9 @@ class ChatVC: UIViewController {
         chatUV.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblChats.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chat", comment: "")
         

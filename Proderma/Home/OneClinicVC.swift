@@ -40,6 +40,8 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     var clinicID : String!
     var clinicName : String!
     var clinicLocation : String!
+    var clinicLatitude : String!
+    var clinicLongitude : String!
     var clinicPhone : String!
     var clinicWhatsapp : String!
     var clinicInformation : String!
@@ -63,14 +65,21 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         phoneTxt.addGestureRecognizer(gestureRecognizer)
         phoneTxt.isUserInteractionEnabled = true
         whatsappTxt.isUserInteractionEnabled = true
+        locationTxt.isUserInteractionEnabled = true
         let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onOpenWhatsapp))
         whatsappTxt.addGestureRecognizer(gestureRecognizerw)
+        
+        let gestureRecognizerm = UITapGestureRecognizer(target: self, action: #selector(onOpenMap))
+        locationTxt.addGestureRecognizer(gestureRecognizerm)
         setReady()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         inputSource = []
         getData()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     func setReady(){
         lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
@@ -100,6 +109,13 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
                 }
             }
         }
+    }
+    @objc func onOpenMap(){
+        let mapURL = "https://www.google.com/maps/@" + clinicLatitude + "," + clinicLongitude + ",14z"
+        let whatsappURL = URL(string: mapURL)
+        if UIApplication.shared.canOpenURL(whatsappURL!) {
+            UIApplication.shared.open(whatsappURL!, options: [:], completionHandler: nil)
+            }
     }
     func getData(){
         allDoctors = []
@@ -163,6 +179,8 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
                 self.clinicWhatsapp = clinicInfo!["whatsapp"] as? String
                 self.clinicPhoto = clinicInfo!["photo"] as? String
                 self.clinicInformation = clinicInfo!["information"] as? String
+                self.clinicLatitude = clinicInfo!["latitude"] as? String
+                self.clinicLongitude = clinicInfo!["longitude"] as? String
 //
                 self.showInfo();
                 self.clinicSlider.setImageInputs(self.inputSource)

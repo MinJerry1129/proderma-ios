@@ -41,6 +41,9 @@ class SignupClinicVC: UIViewController {
         clinicImg.addGestureRecognizer(imageTapGesture)
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         btnSignup.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: ""), for: .normal)        
         lblClinicinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinicinfo", comment: "")

@@ -72,6 +72,9 @@ class ClinicHomeVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         getData()
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
         lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")

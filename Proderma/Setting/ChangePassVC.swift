@@ -27,6 +27,9 @@ class ChangePassVC: UIViewController {
         clinicid = AppDelegate.shared().currentClinicID
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblChangePassword.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: "")
         lblChangePasswordTitle.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: "")

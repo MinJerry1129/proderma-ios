@@ -29,6 +29,9 @@ class HistoryHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         getData()
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblHistory.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "history", comment: "")
         

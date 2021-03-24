@@ -34,6 +34,9 @@ class ClinicDoctorUpdateVC: UIViewController {
         setReady()
         getData()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblDoctorInfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "doctorinfo", comment: "")
         btnDelete.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "delete", comment: ""), for: .normal)

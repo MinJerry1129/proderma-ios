@@ -44,6 +44,9 @@ class ClinicInfoEditVC: UIViewController {
         super.viewDidAppear(true)
         getReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblInputlcinicInfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinicinfo", comment: "")
         btnUpdate.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "update", comment: ""), for: .normal)

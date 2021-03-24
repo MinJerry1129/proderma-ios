@@ -42,6 +42,9 @@ class EventOneVC: UIViewController {
         setReady()
         getData()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "event", comment: "")
         lblInformation.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")

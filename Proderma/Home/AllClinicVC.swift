@@ -35,6 +35,9 @@ class AllClinicVC: UIViewController ,UITableViewDelegate, UITableViewDataSource,
         locationManager.requestWhenInUseAuthorization()
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblClinics.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinics", comment: "")
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){

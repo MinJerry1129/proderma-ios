@@ -37,6 +37,9 @@ class ProductInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         allVideo = []
         getData()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblMoreinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "moreinfo", comment: "")
         

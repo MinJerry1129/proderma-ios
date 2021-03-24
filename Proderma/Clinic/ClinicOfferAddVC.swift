@@ -22,6 +22,9 @@ class ClinicOfferAddVC: UIViewController {
         clinicID = AppDelegate.shared().currentClinicID
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblOfferinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "offerInfo", comment: "")
         btnAdd.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "add", comment: ""), for: .normal)

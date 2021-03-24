@@ -30,6 +30,9 @@ class LoginVC: UIViewController {
         phoneToken = AppDelegate.shared().fcmtoken
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         btnLogin.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "login", comment: ""), for: .normal)
         btnAlreday.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "noaccount", comment: ""), for: .normal)

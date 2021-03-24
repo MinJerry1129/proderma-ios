@@ -26,6 +26,9 @@ class SettingHomeVC: UIViewController {
         setReady()
         // Do any additional setup after loading the view.
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblSetting.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "setting", comment: "")
         setLangBtn.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "language", comment: ""), for: .normal)

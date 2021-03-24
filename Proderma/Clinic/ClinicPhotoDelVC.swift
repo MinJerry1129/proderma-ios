@@ -25,6 +25,9 @@ class ClinicPhotoDelVC: UIViewController {
         doctorImg.sd_setImage(with: URL(string: Global.baseUrl + imageURL), completed: nil)
         setReady()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblPhoto.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "photo", comment: "")
         btnDelete.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "delete", comment: ""), for: .normal)

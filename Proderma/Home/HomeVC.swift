@@ -70,6 +70,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         txtNews.text = "PRODERMA ME was developed in 2007 in Dubai, in response to the ever --- growing demand and need for a complete Aeshetic, representing only approved worldwide aesthetic companies"
         getData()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         btnPSeeAll.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "see_all", comment: ""), for: .normal)
         btnCSeeAll.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "see_all", comment: ""), for: .normal)
@@ -162,7 +165,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             let oneProduct: Product
             oneProduct =  allProducts[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! HomeproductCell
-            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+//            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
             cell.productImg.sd_setImage(with: URL(string: Global.baseUrl + oneProduct.photo), completed: nil)
             cell.nameTxt.text = oneProduct.name
             return cell
@@ -170,7 +173,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             let oneClinic: Clinic
             oneClinic = allClinics[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! HomeclinicCell
-            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+//            cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
             cell.clinicImg.sd_setImage(with: URL(string: Global.baseUrl + oneClinic.photo), completed: nil)
             cell.nameTxt.text = oneClinic.name
             return cell

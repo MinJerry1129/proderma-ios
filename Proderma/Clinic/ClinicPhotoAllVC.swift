@@ -33,6 +33,9 @@ class ClinicPhotoAllVC: UIViewController, UICollectionViewDelegate, UICollection
         super.viewDidAppear(true)
         getData()
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func setReady(){
         lblAllPhoto.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "allphoto", comment: "")
         
