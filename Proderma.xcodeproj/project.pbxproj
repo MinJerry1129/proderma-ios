@@ -52,7 +52,6 @@
 		C541469325CF6F09007F73AB /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469225CF6F09007F73AB /* Clinic.swift */; };
 		C541469625CF6F6C007F73AB /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469525CF6F6C007F73AB /* Global.swift */; };
 		C541469925CF6F7D007F73AB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541469825CF6F7D007F73AB /* Product.swift */; };
-		C541469C25CF733E007F73AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C541469B25CF733E007F73AB /* GoogleService-Info.plist */; };
 		C54146D025CFE923007F73AB /* HomeclinicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54146CF25CFE923007F73AB /* HomeclinicCell.swift */; };
 		C54146D325CFED80007F73AB /* HomeproductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54146D225CFED80007F73AB /* HomeproductCell.swift */; };
 		C54146D725CFF295007F73AB /* AllproductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54146D625CFF295007F73AB /* AllproductCell.swift */; };
@@ -77,6 +76,7 @@
 		C5EFF1DD260BBCAF00B22E8C /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EFF1DB260BBCAF00B22E8C /* NotificationCell.xib */; };
 		C5EFF1E1260BBE8100B22E8C /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF1E0260BBE8100B22E8C /* NewsVC.swift */; };
 		C5EFF1E5260BC3E100B22E8C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFF1E4260BC3E100B22E8C /* News.swift */; };
+		C5EFF2D1260CB9AA00B22E8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5EFF2D0260CB9AA00B22E8C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,7 +132,6 @@
 		C541469225CF6F09007F73AB /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
 		C541469525CF6F6C007F73AB /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C541469825CF6F7D007F73AB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		C541469B25CF733E007F73AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C54146CF25CFE923007F73AB /* HomeclinicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeclinicCell.swift; sourceTree = "<group>"; };
 		C54146D225CFED80007F73AB /* HomeproductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeproductCell.swift; sourceTree = "<group>"; };
 		C54146D625CFF295007F73AB /* AllproductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllproductCell.swift; sourceTree = "<group>"; };
@@ -157,6 +156,8 @@
 		C5EFF1DB260BBCAF00B22E8C /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		C5EFF1E0260BBE8100B22E8C /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		C5EFF1E4260BC3E100B22E8C /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		C5EFF2B0260CB88E00B22E8C /* Proderma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Proderma.entitlements; sourceTree = "<group>"; };
+		C5EFF2D0260CB9AA00B22E8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,12 +201,13 @@
 		C51F73C425C1DD1E0047C80B /* Proderma */ = {
 			isa = PBXGroup;
 			children = (
+				C5EFF2B0260CB88E00B22E8C /* Proderma.entitlements */,
 				C51F73C525C1DD1E0047C80B /* AppDelegate.swift */,
 				C51F73C725C1DD1E0047C80B /* SceneDelegate.swift */,
+				C5EFF2D0260CB9AA00B22E8C /* GoogleService-Info.plist */,
 				C527611725FF957E002F3989 /* splash.gif */,
 				C51F73C925C1DD1E0047C80B /* SelLangVC.swift */,
 				C51DD8282608CCDF00FCDCFE /* Localizable.strings */,
-				C541469B25CF733E007F73AB /* GoogleService-Info.plist */,
 				C5EFF1DF260BBE6200B22E8C /* Notification */,
 				C527613925FF9932002F3989 /* Gifanimation */,
 				C524BAB425CDA132005980B5 /* Home */,
@@ -433,7 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51F73D225C1DD200047C80B /* LaunchScreen.storyboard in Resources */,
-				C541469C25CF733E007F73AB /* GoogleService-Info.plist in Resources */,
+				C5EFF2D1260CB9AA00B22E8C /* GoogleService-Info.plist in Resources */,
 				C52761BA25FFC322002F3989 /* OfferCell.xib in Resources */,
 				C51DD8262608CCDF00FCDCFE /* Localizable.strings in Resources */,
 				C5EFF1DD260BBCAF00B22E8C /* NotificationCell.xib in Resources */,
@@ -730,8 +732,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Proderma/Proderma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6MS8U9CKRD;
 				INFOPLIST_FILE = Proderma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -752,8 +755,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Proderma/Proderma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6MS8U9CKRD;
 				INFOPLIST_FILE = Proderma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;

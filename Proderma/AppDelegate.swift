@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
           application.registerUserNotificationSettings(settings)
         }
-
+        
         application.registerForRemoteNotifications()
         
         return true

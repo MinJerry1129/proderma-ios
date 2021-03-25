@@ -25,10 +25,9 @@ class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         loginStatus = AppDelegate.shared().loginStatus
         usertype = AppDelegate.shared().userType
         getData()
-        
     }
     func setReady(){
-        lblNotification.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinics", comment: "")
+        lblNotification.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "notification", comment: "")
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
             btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         }
