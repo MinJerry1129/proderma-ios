@@ -98,5 +98,11 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+    <key>UIAppFonts</key>
+    <array>
+        <string>TheMixArab Black.ttf</string>
+        <string>TheMixArab Bold.ttf</string>
+        <string>TheMixArab Regular.ttf</string>
+    </array>
 </dict>
 </plist>

@@ -47,6 +47,7 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     func setReady(){
         lblProducts.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "products", comment: "")
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            lblProducts.font = UIFont.init(name: "TheMixArab Bold.ttf", size: 8)
             btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         }
     }
@@ -66,7 +67,12 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
             if let value = response.value as? [String: AnyObject] {
                 let productsInfos = value["productsInfo"] as? [[String: AnyObject]]
                 let brandsInfos = value["brandsInfo"] as? [[String: AnyObject]]
-                self.allBrands.append(Brand(id: "0", name: "A l l"))
+                if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+                    self.allBrands.append(Brand(id: "0", name: "الكل"))
+                }else{
+                    self.allBrands.append(Brand(id: "0", name: "A l l"))
+                }
+                
                 if(productsInfos!.count > 0){
                     for i in 0 ... (productsInfos!.count)-1 {
                         let id = productsInfos![i]["id"] as! String

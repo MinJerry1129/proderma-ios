@@ -12,6 +12,8 @@
 "clinics" = "العيادات";
 "products" = "المنتجات";
 "notification" = "انذار";
+"sendMsg" = "أرسل رسالة";
+"send" = "إرسال";
 
 
 "clinic" = "العيادة";

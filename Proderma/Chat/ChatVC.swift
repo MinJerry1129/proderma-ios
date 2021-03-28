@@ -12,10 +12,13 @@ class ChatVC: UIViewController {
     @IBOutlet weak var messageTxt: UITextView!
     @IBOutlet weak var chatUV: UIView!
     @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var lblChats: UILabel!
+    
+    @IBOutlet weak var lblmessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        chatUV.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+//        chatUV.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
         setReady()
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -23,7 +26,8 @@ class ChatVC: UIViewController {
     }
     func setReady(){
         lblChats.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chat", comment: "")
-        
+        lblmessage.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "sendMsg", comment: "")
+        btnSend.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "send", comment: ""), for: .normal)
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
             btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         }

@@ -12,6 +12,9 @@
 "clinics" = "Clinics";
 "products" = "Products";
 "notification" = "Notification";
+"sendMsg" = "Send Message";
+"send" = "Send";
+
 
 "clinic" = "Clinic";
 "event" = "Event";

@@ -87,7 +87,21 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "event", comment: "")
         lblChat.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chat", comment: "")
         lblHistory.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "history", comment: "")
-        lblSetting.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "setting", comment: "")        
+        lblSetting.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "setting", comment: "")
+        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+            lblClinics.font = UIFont.init(name: "TheMixArab Bold.ttf", size: 15)
+            lblProducts.font = UIFont.init(name: "TheMixArab Bold.ttf", size: 15)
+            lblLastNews.font = UIFont.init(name: "TheMixArab Bold.ttf", size: 15)
+            btnPSeeAll.titleLabel?.font = UIFont.init(name: "TheMixArab Bold.ttf", size: 6)
+            btnCSeeAll.titleLabel?.font = UIFont.init(name: "TheMixArab Bold.ttf", size: 6)
+            
+            
+            lblClinic.font = UIFont.init(name: "TheMixArab Regular.ttf", size: 6)
+            lblEvent.font = UIFont.init(name: "TheMixArab Regular.ttf", size: 6)
+            lblChat.font = UIFont.init(name: "TheMixArab Regular.ttf", size: 6)
+            lblHistory.font = UIFont.init(name: "TheMixArab Regular.ttf", size: 6)
+            lblSetting.font = UIFont.init(name: "TheMixArab Regular.ttf", size: 6)
+        }
     }
     func getData(){
         allProducts = []
