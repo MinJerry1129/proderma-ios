@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -50,6 +50,12 @@
 	<string>Your location is used to show local clinics</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) wants to use your photos for publish.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>TheMixArab Black.ttf</string>
+		<string>TheMixArab Bold.ttf</string>
+		<string>TheMixArab Regular.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -98,11 +104,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-    <key>UIAppFonts</key>
-    <array>
-        <string>TheMixArab Black.ttf</string>
-        <string>TheMixArab Bold.ttf</string>
-        <string>TheMixArab Regular.ttf</string>
-    </array>
 </dict>
 </plist>

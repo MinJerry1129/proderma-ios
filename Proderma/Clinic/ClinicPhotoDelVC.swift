@@ -29,6 +29,9 @@ class ClinicPhotoDelVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblPhoto.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblPhoto.addGestureRecognizer(gestureRecognizerw)
         lblPhoto.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "photo", comment: "")
         btnDelete.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "delete", comment: ""), for: .normal)
         
@@ -52,7 +55,9 @@ class ClinicPhotoDelVC: UIViewController {
             }
         }
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
    
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

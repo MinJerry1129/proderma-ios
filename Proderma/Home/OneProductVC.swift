@@ -52,6 +52,8 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var lblInformations: UILabel!
     @IBOutlet weak var btnOrder: UIButton!
     
+    @IBOutlet weak var lblClinicProduct: UILabel!
+    
     override func viewDidLoad() {
         productID = AppDelegate.shared().productID
         loginStatus = AppDelegate.shared().loginStatus
@@ -81,8 +83,12 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         return .lightContent
     }
     func setReady(){
+        lblProduct.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblProduct.addGestureRecognizer(gestureRecognizerw)
         lblProduct.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "products", comment: "")
         lblMoreinfo.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "moreinfo", comment: ""), for: .normal)
+        lblClinicProduct.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinichaveproduct", comment: "")
         lblQuality.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "quality", comment: "")
         lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
         btnOrder.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "order", comment: ""), for: .normal)
@@ -162,6 +168,10 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
                 self.productPercent = productInfo!["percent"] as! String
                 self.productInformation = productInfo!["information"] as! String
                 self.productPhoto = productInfo!["photo"] as! String
+                if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+                    self.productName = productInfo!["namear"] as! String
+                    self.productInformation = productInfo!["informationar"] as! String
+                }
                 
                 self.showInfo();
                 self.productSlider.setImageInputs(self.inputSource)
@@ -182,7 +192,7 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         let oneClinic: Clinic
         oneClinic = allClinics[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: "cell"), for: indexPath) as! ProductClinicCell
-        cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
+//        cell.mainView.layer.borderColor = UIColor(red:156/255, green:37/255, blue:31/255, alpha: 1).cgColor
         cell.clinicImg.sd_setImage(with: URL(string: Global.baseUrl + oneClinic.photo), completed: nil)
         cell.nameTxt.text = oneClinic.name
         return cell
@@ -233,7 +243,9 @@ class OneProductVC: UIViewController, UICollectionViewDelegate, UICollectionView
         }
         
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBactBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

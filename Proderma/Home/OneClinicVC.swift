@@ -64,8 +64,9 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onOpenCall))
         phoneTxt.addGestureRecognizer(gestureRecognizer)
         phoneTxt.isUserInteractionEnabled = true
-        whatsappTxt.isUserInteractionEnabled = true
+        
         locationTxt.isUserInteractionEnabled = true
+        whatsappTxt.isUserInteractionEnabled = true
         let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onOpenWhatsapp))
         whatsappTxt.addGestureRecognizer(gestureRecognizerw)
         
@@ -82,6 +83,9 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         return .lightContent
     }
     func setReady(){
+        lblClinic.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblClinic.addGestureRecognizer(gestureRecognizerw)
         lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
         lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
         
@@ -253,6 +257,9 @@ class OneClinicVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: collectionView.bounds.height)
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

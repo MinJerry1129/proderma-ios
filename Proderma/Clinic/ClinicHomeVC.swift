@@ -29,6 +29,8 @@ class ClinicHomeVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var locationTxt: UILabel!
     @IBOutlet weak var phoneTxt: UILabel!
     @IBOutlet weak var infoTxt: UITextView!
+    @IBOutlet weak var doctorTxt: UILabel!
+    @IBOutlet weak var offerTxt: UILabel!
     
     
     @IBOutlet weak var infoView: UIView!
@@ -76,7 +78,12 @@ class ClinicHomeVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         return .lightContent
     }
     func setReady(){
+        lblClinic.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblClinic.addGestureRecognizer(gestureRecognizerw)
         lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
+        doctorTxt.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "doctorinfo", comment: "")
+        offerTxt.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "offerinfo", comment: "")
         lblInformations.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
         
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
@@ -250,6 +257,9 @@ class ClinicHomeVC: UIViewController , UICollectionViewDelegate, UICollectionVie
         self.clinicofferaddVC = self.storyboard?.instantiateViewController(withIdentifier: "clinicofferaddVC") as? ClinicOfferAddVC
         self.clinicofferaddVC.modalPresentationStyle = .fullScreen
         self.present(self.clinicofferaddVC, animated: true, completion: nil)
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

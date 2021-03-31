@@ -40,6 +40,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var allProducts = [Product]()
     var loginstatus :String!
     var usertype : String!
+    var currentuserID : String!
     
 
     
@@ -59,17 +60,26 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
         cvClinic.delegate = self
         cvClinic.dataSource = self
         cvProduct.delegate = self
         cvProduct.dataSource = self
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         setReady()
         
-        
-        usertype = AppDelegate.shared().userType
+        loginstatus = UserDefaults.standard.string(forKey: "loginstatus") ?? "no"
+        if loginstatus == "yes" {
+            AppDelegate.shared().loginStatus = loginstatus
+            usertype = UserDefaults.standard.string(forKey: "usertype")!
+            AppDelegate.shared().userType = usertype
+            currentuserID = UserDefaults.standard.string(forKey: "clinicid")!
+            AppDelegate.shared().currentClinicID = currentuserID
+            
+        }
+
         
         getData()
     }
@@ -108,8 +118,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         allClinics = []
         deviceID = UIDevice.current.identifierForVendor?.uuidString
         deviceToken = AppDelegate.shared().fcmtoken
-        loginstatus = AppDelegate.shared().loginStatus
-
         //
         self.view.addSubview(spinnerView)
         spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)

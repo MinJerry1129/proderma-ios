@@ -46,6 +46,9 @@ class SignupClinicVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblClinicinfo.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblClinicinfo.addGestureRecognizer(gestureRecognizerw)
         btnSignup.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: ""), for: .normal)        
         lblClinicinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinicinfo", comment: "")
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
@@ -99,52 +102,91 @@ class SignupClinicVC: UIViewController {
         clinicLocation = locationTxt.text!
         clinicCode = codeTxt.text!
         clinicInfo = infoTxt.text!
-        if imgSel == 0{
-            self.view.makeToast("Please select image")
-        }else{
-            if(whatsappnum != "" && clinicLocation != "" && clinicCode != ""){
-                let data = avatarImage.jpegData(compressionQuality: 0.6)
-                let strBase64 = data!.base64EncodedString(options: .lineLength64Characters)
-                
-                let firstname = AppDelegate.shared().sign_firstname
-                let lastname = AppDelegate.shared().sign_lastname
-                let clinicname = AppDelegate.shared().sign_clinicname
-                let email = AppDelegate.shared().sign_email
-                let mobile = AppDelegate.shared().sign_phone
-                let password = AppDelegate.shared().sign_password
-                
-                
-                
-                self.view.addSubview(spinnerView)
-                spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
-                spinnerView.circleLayer.lineWidth = 2.0
-                spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
-                spinnerView.beginRefreshing()
-                let parameters: Parameters = ["firstname": firstname,"secondname": lastname, "clinicname": clinicname, "email": email, "phone": mobile, "password": password, "location": clinicLocation, "info": clinicInfo, "whatsapp": whatsappnum, "visacode": clinicCode, "photo": strBase64, "latitude": latitude, "longitude": longitude ]
-                AF.request(Global.baseUrl + "api/signup", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
-                    print(response)
-                    self.spinnerView.endRefreshing()
-                    if let value = response.value as? [String: AnyObject] {
-                        let status = value["status"] as? String
-                        if status == "ok"{
-                            self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
-                            self.homeVC.modalPresentationStyle = .fullScreen
-                            self.present(self.homeVC, animated: true, completion: nil)
-                            self.view.makeToast("Signup Success, Please wait accept or contact to support team")
-                        }else if status == "existemail"{
-                            self.view.makeToast("Your account already exist, Please contact to support team")
-                        }else {
-                            self.view.makeToast("Fail signup")
-                        }
-                    }
+        if !validatedata(){
+            return
+        }
+            
+        let data = avatarImage.jpegData(compressionQuality: 0.8)
+        let strBase64 = data!.base64EncodedString(options: .lineLength64Characters)
+        
+        let firstname = AppDelegate.shared().sign_firstname
+        let lastname = AppDelegate.shared().sign_lastname
+        let clinicname = AppDelegate.shared().sign_clinicname
+        let email = AppDelegate.shared().sign_email
+        let mobile = AppDelegate.shared().sign_phone
+        let password = AppDelegate.shared().sign_password
+        
+        
+        
+        self.view.addSubview(spinnerView)
+        spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
+        spinnerView.circleLayer.lineWidth = 2.0
+        spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
+        spinnerView.beginRefreshing()
+        let parameters: Parameters = ["firstname": firstname,"secondname": lastname, "clinicname": clinicname, "email": email, "phone": mobile, "password": password, "location": clinicLocation, "info": clinicInfo, "whatsapp": whatsappnum, "visacode": clinicCode, "photo": strBase64, "latitude": latitude, "longitude": longitude ]
+        AF.request(Global.baseUrl + "api/signup", method: .post, parameters: parameters, encoding:JSONEncoding.default).responseJSON{ response in
+            print(response)
+            self.spinnerView.endRefreshing()
+            if let value = response.value as? [String: AnyObject] {
+                let status = value["status"] as? String
+                if status == "ok"{
+                    let alert = UIAlertController(title: "Signup Result", message: "Signup success, Please wait accept or contact to support team", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "O K", style: .default, handler: { _ in
+                        self.onHomePage()
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }else if status == "existemail"{
+                    self.view.makeToast("Your account already exist, Please contact to support team")
+                }else if status == "noclinic"{
+                    self.view.makeToast("You are not elite clinic. Check elite card number again.")
+                }else {
+                    self.view.makeToast("Fail signup")
                 }
-                
-                
-            }else{
-                self.view.makeToast("Please input empty field")
             }
         }
     }
+    func onHomePage(){
+        self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
+        self.homeVC.modalPresentationStyle = .fullScreen
+        self.present(self.homeVC, animated: true, completion: nil)
+    }
+    
+    func validatedata() -> Bool {
+        if imgSel == 0{
+            self.view.makeToast("Please select image")
+            return false
+        }
+        if clinicLocation == ""{
+            self.view.makeToast("Input Clinic Location")
+            return false
+        }
+        if clinicCode == ""{
+            self.view.makeToast("Input Card")
+            return false
+        }else{
+            let codeRegEx = "[0-9]{16,17}"
+            let codePred = NSPredicate(format:"SELF MATCHES %@", codeRegEx)
+            if !codePred.evaluate(with: clinicCode){
+                self.view.makeToast("Input correct phonenumber")
+                return false
+            }
+        }
+        
+        if whatsappnum == ""{
+            self.view.makeToast("Input whatsapp number")
+            return false
+        }else{
+            let phoneRegEx = "[+]+[0-9]{10,17}"
+            let phonePred = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
+            if !phonePred.evaluate(with: whatsappnum){
+                self.view.makeToast("Input correct whatsappnumber")
+                return false
+            }
+        }
+        
+        return true
+    }
+    
     
     @IBAction func locationTap(_ sender: Any) {
         locationTxt.resignFirstResponder()
@@ -152,6 +194,9 @@ class SignupClinicVC: UIViewController {
         acController.delegate = self
         present(acController, animated: true, completion: nil)
         
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

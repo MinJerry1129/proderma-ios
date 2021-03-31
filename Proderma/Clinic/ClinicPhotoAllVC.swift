@@ -37,6 +37,9 @@ class ClinicPhotoAllVC: UIViewController, UICollectionViewDelegate, UICollection
         return .lightContent
     }
     func setReady(){
+        lblAllPhoto.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblAllPhoto.addGestureRecognizer(gestureRecognizerw)
         lblAllPhoto.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "allphoto", comment: "")
         
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
@@ -171,7 +174,9 @@ class ClinicPhotoAllVC: UIViewController, UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: (collectionView.bounds.width * 0.25 - 10), height: (collectionView.bounds.width * 0.25 - 10))
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

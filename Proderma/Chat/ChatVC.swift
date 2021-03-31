@@ -25,6 +25,9 @@ class ChatVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblChats.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblChats.addGestureRecognizer(gestureRecognizerw)
         lblChats.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "chat", comment: "")
         lblmessage.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "sendMsg", comment: "")
         btnSend.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "send", comment: ""), for: .normal)
@@ -49,7 +52,9 @@ class ChatVC: UIViewController {
             }
         }
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

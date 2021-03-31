@@ -39,6 +39,9 @@ class AllClinicVC: UIViewController ,UITableViewDelegate, UITableViewDataSource,
         return .lightContent
     }
     func setReady(){
+        lblClinics.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblClinics.addGestureRecognizer(gestureRecognizerw)
         lblClinics.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinics", comment: "")
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
             btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -155,6 +158,9 @@ class AllClinicVC: UIViewController ,UITableViewDelegate, UITableViewDataSource,
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func onBtnBack(_ sender: Any) {

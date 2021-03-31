@@ -44,7 +44,12 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
     func setReady(){
+        lblProducts.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblProducts.addGestureRecognizer(gestureRecognizerw)
+        
         lblProducts.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "products", comment: "")
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
             lblProducts.font = UIFont.init(name: "TheMixArab Bold.ttf", size: 8)
@@ -77,11 +82,16 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
                     for i in 0 ... (productsInfos!.count)-1 {
                         let id = productsInfos![i]["id"] as! String
                         let brandid = productsInfos![i]["brandid"] as! String
-                        let name = productsInfos![i]["name"] as! String
+                        var name = productsInfos![i]["name"] as! String
                         let price = productsInfos![i]["price"] as! String
                         let percent = productsInfos![i]["percent"] as! String
                         let photo = productsInfos![i]["photo"] as! String
-                        let description = productsInfos![i]["information"] as! String
+                        var description = productsInfos![i]["information"] as! String
+                        if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
+                            name = productsInfos![i]["namear"] as! String
+                            description = productsInfos![i]["informationar"] as! String
+                        }
+                        
                         
                         let productcell = Product(id: id,brandid: brandid, name: name, price: price, percent: percent, photo: photo, description: description)
                         self.allProducts.append(productcell)
@@ -204,6 +214,9 @@ class AllProductVC: UIViewController , UICollectionViewDelegate, UICollectionVie
             }
             return CGSize(width: width + 10, height: 40)
         }
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func onBtnBack(_ sender: Any) {

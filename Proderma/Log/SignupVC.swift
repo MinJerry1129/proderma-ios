@@ -45,6 +45,9 @@ class SignupVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblSingup.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblSingup.addGestureRecognizer(gestureRecognizerw)
         signupBtn.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "signup", comment: ""), for: .normal)
         btnAlready.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "alreadyaccount", comment: ""), for: .normal)
         lblAreElite.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "eliteclinic", comment: "")
@@ -73,18 +76,19 @@ class SignupVC: UIViewController {
         email = emailTxt.text!
         mobile = phoneTxt.text!
         password = passwordTxt.text!
-        
-        if(firstname != "" && lastname != "" && clinicname != "" && email != "" && mobile != "" && password != ""){
-            if clinic_type == "normal"{
-                onNormalSignup()
-            }else{
-                onElitePage()
-            }
-        }else{
-            self.view.makeToast("Fill the empty field")
+        if !validatedata(){
+            return
         }
+        
+        if clinic_type == "normal"{
+            onNormalSignup()
+        }else{
+            onElitePage()
+        }
+        
        
     }
+    
     func onNormalSignup(){
         self.view.addSubview(spinnerView)
         spinnerView.frame = CGRect(x: (UIScreen.main.bounds.size.width - 50.0) / 2.0, y: (UIScreen.main.bounds.size.height-50)/2, width: 50, height: 50)
@@ -98,10 +102,11 @@ class SignupVC: UIViewController {
             if let value = response.value as? [String: AnyObject] {
                 let status = value["status"] as? String
                 if status == "ok"{
-                    self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
-                    self.homeVC.modalPresentationStyle = .fullScreen
-                    self.present(self.homeVC, animated: true, completion: nil)
-                    self.view.makeToast("Signup Success, Please wait accept or contact to support team")                    
+                    let alert = UIAlertController(title: "Signup Result", message: "Signup success, Please wait accept or contact to support team", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "O K", style: .default, handler: { _ in
+                                self.onHomePage()
+                            }))
+                            self.present(alert, animated: true, completion: nil)
                 }else if status == "existemail"{
                     self.view.makeToast("Your account already exist, Please contact to support team")
                 }else {
@@ -109,6 +114,11 @@ class SignupVC: UIViewController {
                 }
             }
         }
+    }
+    func onHomePage(){
+        self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
+        self.homeVC.modalPresentationStyle = .fullScreen
+        self.present(self.homeVC, animated: true, completion: nil)
     }
     func onElitePage(){
         AppDelegate.shared().sign_firstname = firstname
@@ -122,8 +132,58 @@ class SignupVC: UIViewController {
         self.signupclinicVC.modalPresentationStyle = .fullScreen
         self.present(self.signupclinicVC, animated: true, completion: nil)
     }
+    func validatedata() -> Bool {
+        if firstname == ""{
+            self.view.makeToast("Input First name")
+            return false
+        }
+        if lastname == ""{
+            self.view.makeToast("Input Last name")
+            return false
+        }
+        if clinicname == ""{
+            self.view.makeToast("Input Clinic name")
+            return false
+        }
+        if email == ""{
+            self.view.makeToast("Input Email Address")
+            return false
+        }else{
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            if !emailPred.evaluate(with: email){
+                self.view.makeToast("Input correct email address")
+                return false
+            }
+        }
+        
+        if mobile == ""{
+            self.view.makeToast("Input Phone number")
+            return false
+        }else{
+            let phoneRegEx = "[+]+[0-9]{10,17}"
+            let phonePred = NSPredicate(format:"SELF MATCHES %@", phoneRegEx)
+            if !phonePred.evaluate(with: mobile){
+                self.view.makeToast("Input correct phonenumber")
+                return false
+            }
+        }
+        if password == ""{
+            self.view.makeToast("Input password")
+            return false
+        }else{
+            if password.count < 6{
+                self.view.makeToast("Input password more than 6 characters")
+                return false
+            }
+        }
+        return true
+    }
     
     @IBAction func onGoLogHomeBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @objc func onBackPage(){
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {

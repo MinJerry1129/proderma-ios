@@ -48,6 +48,9 @@ class ClinicInfoEditVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblInputlcinicInfo.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblInputlcinicInfo.addGestureRecognizer(gestureRecognizerw)
         lblInputlcinicInfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinicinfo", comment: "")
         btnUpdate.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "update", comment: ""), for: .normal)
         
@@ -167,6 +170,9 @@ class ClinicInfoEditVC: UIViewController {
         
         
         
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

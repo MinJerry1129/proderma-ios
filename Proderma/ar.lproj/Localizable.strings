@@ -46,3 +46,6 @@
 "eliteclinic" = "هل انت ايليت ؟";
 "alreadyaccount" = "لديك حساب بالفعل؟ تسجيل الدخول";
 "noaccount" = "ليس لديك حساب؟ اشتراك";
+"doctorinfo" = "معلومات الطبيب";
+"offerinfo" = "معلومات العرض";
+"clinichaveproduct" = "عيادة لديها هذا المنتج";

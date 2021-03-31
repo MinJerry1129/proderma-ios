@@ -30,6 +30,9 @@ class SettingHomeVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblSetting.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblSetting.addGestureRecognizer(gestureRecognizerw)
         lblSetting.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "setting", comment: "")
         setLangBtn.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "language", comment: ""), for: .normal)
         changePassBtn.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: ""), for: .normal)
@@ -46,6 +49,7 @@ class SettingHomeVC: UIViewController {
     }
     @IBAction func onLogoutBtn(_ sender: Any) {
         AppDelegate.shared().loginStatus = "no"
+        UserDefaults.standard.set("no", forKey: "loginstatus")
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -72,6 +76,9 @@ class SettingHomeVC: UIViewController {
         self.splashVC.modalPresentationStyle = .fullScreen
         self.present(self.splashVC, animated: true, completion: nil)
         
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

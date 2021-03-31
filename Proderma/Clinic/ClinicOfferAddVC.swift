@@ -26,6 +26,9 @@ class ClinicOfferAddVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblOfferinfo.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblOfferinfo.addGestureRecognizer(gestureRecognizerw)
         lblOfferinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "offerInfo", comment: "")
         btnAdd.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "add", comment: ""), for: .normal)
         
@@ -55,7 +58,9 @@ class ClinicOfferAddVC: UIViewController {
         }
         
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

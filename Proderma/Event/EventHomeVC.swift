@@ -35,6 +35,9 @@ class EventHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return .lightContent
     }
     func setReady(){
+        lblEvent.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblEvent.addGestureRecognizer(gestureRecognizerw)
         lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "homeevent", comment: "")
         
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
@@ -108,7 +111,9 @@ class EventHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         self.eventoneVC.modalPresentationStyle = .fullScreen
         self.present(self.eventoneVC, animated: true, completion: nil)
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
 
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

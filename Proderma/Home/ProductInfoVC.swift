@@ -41,6 +41,9 @@ class ProductInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return .lightContent
     }
     func setReady(){
+        lblMoreinfo.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblMoreinfo.addGestureRecognizer(gestureRecognizerw)
         lblMoreinfo.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "moreinfo", comment: "")
         
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
@@ -150,7 +153,9 @@ class ProductInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 break
             }
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

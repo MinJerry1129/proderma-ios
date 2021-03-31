@@ -35,6 +35,9 @@ class ClinicNormalVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblClinic.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblClinic.addGestureRecognizer(gestureRecognizerw)
         lblClinic.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "clinic", comment: "")
         btnUpdate.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: ""), for: .normal)
         
@@ -94,7 +97,9 @@ class ClinicNormalVC: UIViewController {
             self.view.makeToast("Input empty field!")
         }
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

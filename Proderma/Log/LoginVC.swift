@@ -34,6 +34,9 @@ class LoginVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblLogin.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblLogin.addGestureRecognizer(gestureRecognizerw)
         btnLogin.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "login", comment: ""), for: .normal)
         btnAlreday.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "noaccount", comment: ""), for: .normal)
         lblLogin.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "login", comment: "")
@@ -72,6 +75,11 @@ class LoginVC: UIViewController {
                         AppDelegate.shared().currentClinicID = clinic_id
                         AppDelegate.shared().userType = type
                         AppDelegate.shared().loginStatus = "yes"
+                        
+                        UserDefaults.standard.set(clinic_id, forKey: "clinicid")
+                        UserDefaults.standard.set(type, forKey: "usertype")
+                        UserDefaults.standard.set("yes", forKey: "loginstatus")
+                        
                         self.homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? HomeVC
                         self.homeVC.modalPresentationStyle = .fullScreen
                         self.present(self.homeVC, animated: true, completion: nil)                        
@@ -86,7 +94,9 @@ class LoginVC: UIViewController {
     @IBAction func onGoLogHomeBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -31,6 +31,9 @@ class ChangePassVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblChangePassword.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblChangePassword.addGestureRecognizer(gestureRecognizerw)
         lblChangePassword.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: "")
         lblChangePasswordTitle.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: "")
         btnChange.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "changepassword", comment: ""), for: .normal)
@@ -71,7 +74,9 @@ class ChangePassVC: UIViewController {
         }
         
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

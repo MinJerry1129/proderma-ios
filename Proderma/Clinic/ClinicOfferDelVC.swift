@@ -68,6 +68,9 @@ class ClinicOfferDelVC: UIViewController {
             }
         }
     }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

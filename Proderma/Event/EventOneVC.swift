@@ -46,6 +46,9 @@ class EventOneVC: UIViewController {
         return .lightContent
     }
     func setReady(){
+        lblEvent.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblEvent.addGestureRecognizer(gestureRecognizerw)
         lblEvent.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "event", comment: "")
         lblInformation.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "informations", comment: "")
         btnInterest.setTitle(LocalizationSystem.sharedInstance.localizedStringForKey(key: "interest", comment: ""), for: .normal)
@@ -124,7 +127,9 @@ class EventOneVC: UIViewController {
             }
         }
     }
-    
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

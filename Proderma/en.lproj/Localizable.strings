@@ -50,6 +50,9 @@
 "eliteclinic" = "Are you Elite Clinic?";
 "alreadyaccount" = "Have already account? Signin";
 "noaccount" = "Don't have account? Signup";
+"doctorinfo" = "Doctor Information";
+"offerinfo" = "Offer Information";
+"clinichaveproduct" = "Clinic have this product";
 
 
 

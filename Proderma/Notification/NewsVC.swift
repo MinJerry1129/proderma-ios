@@ -27,6 +27,9 @@ class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         getData()
     }
     func setReady(){
+        lblNotification.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblNotification.addGestureRecognizer(gestureRecognizerw)
         lblNotification.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "notification", comment: "")
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
             btnBack.setImage(UIImage(systemName: "chevron.right"), for: .normal)
@@ -107,6 +110,9 @@ class NewsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         size.height = txt_frame.size.height
 
         return (size.height + 70) / 0.95
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

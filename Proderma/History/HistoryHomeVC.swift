@@ -33,6 +33,9 @@ class HistoryHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return .lightContent
     }
     func setReady(){
+        lblHistory.isUserInteractionEnabled = true
+        let gestureRecognizerw = UITapGestureRecognizer(target: self, action: #selector(onBackPage))
+        lblHistory.addGestureRecognizer(gestureRecognizerw)
         lblHistory.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "history", comment: "")
         
         if(UserDefaults.standard.string(forKey: "lang")! == "ar"){
@@ -90,6 +93,9 @@ class HistoryHomeVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    @objc func onBackPage(){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func onBackBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
